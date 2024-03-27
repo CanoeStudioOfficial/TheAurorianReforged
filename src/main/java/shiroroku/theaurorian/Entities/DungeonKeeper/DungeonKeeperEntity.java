@@ -87,11 +87,15 @@ public class DungeonKeeperEntity extends AbstractSkeleton {
         super.dropCustomDeathLoot(pSource, pLooting, pRecentlyHit);
         ItemEntity amulet = this.spawnAtLocation(ItemRegistry.keepers_amulet.get());
         ItemEntity key = this.spawnAtLocation(ItemRegistry.darkstone_key.get());
+        ItemEntity loot_key = this.spawnAtLocation(ItemRegistry.runestone_loot_key.get());
         if (amulet != null) {
             amulet.setExtendedLifetime();
         }
         if (key != null) {
             key.setExtendedLifetime();
+        }
+        if (loot_key != null) {
+            loot_key.setExtendedLifetime();
         }
     }
 
