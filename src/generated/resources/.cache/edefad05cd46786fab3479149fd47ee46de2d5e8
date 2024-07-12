@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-11T17:55:08.994904941	Block States: theaurorian
+// 1.19.2	2024-07-11T18:11:53.719561187	Block States: theaurorian
 c01aff19f2d274ab755738d0fb047b9418591068 assets/theaurorian/blockstates/aurorian_coal_ore.json
 73eebd33213159360bcff329b9ddcb72695242c1 assets/theaurorian/blockstates/aurorian_cobblestone.json
 7fdce59c6c2083945e76721aedaf6ba72c20e10d assets/theaurorian/blockstates/aurorian_deepslate.json
@@ -9,6 +9,8 @@ c01aff19f2d274ab755738d0fb047b9418591068 assets/theaurorian/blockstates/aurorian
 68e7465b63fdd876afb0105b521b647f243068e5 assets/theaurorian/blockstates/cerulean_ore.json
 3a6ff1e2582c7a61b53bc4cc3208d5d3226eb694 assets/theaurorian/blockstates/darkstone.json
 3e1acc419a59e26e958a1e6da9f1c3add07c119c assets/theaurorian/blockstates/darkstone_chipped.json
+a4a601fe187d4c5479421bcc401d344aa4c31bd6 assets/theaurorian/blockstates/darkstone_gate.json
+8bab77311240f02c44fac015e5457ce7eba437b1 assets/theaurorian/blockstates/darkstone_gate_keyhole.json
 3befaefff3fd658c831ca2c493aff28876616cde assets/theaurorian/blockstates/darkstone_lamp.json
 cf7a535845cef9c9696d6a8ca7a940ed081ad716 assets/theaurorian/blockstates/darkstone_pillar.json
 0aee72ac3889082168480abd25297f5dace96d09 assets/theaurorian/blockstates/darkstone_stairs.json
@@ -41,6 +43,8 @@ effda07f109a44ad4f25dd778556ad6cf92c4bd3 assets/theaurorian/models/block/bright_
 91d96266283606b7e0cbafccacde9267908fc01a assets/theaurorian/models/block/cerulean_ore.json
 bbc8f83e2a0126db3dd23c8428e72f603ecbd533 assets/theaurorian/models/block/darkstone.json
 7fcbe0454b3ea41d04b6edfa4b19f1f617fcdd97 assets/theaurorian/models/block/darkstone_chipped.json
+fe3b76f87a0c1fe4fb4d57cc6154117b63f4232b assets/theaurorian/models/block/darkstone_gate.json
+5984236fdd4ffd05b7615d0c7deafcf2c11c0905 assets/theaurorian/models/block/darkstone_gate_keyhole.json
 b5c10990f43bd3f3d61fa80eba2c25999b28d890 assets/theaurorian/models/block/darkstone_lamp.json
 4fb72d1e10f54326f34f16ad6654de81d6bf92a3 assets/theaurorian/models/block/darkstone_pillar.json
 000d870a6b217a02536fe12133eed851ed3915e5 assets/theaurorian/models/block/darkstone_stairs.json
@@ -83,6 +87,8 @@ ecb4eff44d991b91d0f75132aa59aa2e7d163dc1 assets/theaurorian/models/item/aurorian
 e7f930cc43f971fd211159544c7de8f8cca44e68 assets/theaurorian/models/item/cerulean_ore.json
 0afbba65514ff827307c556f13f0c816a06dada1 assets/theaurorian/models/item/darkstone.json
 3078765fa3f0877316360bdf3976af859b099098 assets/theaurorian/models/item/darkstone_chipped.json
+74e0693f851a9297ba26e9db8d23315903b8b0eb assets/theaurorian/models/item/darkstone_gate.json
+5c168227da24a9840465fb5d235ecc1076e89629 assets/theaurorian/models/item/darkstone_gate_keyhole.json
 e2b42b9a21ee52f76c9a3910643e59993c2513ba assets/theaurorian/models/item/darkstone_lamp.json
 074ca94aa48146e0b690b6eb2fb82304592ecdab assets/theaurorian/models/item/darkstone_pillar.json
 b5b6bf91d27c663224c3e11084fb263002da17df assets/theaurorian/models/item/darkstone_stairs.json

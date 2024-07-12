@@ -40,6 +40,8 @@
   "block.theaurorian.darkstone_pillar": "Darkstone Pillar",
   "block.theaurorian.darkstone_chipped": "Chipped Darkstone",
   "block.theaurorian.darkstone_stairs": "Darkstone Stairs",
+  "block.theaurorian.darkstone_gate_keyhole": "Darkstone Gate Keyhole",
+  "block.theaurorian.darkstone_gate": "Darkstone Gate",
   "block.theaurorian.scrapper": "Scrapper",
   "block.theaurorian.scrapper.desc": "Grinds tools into their materials. May not return materials if item health is less than 75%",
   "block.theaurorian.silentwood_crafting_table": "Silentwood Crafting Table",
