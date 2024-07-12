@@ -1,4 +1,4 @@
-// 1.19.2	2024-03-05T17:40:57.430780022	LootTables
+// 1.19.2	2024-07-11T17:52:39.019053679	LootTables
 a51a687ced84a16c646af8c74ece31bba237c0c8 data/theaurorian/loot_tables/blocks/aurorian_coal_ore.json
 3454003c9e54aba310c93ea27e5ec39d993ff312 data/theaurorian/loot_tables/blocks/aurorian_cobblestone.json
 4ccbbda3a1afb768405a37fac09cb3e2e67f829d data/theaurorian/loot_tables/blocks/aurorian_deepslate.json
@@ -11,6 +11,11 @@ d2bbeeb320d30929a909158ce363e1b3416e2747 data/theaurorian/loot_tables/blocks/bri
 541f3579f742d3fbf8fc3ab498b42c829494023d data/theaurorian/loot_tables/blocks/cerulean_ore.json
 79c61f6adde4a72aac726d5d754be5f4243ca834 data/theaurorian/loot_tables/blocks/chimney.json
 d2a173d54438ea9bd436f2342417d61ae6fcd64f data/theaurorian/loot_tables/blocks/crystal.json
+d82ab3e1a55ee49c1f2fff31cb801d021d899f4e data/theaurorian/loot_tables/blocks/darkstone.json
+803bb123b9252e7152a96d54d6f334ab0d760dc0 data/theaurorian/loot_tables/blocks/darkstone_chipped.json
+ef3952982f74cfeef644c53b00fa0c53ca22e2c5 data/theaurorian/loot_tables/blocks/darkstone_lamp.json
+de653575d2554b48ea88f4e78d72e59995f23c4e data/theaurorian/loot_tables/blocks/darkstone_pillar.json
+7c826a96065fd45c3c98e628998a4ea4ea7fa9e8 data/theaurorian/loot_tables/blocks/darkstone_stairs.json
 d8f92dc67233df39dd55ce4202a4f5d1ef0d13aa data/theaurorian/loot_tables/blocks/deepslate_cerulean_ore.json
 455c1e7d9bb6aeb5c6835708cd314da8c6a99dfd data/theaurorian/loot_tables/blocks/deepslate_moonstone_ore.json
 9d24f39570238316b01825cead2d0f538bbfde79 data/theaurorian/loot_tables/blocks/geode.json

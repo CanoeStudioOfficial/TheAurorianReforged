@@ -7,6 +7,11 @@
     "theaurorian:runestone_gate_loot_keyhole",
     "theaurorian:runestone_lamp",
     "theaurorian:runestone_smooth",
-    "theaurorian:runestone_stairs"
+    "theaurorian:runestone_stairs",
+    "theaurorian:darkstone",
+    "theaurorian:darkstone_chipped",
+    "theaurorian:darkstone_lamp",
+    "theaurorian:darkstone_pillar",
+    "theaurorian:darkstone_stairs"
   ]
 }

@@ -70,6 +70,11 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_lamp.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_smooth.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_stairs.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_chipped.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_lamp.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_pillar.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_stairs.get());
         this.tag(DUNGEON_GATES).add(BlockRegistry.runestone_gate.get());
         this.tag(Tags.Blocks.ORES).add(BlockRegistry.geode.get());
         this.tag(CERULEAN_ORE).add(BlockRegistry.cerulean_ore.get());

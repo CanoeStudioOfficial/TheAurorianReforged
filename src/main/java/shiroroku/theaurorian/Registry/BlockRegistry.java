@@ -49,6 +49,13 @@ public class BlockRegistry {
     public static final RegistryObject<Block> runestone_smooth = regBlockItem(BLOCKS_GEN, "runestone_smooth", () -> new Block(BlockBehaviour.Properties.copy(runestone.get())));
     public static final RegistryObject<Block> runestone_stairs = regBlockItem(BLOCKS, "runestone_stairs", () -> new StairBlock(() -> runestone.get().defaultBlockState(), BlockBehaviour.Properties.copy(runestone.get())));
 
+    // Darkstone
+    public static final RegistryObject<Block> darkstone = regBlockItem(BLOCKS_GEN, "darkstone", () -> new Block(BlockBehaviour.Properties.copy(runestone.get())));
+    public static final RegistryObject<Block> darkstone_chipped = regBlockItem(BLOCKS_GEN, "darkstone_chipped", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
+    public static final RegistryObject<Block> darkstone_pillar = regBlockItem(BLOCKS_GEN, "darkstone_pillar", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
+    public static final RegistryObject<Block> darkstone_lamp = regBlockItem(BLOCKS_GEN, "darkstone_lamp", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get()).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> darkstone_stairs = regBlockItem(BLOCKS, "darkstone_stairs", () -> new StairBlock(() -> darkstone.get().defaultBlockState(), BlockBehaviour.Properties.copy(darkstone.get())));
+
     // Natural
     public static final RegistryObject<Block> aurorian_cobblestone = regBlockItem(BLOCKS_GEN, "aurorian_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> aurorian_dirt = regBlockItem(BLOCKS_GEN, "aurorian_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));

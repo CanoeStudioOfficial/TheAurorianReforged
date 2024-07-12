@@ -45,7 +45,9 @@ public class DataGenBlocks extends BlockStateProvider {
         simpleBlockItem(BlockRegistry.silentwood_log.get());
         barsBlock(BlockRegistry.runestone_bars.get());
         stairsBlock((StairBlock) BlockRegistry.runestone_stairs.get(), blockTexture(BlockRegistry.runestone.get()));
+        stairsBlock((StairBlock) BlockRegistry.darkstone_stairs.get(), blockTexture(BlockRegistry.darkstone.get()));
         simpleBlockItem(BlockRegistry.runestone_stairs.get());
+        simpleBlockItem(BlockRegistry.darkstone_stairs.get());
         simpleBlockItem(BlockRegistry.fog_wall.get());
         simpleBlockItem(BlockRegistry.boss_spawner.get());
     }

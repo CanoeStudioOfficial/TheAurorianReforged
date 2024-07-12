@@ -72,6 +72,7 @@ public class DataGenBlocksLoot extends LootTableProvider {
             this.add(BlockRegistry.lavender_block.get(), dropWithSickleOrShears(ItemRegistry.lavender.get()));
             this.dropSelf(BlockRegistry.runestone_bars.get());
             this.dropSelf(BlockRegistry.runestone_stairs.get());
+            this.dropSelf(BlockRegistry.darkstone_stairs.get());
             this.add(BlockRegistry.bright_bulb.get(), dropWithSickleOrShears(BlockRegistry.bright_bulb.get()));
             this.add(BlockRegistry.petunia.get(), dropWithSickleOrShears(BlockRegistry.petunia.get()));
             this.add(BlockRegistry.silkberry_block.get(), dropWithSickleOrShears(ItemRegistry.silkberry.get()));
@@ -115,6 +116,7 @@ public class DataGenBlocksLoot extends LootTableProvider {
             gen.add(BlockRegistry.petunia.get());
             gen.add(BlockRegistry.runestone_bars.get());
             gen.add(BlockRegistry.runestone_stairs.get());
+            gen.add(BlockRegistry.darkstone_stairs.get());
             gen.add(BlockRegistry.scrapper.get());
             gen.add(BlockRegistry.silentwood_leaves.get());
             gen.add(BlockRegistry.silentwood_log.get());
