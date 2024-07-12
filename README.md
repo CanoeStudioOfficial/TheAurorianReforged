@@ -7,6 +7,7 @@ A Minecraft mod for that adds a new dimension with new bosses, tools, and other 
 ### Major changes from 1.12 to 1.19:
 
 - Dungeons are now randomly spread, no longer on a grid axis.
+- Boss player count & difficulty scaling.
 - All Dungeons have new layouts and more variety.
 - Umbra sword reworked.
 - Crystalline sword reworked.
