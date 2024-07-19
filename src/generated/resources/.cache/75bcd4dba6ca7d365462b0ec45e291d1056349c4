@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-11T18:21:53.184400824	Tags for minecraft:block
+// 1.19.2	2024-07-19T15:05:48.879979813	Tags for minecraft:block
 4052cba1a2dd4624005126892af9d93ccbc0a53d data/forge/tags/blocks/chests.json
 4052cba1a2dd4624005126892af9d93ccbc0a53d data/forge/tags/blocks/chests/wooden.json
 8466de5ec328ffe96089d80210f4d51a2cc24aaf data/forge/tags/blocks/ores.json
@@ -8,15 +8,17 @@ fae13353da6edb331f10f01e307c666030c75191 data/forge/tags/blocks/ores/coal.json
 67003f2f07aea2540262d5136f3000c5e186ddd8 data/minecraft/tags/blocks/flowers.json
 08aa0ddf749cbe4d23b58e535778c6ba8a9b23e4 data/minecraft/tags/blocks/leaves.json
 57f5b0ce211cd7e774040d931915386ae89a3380 data/minecraft/tags/blocks/logs_that_burn.json
-6f19c4bd784976904531106f08de754fcaed31e6 data/minecraft/tags/blocks/mineable/axe.json
-72fb6816fd3cb6b0f3cf4ed2b45f8702f61e943c data/minecraft/tags/blocks/mineable/pickaxe.json
+2992db73e49520a1c4164367017fb1e0260f0959 data/minecraft/tags/blocks/mineable/axe.json
+d3cc557851cbb39e495484bc1cc2ea666cf7068b data/minecraft/tags/blocks/mineable/pickaxe.json
 7c9955f473dc23c07fa9515f7f2794d50cd1408c data/minecraft/tags/blocks/mineable/shovel.json
 7474587f7cb7d3b6e75281b2b34795bace7d4779 data/minecraft/tags/blocks/needs_stone_tool.json
 1ffa81e678a299783db31023ef435426d32cb831 data/minecraft/tags/blocks/planks.json
 9628fa3137b0b76086d4422d7f4b99d8b5105940 data/minecraft/tags/blocks/replaceable_plants.json
 fc4abefa323050c3024b18f4eff7829b95125670 data/minecraft/tags/blocks/saplings.json
+1b3e33e4d1da23de82ed2f7215cdf5709ac391bc data/minecraft/tags/blocks/slabs.json
 43c5e5e0009011c2bf59ba7abd15fbb5584b1ae8 data/minecraft/tags/blocks/stairs.json
 96cf934ecdc65dccadd44b604209a8d364e54ec0 data/minecraft/tags/blocks/stone_ore_replaceables.json
+ce9aba30f358c2ea8922c4430663c42b6b8fb9aa data/minecraft/tags/blocks/wooden_slabs.json
 aa10960d590cbb00738b837fc1795e3ba65b39e3 data/theaurorian/tags/blocks/cerulean_ore.json
 13ac4cd8db6363b382e0611458a4a2f15038bddd data/theaurorian/tags/blocks/dungeon_bricks.json
 57efd13e9eab959fdf808a6d37c54a27fc438b68 data/theaurorian/tags/blocks/dungeon_gates.json

@@ -97,6 +97,9 @@ public class DataGenBlocksLoot extends LootTableProvider {
             this.dropSelf(BlockRegistry.silentwood_crafting_table.get());
             this.add(BlockRegistry.geode.get(), (block) -> createOreDrop(block, BlockRegistry.crystal.get().asItem()));
             this.add(BlockRegistry.aurorian_coal_ore.get(), (block) -> createOreDrop(block, ItemRegistry.aurorian_coal.get()));
+            this.add(BlockRegistry.silentwood_slab.get(), BlockLoot::createSlabItemTable);
+            this.add(BlockRegistry.aurorian_cobblestone_slab.get(), BlockLoot::createSlabItemTable);
+            this.add(BlockRegistry.aurorian_deepslate_slab.get(), BlockLoot::createSlabItemTable);
             // ! dont forget to add to function below too <3
         }
 
@@ -129,6 +132,9 @@ public class DataGenBlocksLoot extends LootTableProvider {
             gen.add(BlockRegistry.bright_bulb.get());
             gen.add(BlockRegistry.aurorian_coal_ore.get());
             gen.add(BlockRegistry.silentwood_chest.get());
+            gen.add(BlockRegistry.silentwood_slab.get());
+            gen.add(BlockRegistry.aurorian_cobblestone_slab.get());
+            gen.add(BlockRegistry.aurorian_deepslate_slab.get());
             return gen;
         }
 

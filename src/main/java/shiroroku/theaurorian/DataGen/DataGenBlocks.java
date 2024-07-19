@@ -2,10 +2,7 @@ package shiroroku.theaurorian.DataGen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.IronBarsBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -46,11 +43,15 @@ public class DataGenBlocks extends BlockStateProvider {
         barsBlock(BlockRegistry.runestone_bars.get());
         stairsBlock((StairBlock) BlockRegistry.runestone_stairs.get(), blockTexture(BlockRegistry.runestone.get()));
         stairsBlock((StairBlock) BlockRegistry.darkstone_stairs.get(), blockTexture(BlockRegistry.darkstone.get()));
+        slabBlock(BlockRegistry.silentwood_slab.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
+        slabBlock(BlockRegistry.aurorian_cobblestone_slab.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
+        slabBlock(BlockRegistry.aurorian_deepslate_slab.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
         simpleBlockItem(BlockRegistry.runestone_stairs.get());
         simpleBlockItem(BlockRegistry.darkstone_stairs.get());
         simpleBlockItem(BlockRegistry.fog_wall.get());
         simpleBlockItem(BlockRegistry.boss_spawner.get());
     }
+
 
     private void simpleBlockItem(Block parent) {
         ResourceLocation location = ForgeRegistries.BLOCKS.getKey(parent);
@@ -65,6 +66,11 @@ public class DataGenBlocks extends BlockStateProvider {
         ResourceLocation texture = blockTexture(block);
         this.paneBlockWithRenderType((IronBarsBlock) block, texture, texture, "cutout");
         itemModels().getBuilder(ForgeRegistries.BLOCKS.getKey(block).getPath()).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", texture);
+    }
+
+    private void slabBlock(Block block, ResourceLocation texture){
+        this.slabBlock((SlabBlock) block, texture, texture);
+        simpleBlockItem(block);
     }
 
     private static ResourceLocation append(ResourceLocation loc, String value) {

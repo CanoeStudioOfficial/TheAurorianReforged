@@ -10,6 +10,8 @@
     "theaurorian:moonlight_forge",
     "theaurorian:moonstone_ore",
     "theaurorian:aurorian_coal_ore",
-    "theaurorian:scrapper"
+    "theaurorian:scrapper",
+    "theaurorian:aurorian_cobblestone_slab",
+    "theaurorian:aurorian_deepslate_slab"
   ]
 }

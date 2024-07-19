@@ -1,6 +1,8 @@
 {
   "block.theaurorian.aurorian_cobblestone": "Aurorian Cobblestone",
+  "block.theaurorian.aurorian_cobblestone_slab": "Aurorian Cobblestone Slab",
   "block.theaurorian.aurorian_deepslate": "Aurorian Deepslate",
+  "block.theaurorian.aurorian_deepslate_slab": "Aurorian Deepslate Slab",
   "block.theaurorian.aurorian_dirt": "Aurorian Dirt",
   "block.theaurorian.aurorian_furnace": "Aurorian Furnace",
   "block.theaurorian.aurorian_coal_ore": "Aurorian Coal Ore",
@@ -48,6 +50,7 @@
   "block.theaurorian.silentwood_leaves": "Silentwood Leaves",
   "block.theaurorian.silentwood_log": "Silentwood Log",
   "block.theaurorian.silentwood_planks": "Silentwood Planks",
+  "block.theaurorian.silentwood_slab": "Silentwood Slab",
   "block.theaurorian.silentwood_sapling": "Silentwood Sapling",
   "block.theaurorian.silkberry_block": "Silkberry",
   "block.theaurorian.boss_spawner": "Boss Spawner",
