@@ -10,7 +10,7 @@
       "item": "theaurorian:crystal"
     },
     "S": {
-      "item": "theaurorian:silentwood_stick"
+      "tag": "forge:rods/wooden"
     },
     "L": {
       "item": "theaurorian:silentwood_leaves"

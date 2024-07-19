@@ -7,7 +7,7 @@
   ],
   "key": {
     "S": {
-      "item": "theaurorian:silentwood_stick"
+      "tag": "forge:rods/wooden"
     },
     "I": {
       "item": "theaurorian:silentwood_planks"

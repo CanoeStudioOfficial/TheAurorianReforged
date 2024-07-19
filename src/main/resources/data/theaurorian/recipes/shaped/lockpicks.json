@@ -10,7 +10,7 @@
       "item": "theaurorian:cerulean_ingot"
     },
     "S": {
-      "item": "theaurorian:silentwood_stick"
+      "tag": "forge:rods/wooden"
     }
   },
   "result": {

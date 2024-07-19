@@ -8,7 +8,7 @@
       "item": "theaurorian:silentwood_stick"
     },
     "S": {
-      "item": "theaurorian:silentwood_planks"
+      "tag": "forge:rods/wooden"
     }
   },
   "result": {
