@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-19T15:05:48.877365354	LootTables
+// 1.19.2	2024-07-19T15:15:36.171470256	LootTables
 a51a687ced84a16c646af8c74ece31bba237c0c8 data/theaurorian/loot_tables/blocks/aurorian_coal_ore.json
 3454003c9e54aba310c93ea27e5ec39d993ff312 data/theaurorian/loot_tables/blocks/aurorian_cobblestone.json
 eaeb954fe7f2f6fcfe9e35e1f607afa0cec4f63e data/theaurorian/loot_tables/blocks/aurorian_cobblestone_slab.json
@@ -39,6 +39,7 @@ e831a643655495915c1053a5b4dc98c0d807adfa data/theaurorian/loot_tables/blocks/run
 81cc4eff767889d9a08c775b6cb4bced22378545 data/theaurorian/loot_tables/blocks/scrapper.json
 031f8c25b86a8008c937eae99f503d97103c4228 data/theaurorian/loot_tables/blocks/silentwood_chest.json
 2288cb197f0e8d0ef165aa1e664649e1c9a0188f data/theaurorian/loot_tables/blocks/silentwood_crafting_table.json
+ec4ddef9e1a3f5bfd7e7372ed67a1d4f3c4d5fbb data/theaurorian/loot_tables/blocks/silentwood_fence.json
 5586ee5715994b9512d05222fa2e2efbb435a9a4 data/theaurorian/loot_tables/blocks/silentwood_leaves.json
 4288b938f8272fd72c3e3eb8068d1c6d317ff44e data/theaurorian/loot_tables/blocks/silentwood_log.json
 2083836e456115e574c27031da3a4538642690cd data/theaurorian/loot_tables/blocks/silentwood_planks.json

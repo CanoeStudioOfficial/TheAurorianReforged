@@ -70,6 +70,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> silentwood_log = regBlockItemWithBurntime(BLOCKS, "silentwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG)), 300);
     public static final RegistryObject<Block> silentwood_planks = regBlockItemWithBurntime(BLOCKS_GEN, "silentwood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)), 300);
     public static final RegistryObject<Block> silentwood_slab = regBlockItemWithBurntime(BLOCKS, "silentwood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.silentwood_planks.get())), 150);
+    public static final RegistryObject<Block> silentwood_fence = regBlockItemWithBurntime(BLOCKS, "silentwood_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(BlockRegistry.silentwood_planks.get())), 300);
     public static final RegistryObject<Block> silentwood_sapling = regBlockItemWithBurntime(BLOCKS_GEN_NL_PLANT, "silentwood_sapling", () -> new SaplingBlock(new SilentwoodTreeFeature(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING)), 100);
 
     // Plants
