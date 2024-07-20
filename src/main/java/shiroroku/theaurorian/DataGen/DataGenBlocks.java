@@ -46,19 +46,32 @@ public class DataGenBlocks extends BlockStateProvider {
         slabBlock(BlockRegistry.silentwood_slab.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
         slabBlock(BlockRegistry.aurorian_cobblestone_slab.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
         slabBlock(BlockRegistry.aurorian_deepslate_slab.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
-        fenceBlock((FenceBlock) BlockRegistry.silentwood_fence.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
-        //simpleBlockItem(BlockRegistry.silentwood_fence.get()); manual for now
+        fenceBlock(BlockRegistry.silentwood_fence.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
+        wallBlock(BlockRegistry.aurorian_cobblestone_wall.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
+        wallBlock(BlockRegistry.aurorian_deepslate_wall.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
         simpleBlockItem(BlockRegistry.runestone_stairs.get());
         simpleBlockItem(BlockRegistry.darkstone_stairs.get());
         simpleBlockItem(BlockRegistry.fog_wall.get());
         simpleBlockItem(BlockRegistry.boss_spawner.get());
     }
 
+    private void wallBlock(Block parent, ResourceLocation texture) {
+        super.wallBlock((WallBlock) parent, texture);
+        ResourceLocation location = ForgeRegistries.BLOCKS.getKey(parent);
+        itemModels().getBuilder(location.getPath()).parent(new ModelFile.UncheckedModelFile(mcLoc("block/wall_inventory"))).texture("wall", texture);
+    }
+
+    private void fenceBlock(Block parent, ResourceLocation texture) {
+        super.fenceBlock((FenceBlock) parent, texture);
+        ResourceLocation location = ForgeRegistries.BLOCKS.getKey(parent);
+        itemModels().getBuilder(location.getPath()).parent(new ModelFile.UncheckedModelFile(mcLoc("block/fence_inventory"))).texture("texture", texture);
+    }
 
     private void simpleBlockItem(Block parent) {
         ResourceLocation location = ForgeRegistries.BLOCKS.getKey(parent);
         itemModels().getBuilder(location.getPath()).parent(new ModelFile.UncheckedModelFile(modLoc("block/" + location.getPath())));
     }
+
     private void simpleBlockItem(Block parent, String renderType) {
         ResourceLocation location = ForgeRegistries.BLOCKS.getKey(parent);
         itemModels().getBuilder(location.getPath()).renderType(renderType).parent(new ModelFile.UncheckedModelFile(modLoc("block/" + location.getPath())));
@@ -70,7 +83,7 @@ public class DataGenBlocks extends BlockStateProvider {
         itemModels().getBuilder(ForgeRegistries.BLOCKS.getKey(block).getPath()).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", texture);
     }
 
-    private void slabBlock(Block block, ResourceLocation texture){
+    private void slabBlock(Block block, ResourceLocation texture) {
         this.slabBlock((SlabBlock) block, texture, texture);
         simpleBlockItem(block);
     }

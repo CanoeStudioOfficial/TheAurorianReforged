@@ -53,6 +53,8 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.scrapper.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_cobblestone_slab.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_deepslate_slab.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_cobblestone_wall.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_deepslate_wall.get());
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.aurorian_dirt.get());
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BlockRegistry.aurorian_grass.get());
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(BlockRegistry.cerulean_ore.get());
@@ -68,6 +70,8 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(BlockTags.SLABS).add(BlockRegistry.aurorian_cobblestone_slab.get());
         this.tag(BlockTags.SLABS).add(BlockRegistry.aurorian_deepslate_slab.get());
         this.tag(BlockTags.WOODEN_FENCES).add(BlockRegistry.silentwood_fence.get());
+        this.tag(BlockTags.WALLS).add(BlockRegistry.aurorian_cobblestone_wall.get());
+        this.tag(BlockTags.WALLS).add(BlockRegistry.aurorian_deepslate_wall.get());
         this.tag(Tags.Blocks.FENCES_WOODEN).add(BlockRegistry.silentwood_fence.get());
         this.tag(Tags.Blocks.CHESTS_WOODEN).add(BlockRegistry.silentwood_chest.get());
         this.tag(Tags.Blocks.CHESTS).add(BlockRegistry.silentwood_chest.get());
