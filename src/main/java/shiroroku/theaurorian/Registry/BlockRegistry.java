@@ -13,14 +13,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
-import shiroroku.theaurorian.Blocks.AurorianDeepslateBlock;
+import shiroroku.theaurorian.Blocks.*;
 import shiroroku.theaurorian.Blocks.AurorianFurnace.AurorianFurnaceBlock;
 import shiroroku.theaurorian.Blocks.AurorianFurnace.ChimneyBlock;
-import shiroroku.theaurorian.Blocks.AurorianGrassBlock;
 import shiroroku.theaurorian.Blocks.BossSpawner.BossSpawnerBlock;
 import shiroroku.theaurorian.Blocks.Crystal.CrystalBlock;
-import shiroroku.theaurorian.Blocks.DungeonGateKeyHole;
-import shiroroku.theaurorian.Blocks.FogWallBlock;
 import shiroroku.theaurorian.Blocks.MoonlightForge.MoonlightForgeBlock;
 import shiroroku.theaurorian.Blocks.Scrapper.ScrapperBlock;
 import shiroroku.theaurorian.Blocks.SilentwoodChest.SilentwoodChestBlock;
@@ -103,6 +100,7 @@ public class BlockRegistry {
 
     // Other
     public static final RegistryObject<Block> fog_wall = regBlockItem(BLOCKS, "fog_wall", () -> new FogWallBlock(BlockBehaviour.Properties.copy(runestone.get()).noCollission().noOcclusion().lightLevel((state) -> 10)));
+    public static final RegistryObject<Block> aurorian_portal = regBlockItem(BLOCKS, "aurorian_portal", () -> new AurorianPortal(BlockBehaviour.Properties.copy(Blocks.NETHER_PORTAL)));
     public static final RegistryObject<Block> moon_gem = regBlockItem(BLOCKS, "moon_gem", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> chimney = regBlockItem(BLOCKS, "chimney", () -> new ChimneyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> crystal = regBlockItem(BLOCKS, "crystal", () -> new CrystalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().lightLevel((state) -> 15).sound(SoundType.GLASS)));
