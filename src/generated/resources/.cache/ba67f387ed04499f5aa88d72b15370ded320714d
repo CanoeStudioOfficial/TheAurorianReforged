@@ -1,4 +1,4 @@
-// 1.19.2	2024-03-16T18:58:53.039295372	Item Models: theaurorian
+// 1.19.2	2024-07-19T19:22:40.258563361	Item Models: theaurorian
 a95bbdcaf10620b09f246c54e853176b212124ff assets/theaurorian/models/item/absorption_orb.json
 9a390d09acfa4a0621298f03a11e6a910b91f71f assets/theaurorian/models/item/aurorian_coal.json
 a7b76beb25c86b4f970a22a6356d6768f7618046 assets/theaurorian/models/item/aurorian_coal_nugget.json
@@ -51,6 +51,7 @@ b27f517f61132023f2c96aa1f6e8035cf7fa5a99 assets/theaurorian/models/item/lavender
 7e09bf354060aeaa4f14aa8908e4ba0dc336874b assets/theaurorian/models/item/lavender_tea.json
 5f18686539d27a15a086d388b1812190c7f70b12 assets/theaurorian/models/item/living_divining_rod.json
 c29e8f9d99c607af763fb446f009b1c1aaf95943 assets/theaurorian/models/item/lockpicks.json
+5ce6d6cb6f40ee2bd743ac127ce28af70335b74c assets/theaurorian/models/item/mirror_of_guidance.json
 2690dd0404fcc5842ab1ae82b5986681d80fba56 assets/theaurorian/models/item/moon_temple_interior_key.json
 572e74cf076e833e4b40cd55f7060b09aaa255f9 assets/theaurorian/models/item/moon_temple_key.json
 e6e8b97f1f396291938f812dc358eadcba8de753 assets/theaurorian/models/item/moon_temple_key_fragment.json
@@ -68,6 +69,7 @@ a34f16939e6c312886ee5a92cf7cb2c9ec98fe06 assets/theaurorian/models/item/moonston
 42d08149b4c6202b336bbd55e971bcf57e1c1c22 assets/theaurorian/models/item/plant_fiber.json
 dbc150a0bb0c9c2299744c244ef419afab53b2a0 assets/theaurorian/models/item/runestone_key.json
 fb0e9d8684eaa6bc0f9c380a074ac3893247b640 assets/theaurorian/models/item/runestone_loot_key.json
+f00e8a9bd4d4c507784996b0bbd8e73ea23c09ab assets/theaurorian/models/item/sapphire_amulet.json
 2e3e2f51c840efeb0cdc7667889b4ea794b4b93e assets/theaurorian/models/item/silentwood_axe.json
 b970236beaae0bfa7496dc4233956f4df055fbc4 assets/theaurorian/models/item/silentwood_hoe.json
 d6293fbbedcfc046ab3d5b8d09ad152a3b9b5eab assets/theaurorian/models/item/silentwood_pickaxe.json

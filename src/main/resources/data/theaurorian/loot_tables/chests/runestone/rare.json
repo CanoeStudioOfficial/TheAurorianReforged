@@ -146,6 +146,11 @@
           "type": "minecraft:item",
           "weight": 1,
           "name": "theaurorian:aurorianite_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "theaurorian:sapphire_amulet"
         }
       ]
     },

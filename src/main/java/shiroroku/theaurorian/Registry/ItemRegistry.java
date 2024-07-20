@@ -61,7 +61,6 @@ public class ItemRegistry {
     public static final RegistryObject<Item> umbra_ingot = ITEMS_GEN.register("umbra_ingot", basicItem());
     public static final RegistryObject<Item> umbra_scrap = ITEMS_GEN.register("umbra_scrap", basicItem());
     public static final RegistryObject<Item> spectral_silk = ITEMS_GEN.register("spectral_silk", basicItem(defaultProp().rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> aurorian_coal = ITEMS_GEN.register("aurorian_coal", basicItemWithBurntime(defaultProp(), 1600));
     public static final RegistryObject<Item> aurorian_coal_nugget = ITEMS_GEN.register("aurorian_coal_nugget", basicItemWithBurntime(defaultProp(), 200));
     public static final RegistryObject<Item> cup = ITEMS_GEN.register("cup", basicItemWithBurntime(defaultProp(), 100));
@@ -142,6 +141,10 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> absorption_orb = ITEMS_GEN.register("absorption_orb", () -> new AbsorptionOrb(defaultProp().durability(250).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> living_divining_rod = ITEMS_GEN_HANDHELD.register("living_divining_rod", () -> new LivingDiviningRod(defaultProp().durability(100).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", basicItem(defaultProp().rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> spawn_egg_hollow = ITEMS_SPAWN_EGGS.register("spawn_egg_hollow", () -> new ForgeSpawnEggItem(EntityRegistry.hollow, 8117755, 3363951, defaultProp()));
     public static final RegistryObject<Item> spawn_egg_undead_knight = ITEMS_SPAWN_EGGS.register("spawn_egg_undead_knight", () -> new ForgeSpawnEggItem(EntityRegistry.undead_knight, 8117755, 3363951, defaultProp()));
