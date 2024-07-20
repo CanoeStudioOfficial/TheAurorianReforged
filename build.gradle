@@ -86,6 +86,9 @@ dependencies {
 	implementation fg.deobf("curse.maven:bookshelf-228525:4556697")
     implementation fg.deobf("curse.maven:enchantment-descriptions-250419:5015022")
 
+    // Effortless building (for making stuctures)
+    implementation fg.deobf("curse.maven:effortless-building-302113:4810762")
+
     // Mixin
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
