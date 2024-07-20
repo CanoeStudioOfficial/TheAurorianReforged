@@ -54,7 +54,6 @@ public class BossSpawnerBlock extends BaseEntityBlock {
         return ItemStack.EMPTY;
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
