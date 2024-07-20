@@ -1,19 +1,19 @@
 {
   "values": [
+    "theaurorian:darkstone",
+    "theaurorian:darkstone_chipped",
+    "theaurorian:darkstone_gate",
+    "theaurorian:darkstone_gate_keyhole",
+    "theaurorian:darkstone_lamp",
+    "theaurorian:darkstone_pillar",
+    "theaurorian:darkstone_stairs",
     "theaurorian:runestone",
     "theaurorian:runestone_bars",
     "theaurorian:runestone_gate",
     "theaurorian:runestone_gate_keyhole",
     "theaurorian:runestone_gate_loot_keyhole",
-    "theaurorian:darkstone_gate",
-    "theaurorian:darkstone_gate_keyhole",
     "theaurorian:runestone_lamp",
     "theaurorian:runestone_smooth",
-    "theaurorian:runestone_stairs",
-    "theaurorian:darkstone",
-    "theaurorian:darkstone_chipped",
-    "theaurorian:darkstone_lamp",
-    "theaurorian:darkstone_pillar",
-    "theaurorian:darkstone_stairs"
+    "theaurorian:runestone_stairs"
   ]
 }

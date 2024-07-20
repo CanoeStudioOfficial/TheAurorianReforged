@@ -60,20 +60,23 @@ public class BlockRegistry {
 
     // Natural
     public static final RegistryObject<Block> aurorian_cobblestone = regBlockItem(BLOCKS_GEN, "aurorian_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
-    public static final RegistryObject<Block> aurorian_cobblestone_wall = regBlockItem(BLOCKS, "aurorian_cobblestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
     public static final RegistryObject<Block> aurorian_cobblestone_slab = regBlockItem(BLOCKS, "aurorian_cobblestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
+    public static final RegistryObject<Block> aurorian_cobblestone_stairs = regBlockItem(BLOCKS, "aurorian_cobblestone_stairs", () -> new StairBlock(() -> aurorian_cobblestone.get().defaultBlockState(), BlockBehaviour.Properties.copy(aurorian_cobblestone.get())));
+    public static final RegistryObject<Block> aurorian_cobblestone_wall = regBlockItem(BLOCKS, "aurorian_cobblestone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
+    public static final RegistryObject<Block> aurorian_deepslate = regBlockItem(BLOCKS_GEN, "aurorian_deepslate", () -> new AurorianDeepslateBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).randomTicks()));
+    public static final RegistryObject<Block> aurorian_deepslate_slab = regBlockItem(BLOCKS, "aurorian_deepslate_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_deepslate.get())));
+    public static final RegistryObject<Block> aurorian_deepslate_stairs = regBlockItem(BLOCKS, "aurorian_deepslate_stairs", () -> new StairBlock(Blocks.DEEPSLATE::defaultBlockState, BlockBehaviour.Properties.copy(aurorian_deepslate.get())));
+    public static final RegistryObject<Block> aurorian_deepslate_wall = regBlockItem(BLOCKS, "aurorian_deepslate_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_deepslate.get())));
     public static final RegistryObject<Block> aurorian_dirt = regBlockItem(BLOCKS_GEN, "aurorian_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
     public static final RegistryObject<Block> aurorian_grass = regBlockItem(BLOCKS, "aurorian_grass", () -> new AurorianGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     public static final RegistryObject<Block> aurorian_stone = regBlockItem(BLOCKS_GEN_NL, "aurorian_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistryObject<Block> aurorian_deepslate = regBlockItem(BLOCKS_GEN, "aurorian_deepslate", () -> new AurorianDeepslateBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).randomTicks()));
-    public static final RegistryObject<Block> aurorian_deepslate_slab = regBlockItem(BLOCKS, "aurorian_deepslate_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_deepslate.get())));
-    public static final RegistryObject<Block> aurorian_deepslate_wall = regBlockItem(BLOCKS, "aurorian_deepslate_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_deepslate.get())));
+    public static final RegistryObject<Block> silentwood_fence = regBlockItemWithBurntime(BLOCKS, "silentwood_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(BlockRegistry.silentwood_planks.get())), 300);
     public static final RegistryObject<Block> silentwood_leaves = regBlockItem(BLOCKS_GEN_NL, "silentwood_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LEAVES)));
     public static final RegistryObject<Block> silentwood_log = regBlockItemWithBurntime(BLOCKS, "silentwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG)), 300);
     public static final RegistryObject<Block> silentwood_planks = regBlockItemWithBurntime(BLOCKS_GEN, "silentwood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)), 300);
-    public static final RegistryObject<Block> silentwood_slab = regBlockItemWithBurntime(BLOCKS, "silentwood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.silentwood_planks.get())), 150);
-    public static final RegistryObject<Block> silentwood_fence = regBlockItemWithBurntime(BLOCKS, "silentwood_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(BlockRegistry.silentwood_planks.get())), 300);
     public static final RegistryObject<Block> silentwood_sapling = regBlockItemWithBurntime(BLOCKS_GEN_NL_PLANT, "silentwood_sapling", () -> new SaplingBlock(new SilentwoodTreeFeature(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING)), 100);
+    public static final RegistryObject<Block> silentwood_slab = regBlockItemWithBurntime(BLOCKS, "silentwood_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.silentwood_planks.get())), 150);
+    public static final RegistryObject<Block> silentwood_stairs = regBlockItemWithBurntime(BLOCKS, "silentwood_stairs", () -> new StairBlock(() -> silentwood_planks.get().defaultBlockState(), BlockBehaviour.Properties.copy(silentwood_planks.get())), 300);
 
     // Plants
     public static final RegistryObject<Block> aurorian_tallgrass = regBlockItem(BLOCKS_GEN_NL_PLANT, "aurorian_tallgrass", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));

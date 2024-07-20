@@ -39,20 +39,21 @@ public class DataGenBlocks extends BlockStateProvider {
 
         // CUSTOM
         axisBlock((RotatedPillarBlock) BlockRegistry.silentwood_log.get());
-        simpleBlockItem(BlockRegistry.silentwood_log.get());
         barsBlock(BlockRegistry.runestone_bars.get());
-        stairsBlock((StairBlock) BlockRegistry.runestone_stairs.get(), blockTexture(BlockRegistry.runestone.get()));
-        stairsBlock((StairBlock) BlockRegistry.darkstone_stairs.get(), blockTexture(BlockRegistry.darkstone.get()));
-        slabBlock(BlockRegistry.silentwood_slab.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
+        fenceBlock(BlockRegistry.silentwood_fence.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
+        simpleBlockItem(BlockRegistry.boss_spawner.get());
+        simpleBlockItem(BlockRegistry.fog_wall.get());
+        simpleBlockItem(BlockRegistry.silentwood_log.get());
         slabBlock(BlockRegistry.aurorian_cobblestone_slab.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
         slabBlock(BlockRegistry.aurorian_deepslate_slab.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
-        fenceBlock(BlockRegistry.silentwood_fence.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
+        slabBlock(BlockRegistry.silentwood_slab.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
+        stairsBlock(BlockRegistry.aurorian_cobblestone_stairs.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
+        stairsBlock(BlockRegistry.aurorian_deepslate_stairs.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
+        stairsBlock(BlockRegistry.darkstone_stairs.get(), blockTexture(BlockRegistry.darkstone.get()));
+        stairsBlock(BlockRegistry.runestone_stairs.get(), blockTexture(BlockRegistry.runestone.get()));
+        stairsBlock(BlockRegistry.silentwood_stairs.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
         wallBlock(BlockRegistry.aurorian_cobblestone_wall.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
         wallBlock(BlockRegistry.aurorian_deepslate_wall.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
-        simpleBlockItem(BlockRegistry.runestone_stairs.get());
-        simpleBlockItem(BlockRegistry.darkstone_stairs.get());
-        simpleBlockItem(BlockRegistry.fog_wall.get());
-        simpleBlockItem(BlockRegistry.boss_spawner.get());
     }
 
     private void wallBlock(Block parent, ResourceLocation texture) {
@@ -65,6 +66,11 @@ public class DataGenBlocks extends BlockStateProvider {
         super.fenceBlock((FenceBlock) parent, texture);
         ResourceLocation location = ForgeRegistries.BLOCKS.getKey(parent);
         itemModels().getBuilder(location.getPath()).parent(new ModelFile.UncheckedModelFile(mcLoc("block/fence_inventory"))).texture("texture", texture);
+    }
+
+    private void stairsBlock(Block parent, ResourceLocation texture) {
+        super.stairsBlock((StairBlock) parent, texture);
+        simpleBlockItem(parent);
     }
 
     private void simpleBlockItem(Block parent) {
