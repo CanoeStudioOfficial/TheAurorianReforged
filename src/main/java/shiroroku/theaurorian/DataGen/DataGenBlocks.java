@@ -44,6 +44,7 @@ public class DataGenBlocks extends BlockStateProvider {
         simpleBlockItem(BlockRegistry.boss_spawner.get());
         simpleBlockItem(BlockRegistry.fog_wall.get());
         simpleBlockItem(BlockRegistry.silentwood_log.get());
+        simpleBlockItem(BlockRegistry.aurorian_portal.get());
         slabBlock(BlockRegistry.aurorian_cobblestone_slab.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
         slabBlock(BlockRegistry.aurorian_deepslate_slab.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
         slabBlock(BlockRegistry.silentwood_slab.get(), blockTexture(BlockRegistry.silentwood_planks.get()));

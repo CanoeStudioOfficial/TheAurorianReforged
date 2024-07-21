@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-20T21:52:26.612331229	Tags for minecraft:item
+// 1.19.2	2024-07-21T15:01:35.325814896	Tags for minecraft:item
 43e69fd2854424b3f652227b88a6e29f40cf59e3 data/forge/tags/items/armors/boots.json
 90a2ba48331af73e933481383f7eae9a4787de94 data/forge/tags/items/armors/chestplates.json
 84e3942f69f9c083562172fe3b20e7e9ae307151 data/forge/tags/items/armors/helmets.json
@@ -15,7 +15,7 @@ aa5d03ab212b15001009fc1bd01f1d249b7b937b data/forge/tags/items/tools/axes.json
 9fc18dace72f063d48d73181fb1b1a84bf9e0977 data/forge/tags/items/tools/bows.json
 340b18e3ceafc8a8c6762954a0425651ce7f28d4 data/forge/tags/items/tools/hoes.json
 0eb119ae83af9e5c785a5e10ebe1c00be11cbc59 data/forge/tags/items/tools/pickaxes.json
-9a84612dabb589f4ffd115650c39a688579de7f1 data/forge/tags/items/tools/shields.json
+1ce68a1a314cdfc0b2c1823dcdcd412f8cc3adc2 data/forge/tags/items/tools/shields.json
 4e0a355f6065b47bc4433431f3effcade1b3de49 data/forge/tags/items/tools/shovels.json
 e5a1b997ae0ed33e8a12a8d9a15f97e12ce9adfb data/forge/tags/items/tools/swords.json
 1a523c54854a12ed15e76951cb1079936b7fab43 data/minecraft/tags/items/arrows.json
@@ -25,7 +25,7 @@ e0e15706e22e48e41fff0ccd1f4b29f615a0f743 data/theaurorian/tags/items/aurorian_st
 aa10960d590cbb00738b837fc1795e3ba65b39e3 data/theaurorian/tags/items/cerulean_ore.json
 4c8d9e5ebf5557a2861347cf4be4ecd06d17189f data/theaurorian/tags/items/crystalline_shield_repairable.json
 7d0747d4b11fea4718a539b1f5a3f4abc43be309 data/theaurorian/tags/items/crystalline_treasure.json
-aa575171ce69eff9ac4f2e7c4ce6691f4e7dddf5 data/theaurorian/tags/items/keys.json
+ca836ecf6d43594ba23bfcac607554ed3e81e25b data/theaurorian/tags/items/keys.json
 b9be800558c6cd2dcd4d1ab3458903f1a58713f5 data/theaurorian/tags/items/lightning_immune.json
 1b4df3617da1989dcf76114e0af4220d14d1b449 data/theaurorian/tags/items/moonstone_ore.json
 237ad8f7a5d7d094905f4a04725fc91775692a0d data/theaurorian/tags/items/scrap.json

@@ -49,11 +49,11 @@ public class BlockRegistry {
     // Darkstone
     public static final RegistryObject<Block> darkstone = regBlockItem(BLOCKS_GEN, "darkstone", () -> new Block(BlockBehaviour.Properties.copy(runestone.get())));
     public static final RegistryObject<Block> darkstone_chipped = regBlockItem(BLOCKS_GEN, "darkstone_chipped", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
-    public static final RegistryObject<Block> darkstone_pillar = regBlockItem(BLOCKS_GEN, "darkstone_pillar", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
-    public static final RegistryObject<Block> darkstone_lamp = regBlockItem(BLOCKS_GEN, "darkstone_lamp", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get()).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> darkstone_stairs = regBlockItem(BLOCKS, "darkstone_stairs", () -> new StairBlock(() -> darkstone.get().defaultBlockState(), BlockBehaviour.Properties.copy(darkstone.get())));
     public static final RegistryObject<Block> darkstone_gate = regBlockItem(BLOCKS_GEN, "darkstone_gate", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
     public static final RegistryObject<Block> darkstone_gate_keyhole = regBlockItem(BLOCKS_GEN, "darkstone_gate_keyhole", () -> new DungeonGateKeyHole(ItemRegistry.darkstone_key, BlockBehaviour.Properties.copy(darkstone.get())));
+    public static final RegistryObject<Block> darkstone_lamp = regBlockItem(BLOCKS_GEN, "darkstone_lamp", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get()).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> darkstone_pillar = regBlockItem(BLOCKS_GEN, "darkstone_pillar", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
+    public static final RegistryObject<Block> darkstone_stairs = regBlockItem(BLOCKS, "darkstone_stairs", () -> new StairBlock(() -> darkstone.get().defaultBlockState(), BlockBehaviour.Properties.copy(darkstone.get())));
 
     // Natural
     public static final RegistryObject<Block> aurorian_cobblestone = regBlockItem(BLOCKS_GEN, "aurorian_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -77,33 +77,34 @@ public class BlockRegistry {
 
     // Plants
     public static final RegistryObject<Block> aurorian_tallgrass = regBlockItem(BLOCKS_GEN_NL_PLANT, "aurorian_tallgrass", () -> new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+    public static final RegistryObject<Block> bright_bulb = regBlockItem(BLOCKS_GEN_NL_PLANT, "bright_bulb", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).lightLevel((state) -> 10)));
     public static final RegistryObject<Block> lavender_block = regBlockItem(BLOCKS_GEN_NL_PLANT, "lavender_block", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
     public static final RegistryObject<Block> petunia = regBlockItem(BLOCKS_GEN_NL_PLANT, "petunia", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
     public static final RegistryObject<Block> silkberry_block = regBlockItem(BLOCKS_GEN_NL_PLANT, "silkberry_block", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
-    public static final RegistryObject<Block> bright_bulb = regBlockItem(BLOCKS_GEN_NL_PLANT, "bright_bulb", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).lightLevel((state) -> 10)));
 
     // Ores
+    public static final RegistryObject<Block> aurorian_coal_ore = regBlockItem(BLOCKS_GEN_NL, "aurorian_coal_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_ORE)));
     public static final RegistryObject<Block> cerulean_ore = regBlockItem(BLOCKS_GEN, "cerulean_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
-    public static final RegistryObject<Block> moonstone_ore = regBlockItem(BLOCKS_GEN, "moonstone_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
     public static final RegistryObject<Block> deepslate_cerulean_ore = regBlockItem(BLOCKS_GEN, "deepslate_cerulean_ore", () -> new Block(BlockBehaviour.Properties.copy(cerulean_ore.get())));
+    public static final RegistryObject<Block> moonstone_ore = regBlockItem(BLOCKS_GEN, "moonstone_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
     public static final RegistryObject<Block> deepslate_moonstone_ore = regBlockItem(BLOCKS_GEN, "deepslate_moonstone_ore", () -> new Block(BlockBehaviour.Properties.copy(moonstone_ore.get())));
     public static final RegistryObject<Block> geode = regBlockItem(BLOCKS_GEN_NL, "geode", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
-    public static final RegistryObject<Block> aurorian_coal_ore = regBlockItem(BLOCKS_GEN_NL, "aurorian_coal_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COAL_ORE)));
 
     // Machines
-    public static final RegistryObject<Block> scrapper = regBlockItem(BLOCKS, "scrapper", () -> new ScrapperBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistryObject<Block> moonlight_forge = regBlockItem(BLOCKS, "moonlight_forge", () -> new MoonlightForgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> aurorian_furnace = regBlockItem(BLOCKS, "aurorian_furnace", () -> new AurorianFurnaceBlock(BlockBehaviour.Properties.copy(Blocks.FURNACE)));
-    public static final RegistryObject<Block> silentwood_crafting_table = regBlockItem(BLOCKS, "silentwood_crafting_table", () -> new SilentwoodCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
     public static final RegistryObject<Block> boss_spawner = regBlockItem(BLOCKS, "boss_spawner", () -> new BossSpawnerBlock(BlockBehaviour.Properties.copy(Blocks.SPAWNER)));
+    public static final RegistryObject<Block> moonlight_forge = regBlockItem(BLOCKS, "moonlight_forge", () -> new MoonlightForgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistryObject<Block> scrapper = regBlockItem(BLOCKS, "scrapper", () -> new ScrapperBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> silentwood_chest = regBlockItem(BLOCKS, "silentwood_chest", () -> new SilentwoodChestBlock(BlockBehaviour.Properties.copy(Blocks.CHEST)));
+    public static final RegistryObject<Block> silentwood_crafting_table = regBlockItem(BLOCKS, "silentwood_crafting_table", () -> new SilentwoodCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)));
 
     // Other
-    public static final RegistryObject<Block> fog_wall = regBlockItem(BLOCKS, "fog_wall", () -> new FogWallBlock(BlockBehaviour.Properties.copy(runestone.get()).noCollission().noOcclusion().lightLevel((state) -> 10)));
     public static final RegistryObject<Block> aurorian_portal = regBlockItem(BLOCKS, "aurorian_portal", () -> new AurorianPortal(BlockBehaviour.Properties.copy(Blocks.NETHER_PORTAL)));
-    public static final RegistryObject<Block> moon_gem = regBlockItem(BLOCKS, "moon_gem", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+    public static final RegistryObject<Block> aurorian_portal_frame = regBlockItem(BLOCKS_GEN, "aurorian_portal_frame", () -> new Block(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
     public static final RegistryObject<Block> chimney = regBlockItem(BLOCKS, "chimney", () -> new ChimneyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> crystal = regBlockItem(BLOCKS, "crystal", () -> new CrystalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().lightLevel((state) -> 15).sound(SoundType.GLASS)));
+    public static final RegistryObject<Block> fog_wall = regBlockItem(BLOCKS, "fog_wall", () -> new FogWallBlock(BlockBehaviour.Properties.copy(runestone.get()).noCollission().noOcclusion().lightLevel((state) -> 10)));
+    public static final RegistryObject<Block> moon_gem = regBlockItem(BLOCKS, "moon_gem", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
     public static void register(IEventBus bus) {
         BLOCKS_GEN.register(bus);

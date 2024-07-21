@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-19T17:43:04.849611083	LootTables
+// 1.19.2	2024-07-21T15:01:35.326140428	LootTables
 a51a687ced84a16c646af8c74ece31bba237c0c8 data/theaurorian/loot_tables/blocks/aurorian_coal_ore.json
 3454003c9e54aba310c93ea27e5ec39d993ff312 data/theaurorian/loot_tables/blocks/aurorian_cobblestone.json
 eaeb954fe7f2f6fcfe9e35e1f607afa0cec4f63e data/theaurorian/loot_tables/blocks/aurorian_cobblestone_slab.json
@@ -11,6 +11,7 @@ e6c0e19a165ae78e72008eb6984d658d21142887 data/theaurorian/loot_tables/blocks/aur
 52085d6b10f385c61c25c0dfe1ba908429b41139 data/theaurorian/loot_tables/blocks/aurorian_dirt.json
 1f80ddd3df4f04811b0abdd0c3567409d881bc18 data/theaurorian/loot_tables/blocks/aurorian_furnace.json
 8d80a097dc06bd35d660b6ec9a05a014deab357e data/theaurorian/loot_tables/blocks/aurorian_grass.json
+0199ee8ef95ab2ae92fb2b1a5a49fbcdfc1a7b9c data/theaurorian/loot_tables/blocks/aurorian_portal_frame.json
 0ee91bcb7204625ca8cc06321adb5e3724e99407 data/theaurorian/loot_tables/blocks/aurorian_stone.json
 7c0145cdd8b2c269a230bedec86c7b699b5e73c9 data/theaurorian/loot_tables/blocks/aurorian_tallgrass.json
 d2bbeeb320d30929a909158ce363e1b3416e2747 data/theaurorian/loot_tables/blocks/bright_bulb.json

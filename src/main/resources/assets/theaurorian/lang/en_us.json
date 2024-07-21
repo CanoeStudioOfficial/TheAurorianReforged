@@ -61,6 +61,8 @@
   "block.theaurorian.silentwood_slab": "Silentwood Slab",
   "block.theaurorian.silentwood_stairs": "Silentwood Stairs",
   "block.theaurorian.silkberry_block": "Silkberry",
+  "block.theaurorian.aurorian_portal_frame": "Aurorian Portal Frame",
+  "block.theaurorian.aurorian_portal": "Aurorian Portal",
   "enchantment.theaurorian.lightning": "Lightning Damage",
   "enchantment.theaurorian.lightning.desc": "Increases damage against armored and metallic creatures",
   "enchantment.theaurorian.lightning_resistance": "Lightning Resistance",
