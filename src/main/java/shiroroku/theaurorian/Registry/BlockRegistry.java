@@ -53,7 +53,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> darkstone_lamp = regBlockItem(BLOCKS_GEN, "darkstone_lamp", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get()).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> darkstone_stairs = regBlockItem(BLOCKS, "darkstone_stairs", () -> new StairBlock(() -> darkstone.get().defaultBlockState(), BlockBehaviour.Properties.copy(darkstone.get())));
     public static final RegistryObject<Block> darkstone_gate = regBlockItem(BLOCKS_GEN, "darkstone_gate", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
-    public static final RegistryObject<Block> darkstone_gate_keyhole = regBlockItem(BLOCKS_GEN, "darkstone_gate_keyhole", () -> new DungeonGateKeyHole(ItemRegistry.darkstone_key, BlockBehaviour.Properties.copy(darkstone.get()), true));
+    public static final RegistryObject<Block> darkstone_gate_keyhole = regBlockItem(BLOCKS_GEN, "darkstone_gate_keyhole", () -> new DungeonGateKeyHole(ItemRegistry.darkstone_key, BlockBehaviour.Properties.copy(darkstone.get())));
 
     // Natural
     public static final RegistryObject<Block> aurorian_cobblestone = regBlockItem(BLOCKS_GEN, "aurorian_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
