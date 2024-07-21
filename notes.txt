@@ -13,6 +13,5 @@
     - farming
     - dungeon locator and boss weapons
     - aurorian portal
-    - double chest in runestone dungeon has no loot
     - undead knights missing gear
     - probably lots more im forgetting...
