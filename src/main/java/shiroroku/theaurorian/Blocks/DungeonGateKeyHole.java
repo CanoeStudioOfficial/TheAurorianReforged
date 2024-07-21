@@ -21,6 +21,8 @@ import java.util.function.Supplier;
 
 public class DungeonGateKeyHole extends Block {
 
+    private static final int radius = 3;
+    private static final double pick_failure_chance = 0.66;
     private final Supplier<Item> key;
     private final boolean can_lockpick;
 
@@ -39,7 +41,6 @@ public class DungeonGateKeyHole extends Block {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         ItemStack usedItem = pPlayer.getItemInHand(InteractionHand.MAIN_HAND);
         boolean hasItem = (can_lockpick && usedItem.is(ItemRegistry.lockpicks.get())) || usedItem.is(key.get());
-
         if (!hasItem) {
             if (can_lockpick) {
                 pPlayer.displayClientMessage(Component.translatable("string.theaurorian.gate_key_lockpick"), true);
@@ -52,22 +53,21 @@ public class DungeonGateKeyHole extends Block {
         if (!pLevel.isClientSide()) {
             usedItem.hurtAndBreak(1, pPlayer, (player) -> player.broadcastBreakEvent(InteractionHand.MAIN_HAND));
 
-            // 2/3 of the time the lockpick will not unlock the gate
+            // Pick chance
             if (can_lockpick && usedItem.is(ItemRegistry.lockpicks.get())) {
-                if (ModUtil.randomChanceOf(pPlayer.getRandom(), 0.66)) {
+                if (ModUtil.randomChanceOf(pPlayer.getRandom(), pick_failure_chance)) {
                     return InteractionResult.FAIL;
                 }
             }
 
-            for (int y = -3; y <= 3; y++) {
-                for (int xz = -3; xz <= 3; xz++) {
-                    BlockPos posx = pPos.offset(xz, y, 0);
-                    BlockPos posz = pPos.offset(0, y, xz);
-                    if (pLevel.getBlockState(posx).is(DataGenBlocksTags.DUNGEON_GATES)) {
-                        pLevel.destroyBlock(posx, false);
-                    }
-                    if (pLevel.getBlockState(posz).is(DataGenBlocksTags.DUNGEON_GATES)) {
-                        pLevel.destroyBlock(posz, false);
+            // Break gates
+            for (int y = -radius; y <= radius; y++) {
+                for (int x = -radius; x <= radius; x++) {
+                    for (int z = -radius; z <= radius; z++) {
+                        BlockPos posx = pPos.offset(x, y, z);
+                        if (pLevel.getBlockState(posx).is(DataGenBlocksTags.DUNGEON_GATES)) {
+                            pLevel.destroyBlock(posx, false);
+                        }
                     }
                 }
             }
