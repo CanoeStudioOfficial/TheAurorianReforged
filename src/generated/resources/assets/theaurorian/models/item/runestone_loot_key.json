@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "theaurorian:item/key",
   "textures": {
     "layer0": "theaurorian:item/runestone_loot_key"
   }

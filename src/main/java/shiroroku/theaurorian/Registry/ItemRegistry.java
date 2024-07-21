@@ -36,6 +36,7 @@ public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS_GEN_HANDHELD = DeferredRegister.create(ForgeRegistries.ITEMS, TheAurorian.MODID); // item with handheld model (tools, sticks)
     public static final DeferredRegister<Item> ITEMS_GEN_SHIELD = DeferredRegister.create(ForgeRegistries.ITEMS, TheAurorian.MODID); // adds blocking functionality and models
     public static final DeferredRegister<Item> ITEMS_SPAWN_EGGS = DeferredRegister.create(ForgeRegistries.ITEMS, TheAurorian.MODID);
+    public static final DeferredRegister<Item> ITEMS_GEN_KEY = DeferredRegister.create(ForgeRegistries.ITEMS, TheAurorian.MODID);
     public static final DeferredRegister<Item> ITEMS_GEN_TEA = DeferredRegister.create(ForgeRegistries.ITEMS, TheAurorian.MODID); // tea
 
     // Ingredients
@@ -51,12 +52,12 @@ public class ItemRegistry {
     public static final RegistryObject<Item> moonstone_ingot = ITEMS_GEN.register("moonstone_ingot", basicItem());
     public static final RegistryObject<Item> moonstone_nugget = ITEMS_GEN.register("moonstone_nugget", basicItem());
     public static final RegistryObject<Item> plant_fiber = ITEMS_GEN.register("plant_fiber", basicItem());
-    public static final RegistryObject<Item> runestone_key = ITEMS_GEN.register("runestone_key", basicItem(defaultProp().durability(3).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> runestone_loot_key = ITEMS_GEN.register("runestone_loot_key", basicItem(defaultProp().durability(1).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> moon_temple_key = ITEMS_GEN.register("moon_temple_key", basicItem(defaultProp().durability(3).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> darkstone_key = ITEMS_GEN.register("darkstone_key", basicItem(defaultProp().durability(3).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> runestone_key = ITEMS_GEN_KEY.register("runestone_key", basicItem(defaultProp().durability(3).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> runestone_loot_key = ITEMS_GEN_KEY.register("runestone_loot_key", basicItem(defaultProp().durability(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> moon_temple_key = ITEMS_GEN_KEY.register("moon_temple_key", basicItem(defaultProp().durability(3).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> darkstone_key = ITEMS_GEN_KEY.register("darkstone_key", basicItem(defaultProp().durability(3).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> moon_temple_key_fragment = ITEMS_GEN.register("moon_temple_key_fragment", basicItem());
-    public static final RegistryObject<Item> moon_temple_interior_key = ITEMS_GEN.register("moon_temple_interior_key", basicItem(defaultProp().durability(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> moon_temple_interior_key = ITEMS_GEN_KEY.register("moon_temple_interior_key", basicItem(defaultProp().durability(1).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> silentwood_stick = ITEMS_GEN_HANDHELD.register("silentwood_stick", basicItemWithBurntime(defaultProp(), 100));
     public static final RegistryObject<Item> umbra_ingot = ITEMS_GEN.register("umbra_ingot", basicItem());
     public static final RegistryObject<Item> umbra_scrap = ITEMS_GEN.register("umbra_scrap", basicItem());
@@ -191,6 +192,7 @@ public class ItemRegistry {
     public static void register(IEventBus bus) {
         ItemRegistry.ITEMS.register(bus);
         ItemRegistry.ITEMS_GEN.register(bus);
+        ItemRegistry.ITEMS_GEN_KEY.register(bus);
         ItemRegistry.ITEMS_GEN_HANDHELD.register(bus);
         ItemRegistry.ITEMS_GEN_SHIELD.register(bus);
         ItemRegistry.ITEMS_SPAWN_EGGS.register(bus);

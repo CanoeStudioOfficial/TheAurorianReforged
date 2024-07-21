@@ -40,6 +40,7 @@ public class DataGenItemsTags extends TagsProvider<Item> {
     @Override
     protected void addTags() {
         ItemRegistry.ITEMS_GEN_SHIELD.getEntries().stream().map(Supplier::get).forEach((shield) -> this.tag(Tags.Items.TOOLS_SHIELDS).add(shield));
+        ItemRegistry.ITEMS_GEN_KEY.getEntries().stream().map(Supplier::get).forEach((key) -> this.tag(KEYS).add(key));
         this.tag(LIGHTNING_IMMUNE).add(Items.LEATHER_BOOTS, Items.LEATHER_CHESTPLATE, Items.LEATHER_HELMET, Items.LEATHER_LEGGINGS);
         this.tag(ABSORPTION_ORB_REPAIRABLE).addTags(Tags.Items.TOOLS, Tags.Items.ARMORS, Tags.Items.SHEARS);
         this.tag(AURORIAN_STONES).add(BlockRegistry.aurorian_cobblestone.get().asItem());
@@ -52,10 +53,6 @@ public class DataGenItemsTags extends TagsProvider<Item> {
         this.tag(CRYSTALLINE_PICKAXE_TREASURE).add(Items.RAW_GOLD);
         this.tag(CRYSTALLINE_PICKAXE_TREASURE).add(Items.RAW_IRON);
         this.tag(CRYSTALLINE_SHIELD_REPAIRABLE).addTags(Tags.Items.TOOLS, Tags.Items.ARMORS, Tags.Items.SHEARS);
-        this.tag(KEYS).add(ItemRegistry.runestone_key.get());
-        this.tag(KEYS).add(ItemRegistry.runestone_loot_key.get());
-        this.tag(KEYS).add(ItemRegistry.moon_temple_key.get());
-        this.tag(KEYS).add(ItemRegistry.moon_temple_interior_key.get());
         this.tag(SCRAP).add(ItemRegistry.aurorianite_scrap.get());
         this.tag(SCRAP).add(ItemRegistry.crystalline_scrap.get());
         this.tag(SCRAP).add(ItemRegistry.umbra_scrap.get());
