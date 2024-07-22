@@ -100,7 +100,7 @@ public class BlockRegistry {
 
     // Other
     public static final RegistryObject<Block> aurorian_portal = regBlockItem(BLOCKS, "aurorian_portal", () -> new AurorianPortal(BlockBehaviour.Properties.copy(Blocks.NETHER_PORTAL)));
-    public static final RegistryObject<Block> aurorian_portal_frame = regBlockItem(BLOCKS_GEN, "aurorian_portal_frame", () -> new Block(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
+    public static final RegistryObject<Block> aurorian_portal_frame = regBlockItem(BLOCKS_GEN, "aurorian_portal_frame", () -> new AurorianPortalFrame(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
     public static final RegistryObject<Block> chimney = regBlockItem(BLOCKS, "chimney", () -> new ChimneyBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
     public static final RegistryObject<Block> crystal = regBlockItem(BLOCKS, "crystal", () -> new CrystalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().lightLevel((state) -> 15).sound(SoundType.GLASS)));
     public static final RegistryObject<Block> fog_wall = regBlockItem(BLOCKS, "fog_wall", () -> new FogWallBlock(BlockBehaviour.Properties.copy(runestone.get()).noCollission().noOcclusion().lightLevel((state) -> 10)));

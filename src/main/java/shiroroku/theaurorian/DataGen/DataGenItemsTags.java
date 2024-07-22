@@ -23,6 +23,7 @@ public class DataGenItemsTags extends TagsProvider<Item> {
     public static final TagKey<Item> TEA = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "tea"));
     public static final TagKey<Item> KEYS = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "keys"));
     public static final TagKey<Item> SCRAP = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "scrap"));
+    public static final TagKey<Item> PORTAL_LIGHTERS = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "portal_lighters"));
     public static final TagKey<Item> ABSORPTION_ORB_REPAIRABLE = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "absorption_orb_repairable"));
     public static final TagKey<Item> CRYSTALLINE_SHIELD_REPAIRABLE = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "crystalline_shield_repairable"));
     public static final TagKey<Item> SPECTRAL_ARMOR = ItemTags.create(new ResourceLocation(TheAurorian.MODID, "spectral_armor"));
@@ -41,6 +42,7 @@ public class DataGenItemsTags extends TagsProvider<Item> {
     protected void addTags() {
         ItemRegistry.ITEMS_GEN_SHIELD.getEntries().stream().map(Supplier::get).forEach((shield) -> this.tag(Tags.Items.TOOLS_SHIELDS).add(shield));
         ItemRegistry.ITEMS_GEN_KEY.getEntries().stream().map(Supplier::get).forEach((key) -> this.tag(KEYS).add(key));
+        this.tag(PORTAL_LIGHTERS).add(Items.FLINT_AND_STEEL);
         this.tag(LIGHTNING_IMMUNE).add(Items.LEATHER_BOOTS, Items.LEATHER_CHESTPLATE, Items.LEATHER_HELMET, Items.LEATHER_LEGGINGS);
         this.tag(ABSORPTION_ORB_REPAIRABLE).addTags(Tags.Items.TOOLS, Tags.Items.ARMORS, Tags.Items.SHEARS);
         this.tag(AURORIAN_STONES).add(BlockRegistry.aurorian_cobblestone.get().asItem());

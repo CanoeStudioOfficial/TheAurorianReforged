@@ -1,7 +1,11 @@
 package shiroroku.theaurorian;
 
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +20,7 @@ public class TheAurorian {
     public static final String MODID = "theaurorian";
     public static final Logger LOGGER = LogManager.getLogger();
 
+    public static final ResourceKey<Level> the_aurorian = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(TheAurorian.MODID, "the_aurorian"));
     public static final CreativeModeTab CREATIVETAB = new CreativeModeTab(MODID) {
         @Override
         public ItemStack makeIcon() {
@@ -34,6 +39,7 @@ public class TheAurorian {
         RecipeRegistry.SERIALIZERS.register(bus);
         EntityRegistry.ENTITIES.register(bus);
         EnchantRegistry.ENCHANTMENTS.register(bus);
+        POIRegistry.POIS.register(bus);
     }
 
 }
