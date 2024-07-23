@@ -146,6 +146,8 @@ public class ItemRegistry {
     public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", () -> new MirrorOGItem(defaultProp().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> ruby_amulet = ITEMS_GEN.register("ruby_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> emerald_amulet = ITEMS_GEN.register("emerald_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
 
     // Misc
     public static final RegistryObject<Item> spawn_egg_dungeon_keeper = ITEMS_SPAWN_EGGS.register("spawn_egg_dungeon_keeper", () -> new ForgeSpawnEggItem(EntityRegistry.dungeon_keeper, 8117755, 3363951, defaultProp()));

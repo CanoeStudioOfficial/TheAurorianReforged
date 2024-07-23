@@ -1,10 +1,8 @@
 {
-  "name": "Dungeons!",
   "icon": "theaurorian:lockpicks",
   "x": -40,
   "y": 40,
   "children": [
     "theaurorian:dungeon_runestone"
-  ],
-  "description": "The Aurorian has a dungeon progression system, meaning you must complete one dungeon to unlock another.\n\nDungeon Walls are unbreakable! (At least until you beat them all) And each on has a unique boss with unique loot.\n\nYou can find more information for each dungeon in the next entries!\n\n\n\n§9The Runestone Dungeon is the first, craft some Lockpicks to pick the door!"
+  ]
 }

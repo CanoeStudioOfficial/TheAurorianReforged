@@ -9,12 +9,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.phys.Vec2;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import shiroroku.theaurorian.TheAurorian;
 import shiroroku.theaurorian.Util.RenderUtil;
 import shiroroku.theaurorian.Util.SimpleTimer;
 
 import java.util.List;
 
 public class MirrorNode {
+    private static final Logger log = LoggerFactory.getLogger(MirrorNode.class);
+
     public static enum NODE_BORDER {
         REGULAR("regular"),
         BLUE("blue"),
@@ -71,6 +76,11 @@ public class MirrorNode {
     public void renderLines(PoseStack pose, SimpleTimer lineTimer) {
         children.forEach(childKey -> {
             MirrorNode child = MirrorDataLoader.NODES.get(childKey);
+            if(child == null){
+                TheAurorian.LOGGER.error("Mirror of Guidance couldnt find child [{}] for [{}]", childKey, name);
+                return;
+            }
+
             Vec2 start = new Vec2(x, y);
             Vec2 end = new Vec2(child.x, child.y);
             int count = (int) Math.sqrt(Mth.square(end.x - start.x) + Mth.square(end.y - start.y)) / 10;

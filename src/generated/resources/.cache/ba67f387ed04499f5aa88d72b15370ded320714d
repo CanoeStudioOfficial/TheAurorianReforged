@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-20T21:52:26.609984259	Item Models: theaurorian
+// 1.19.2	2024-07-23T11:19:31.464056393	Item Models: theaurorian
 a95bbdcaf10620b09f246c54e853176b212124ff assets/theaurorian/models/item/absorption_orb.json
 9a390d09acfa4a0621298f03a11e6a910b91f71f assets/theaurorian/models/item/aurorian_coal.json
 a7b76beb25c86b4f970a22a6356d6768f7618046 assets/theaurorian/models/item/aurorian_coal_nugget.json
@@ -41,6 +41,7 @@ c8075fb0e11b586646bdf0a5c143ac0e017e76a6 assets/theaurorian/models/item/crystall
 3dfd8e891750c020cb35f345f9ed7625b29f4cfc assets/theaurorian/models/item/crystalline_shield_blocking.json
 9cdea7e95dd806bf1108b3c7414694a3282c5dca assets/theaurorian/models/item/cup.json
 940f20081be56c8317f653ab905adae7134124aa assets/theaurorian/models/item/darkstone_key.json
+dcdff0200bc78e87312b14742d37b9687558d9f7 assets/theaurorian/models/item/emerald_amulet.json
 b43f3a128d21c2d52241c3bc9e9b5dcf64796c48 assets/theaurorian/models/item/keepers_amulet.json
 4b42f79515878c203003e87991c19bbf16ca2be9 assets/theaurorian/models/item/knight_boots.json
 b638b1fa08641c3ee003cdc9669e778d6743342f assets/theaurorian/models/item/knight_chestplate.json
@@ -67,6 +68,7 @@ f60c9d928b85201d1b7b89fdc9269f7d02ba2c9b assets/theaurorian/models/item/moonston
 a34f16939e6c312886ee5a92cf7cb2c9ec98fe06 assets/theaurorian/models/item/moonstone_sword.json
 7e09bf354060aeaa4f14aa8908e4ba0dc336874b assets/theaurorian/models/item/petunia_tea.json
 42d08149b4c6202b336bbd55e971bcf57e1c1c22 assets/theaurorian/models/item/plant_fiber.json
+b54abd7bcca56a1029f05952181158daa46fac98 assets/theaurorian/models/item/ruby_amulet.json
 fca2a295d84eed7c3f78465fbb47ee347af1f2d4 assets/theaurorian/models/item/runestone_key.json
 85583caa894357e960e851f8a51a3f827201de14 assets/theaurorian/models/item/runestone_loot_key.json
 f00e8a9bd4d4c507784996b0bbd8e73ea23c09ab assets/theaurorian/models/item/sapphire_amulet.json

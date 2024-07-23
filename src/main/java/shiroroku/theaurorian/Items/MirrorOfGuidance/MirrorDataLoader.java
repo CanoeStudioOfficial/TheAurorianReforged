@@ -22,6 +22,7 @@ public class MirrorDataLoader extends SimpleJsonResourceReloadListener {
 
     public static final Map<ResourceLocation, MirrorNode> NODES = new HashMap<>();
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+    public static boolean loaded = false;
 
     public MirrorDataLoader() {
         super(GSON, "mirror_of_guidance");
@@ -29,12 +30,12 @@ public class MirrorDataLoader extends SimpleJsonResourceReloadListener {
 
     @Override
     protected void apply(Map<ResourceLocation, JsonElement> pObject, ResourceManager pResourceManager, ProfilerFiller pProfiler) {
+        loaded = false;
         NODES.clear();
         for (Map.Entry<ResourceLocation, JsonElement> file : pObject.entrySet()) {
             try {
                 JsonObject json = file.getValue().getAsJsonObject();
 
-                Component name = Component.literal(json.get("name").getAsString());
                 Item icon = ForgeRegistries.ITEMS.getValue(ResourceLocation.tryParse(json.get("icon").getAsString()));
                 int x = json.get("x").getAsInt();
                 int y = json.get("y").getAsInt();
@@ -46,7 +47,10 @@ public class MirrorDataLoader extends SimpleJsonResourceReloadListener {
                 if (json.has("border")) {
                     border = MirrorNode.NODE_BORDER.valueOf(json.get("border").getAsString());
                 }
-                Component description = Component.literal(json.get("description").getAsString());
+
+                String langKey = String.format("mirror_of_guidance.%s.%s", file.getKey().getNamespace(), file.getKey().getPath());
+                Component name = Component.translatable(langKey + ".name");
+                Component description = Component.translatable(langKey + ".desc");
 
                 // Flip y so +y is goes up
                 MirrorNode node = new MirrorNode(name, icon, x, -y, description, children, border);
@@ -56,5 +60,6 @@ public class MirrorDataLoader extends SimpleJsonResourceReloadListener {
                 TheAurorian.LOGGER.error("Failed to load Mirror Of Guidance [{}]: {}", file.getKey(), e.getMessage());
             }
         }
+        loaded = true;
     }
 }

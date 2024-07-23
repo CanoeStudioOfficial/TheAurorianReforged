@@ -189,7 +189,9 @@
   "item.theaurorian.umbra_scrap": "Umbra Scrap",
   "item.theaurorian.umbra_shield": "Umbra Shield",
   "item.theaurorian.umbra_shield.desc": "Flamethrower on a shield!?!?",
-  "item.theaurorian.sapphire_amulet" : "Sapphire Amulet",
+  "item.theaurorian.sapphire_amulet": "Sapphire Amulet",
+  "item.theaurorian.ruby_amulet": "Ruby Amulet",
+  "item.theaurorian.emerald_amulet": "Emerald Amulet",
   "itemGroup.theaurorian": "The Aurorian",
   "string.theaurorian.gate_key": "I need a key to open this...",
   "string.theaurorian.gate_key_lockpick": "I need a key or Lockpicks to open this...",
@@ -198,5 +200,15 @@
   "string.theaurorian.tooltip.aurorian_steel.next_enchant": "Next Enchantment: ",
   "string.theaurorian.tooltip.moonstone": "Tools use less durability at night and more during the day",
   "string.theaurorian.tooltip.more_info": "Hold shift for more info",
-  "string.theaurorian.tooltip.spectral": "Has a %s%% chance to cleanse negative effects when attacking!"
+  "string.theaurorian.tooltip.spectral": "Has a %s%% chance to cleanse negative effects when attacking!",
+  "mirror_of_guidance.theaurorian.aurorian.name": "The Aurorian",
+  "mirror_of_guidance.theaurorian.aurorian.desc": "Welcome to the Aurorian!\n\nThis mirror serves as a guide for those who want to progress in the mod. No entry is hidden, and this mirror saves no data!\n\nSomewhat like an in-game wiki! :)\n\n\n\n\n\n\n\n§9thank u for playing! <3 - Elise(Shiroroku)",
+  "mirror_of_guidance.theaurorian.dungeon_runestone.name": "Runestone Dungeon",
+  "mirror_of_guidance.theaurorian.dungeon_runestone.desc": "The Runestone Dungeon is a cylindrical tower, with each floor containing loot and enemies.\n\nThis dungeons warden is the §9Dungeon§r §9Keeper§r, an undead servant of the Moon Queen who is adept at archery, as well as swordfighting.\n\n\n\n§9Maybe consider bringing a shield? Oh and a Scrapper!§r",
+  "mirror_of_guidance.theaurorian.aurorianite.name": "Aurorianite",
+  "mirror_of_guidance.theaurorian.aurorianite.desc": "Aurorianite tools can mainly be found in the §9Runestone§r §9Dungeon§r.",
+  "mirror_of_guidance.theaurorian.dungeons.name": "Dungeons!",
+  "mirror_of_guidance.theaurorian.dungeons.desc": "The Aurorian has a dungeon progression system, meaning you must complete one dungeon to unlock another.\n\nDungeon Walls are unbreakable! (At least until you beat them all) And each on has a unique boss with unique loot.\n\nYou can find more information for each dungeon in the next entries!\n\n\n\n§9The Runestone Dungeon is the first, craft some Lockpicks to pick the door!",
+  "mirror_of_guidance.theaurorian.ores.name": "Ores",
+  "mirror_of_guidance.theaurorian.ores.desc": "New ores, of course!\n\nUnder the soil of The Aurorian you can find §9Cerulean§r, §9Moonstone§r, and rarely §9Geodes§r.\n\nEach have their own particular uses which you can learn more about in the next entries."
 }

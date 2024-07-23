@@ -57,6 +57,12 @@ public class MirrorOGScreen extends Screen {
     }
 
     @Override
+    public void onClose() {
+        super.onClose();
+        setSelectedNode(null);
+    }
+
+    @Override
     public void render(PoseStack pose, int pMouseX, int pMouseY, float pPartialTick) {
         SoundTimer.tick(pPartialTick);
         LineTimer.tick(pPartialTick);

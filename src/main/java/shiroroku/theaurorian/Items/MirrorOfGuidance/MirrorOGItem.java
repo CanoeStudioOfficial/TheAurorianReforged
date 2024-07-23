@@ -16,7 +16,7 @@ public class MirrorOGItem extends BaseAurorianItem {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-        if (world.isClientSide()) {
+        if (world.isClientSide() && MirrorDataLoader.loaded) {
             Minecraft.getInstance().setScreen(new MirrorOGScreen());
         }
         return super.use(world, player, hand);
