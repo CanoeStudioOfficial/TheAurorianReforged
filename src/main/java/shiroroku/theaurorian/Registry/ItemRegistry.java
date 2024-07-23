@@ -22,6 +22,7 @@ import shiroroku.theaurorian.Entities.AurorianArrow.CrystalArrowEntity;
 import shiroroku.theaurorian.Items.AurorianSteel.*;
 import shiroroku.theaurorian.Items.*;
 import shiroroku.theaurorian.Items.Loot.*;
+import shiroroku.theaurorian.Items.MirrorOfGuidance.MirrorOGItem;
 import shiroroku.theaurorian.Items.Moonstone.*;
 import shiroroku.theaurorian.Items.Spectral.SpectralArmor;
 import shiroroku.theaurorian.TheAurorian;
@@ -143,7 +144,7 @@ public class ItemRegistry {
 
     // Trinkets
     public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", basicItem(defaultProp().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", () -> new MirrorOGItem(defaultProp().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", basicItem(defaultProp().rarity(Rarity.EPIC)));
 
     // Misc

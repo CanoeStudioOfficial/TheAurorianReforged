@@ -1,0 +1,13 @@
+{
+  "name": "The Aurorian",
+  "icon": "theaurorian:aurorian_grass",
+  "x": 0,
+  "y": -20,
+  "border" : "GOLD",
+  "children": [
+    "theaurorian:dungeons",
+    "theaurorian:ores"
+  ],
+  "description": "Welcome to the Aurorian!\n\nThis mirror serves as a guide for those who want to progress in the mod. No entry is hidden, and this mirror saves no data!\n\nSomewhat like an in-game wiki! :)\n\n\n\n\n\n\n\n§9thank u for playing! <3 - Elise(Shiroroku)"
+
+}

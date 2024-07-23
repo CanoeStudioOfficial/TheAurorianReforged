@@ -1,0 +1,12 @@
+{
+  "name": "Ores",
+  "icon": "theaurorian:cerulean_ore",
+  "x": 40,
+  "y": 40,
+  "children": [
+    "theaurorian:ore_cerulean",
+    "theaurorian:ore_moonstone",
+    "theaurorian:ore_geode"
+  ],
+  "description": "New ores, of course!\n\nUnder the soil of The Aurorian you can find §9Cerulean§r, §9Moonstone§r, and rarely §9Geodes§r.\n\nEach have their own particular uses which you can learn more about in the next entries."
+}

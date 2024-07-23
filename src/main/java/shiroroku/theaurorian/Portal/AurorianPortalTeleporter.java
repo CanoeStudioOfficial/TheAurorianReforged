@@ -45,32 +45,31 @@ public class AurorianPortalTeleporter implements ITeleporter {
 
     @Override
     public PortalInfo getPortalInfo(Entity entity, ServerLevel level, Function<ServerLevel, PortalInfo> defaultPortalInfo) {
-        boolean destinationIsUG = level.dimension() == TheAurorian.the_aurorian;
-        if (entity.level.dimension() != TheAurorian.the_aurorian && !destinationIsUG) {
+        if (entity.level.dimension() != TheAurorian.the_aurorian && !(level.dimension() == TheAurorian.the_aurorian)) {
             return null;
-        } else {
-            WorldBorder border = level.getWorldBorder();
-            double minX = Math.max(-2.9999872E7D, border.getMinX() + 16.0D);
-            double minZ = Math.max(-2.9999872E7D, border.getMinZ() + 16.0D);
-            double maxX = Math.min(2.9999872E7D, border.getMaxX() - 16.0D);
-            double maxZ = Math.min(2.9999872E7D, border.getMaxZ() - 16.0D);
-            double coordinateDifference = DimensionType.getTeleportationScale(entity.level.dimensionType(), level.dimensionType());
-            BlockPos blockpos = new BlockPos(Mth.clamp(entity.getX() * coordinateDifference, minX, maxX), entity.getY(), Mth.clamp(entity.getZ() * coordinateDifference, minZ, maxZ));
-            return this.getOrMakePortal(entity, blockpos).map((result) -> {
-                BlockState blockstate = entity.level.getBlockState(entity.portalEntrancePos);
-                Direction.Axis axis;
-                Vec3 vector3d;
-                if (blockstate.hasProperty(BlockStateProperties.HORIZONTAL_AXIS)) {
-                    axis = blockstate.getValue(BlockStateProperties.HORIZONTAL_AXIS);
-                    BlockUtil.FoundRectangle rectangle = BlockUtil.getLargestRectangleAround(entity.portalEntrancePos, axis, 21, Direction.Axis.Y, 21, (pos) -> entity.level.getBlockState(pos) == blockstate);
-                    vector3d = PortalShape.getRelativePosition(rectangle, axis, entity.position(), entity.getDimensions(entity.getPose()));
-                } else {
-                    axis = Direction.Axis.X;
-                    vector3d = new Vec3(0.5D, 0.0D, 0.0D);
-                }
-                return PortalShape.createPortalInfo(level, result, axis, vector3d, entity.getDimensions(entity.getPose()), entity.getDeltaMovement(), entity.getYRot(), entity.getXRot());
-            }).orElse(null);
         }
+
+        WorldBorder border = level.getWorldBorder();
+        double minX = Math.max(-2.9999872E7D, border.getMinX() + 16.0D);
+        double minZ = Math.max(-2.9999872E7D, border.getMinZ() + 16.0D);
+        double maxX = Math.min(2.9999872E7D, border.getMaxX() - 16.0D);
+        double maxZ = Math.min(2.9999872E7D, border.getMaxZ() - 16.0D);
+        double coordinateDifference = DimensionType.getTeleportationScale(entity.level.dimensionType(), level.dimensionType());
+        BlockPos blockPos = new BlockPos(Mth.clamp(entity.getX() * coordinateDifference, minX, maxX), entity.getY(), Mth.clamp(entity.getZ() * coordinateDifference, minZ, maxZ));
+        return this.getOrMakePortal(entity, blockPos).map((result) -> {
+            BlockState blockState = entity.level.getBlockState(entity.portalEntrancePos);
+            Direction.Axis axis;
+            Vec3 vector3d;
+            if (blockState.hasProperty(BlockStateProperties.HORIZONTAL_AXIS)) {
+                axis = blockState.getValue(BlockStateProperties.HORIZONTAL_AXIS);
+                BlockUtil.FoundRectangle rectangle = BlockUtil.getLargestRectangleAround(entity.portalEntrancePos, axis, 21, Direction.Axis.Y, 21, (pos) -> entity.level.getBlockState(pos) == blockState);
+                vector3d = PortalShape.getRelativePosition(rectangle, axis, entity.position(), entity.getDimensions(entity.getPose()));
+            } else {
+                axis = Direction.Axis.X;
+                vector3d = new Vec3(0.5D, 0.0D, 0.0D);
+            }
+            return PortalShape.createPortalInfo(level, result, axis, vector3d, entity.getDimensions(entity.getPose()), entity.getDeltaMovement(), entity.getYRot(), entity.getXRot());
+        }).orElse(null);
     }
 
 
@@ -82,10 +81,10 @@ public class AurorianPortalTeleporter implements ITeleporter {
                 .filter((poi) -> this.level.getBlockState(poi.getPos()).is(BlockRegistry.aurorian_portal.get()))
                 .findFirst();
         return optional.map((poi) -> {
-            BlockPos blockpos = poi.getPos();
-            this.level.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(blockpos), 3, blockpos);
-            BlockState blockstate = this.level.getBlockState(blockpos);
-            return BlockUtil.getLargestRectangleAround(blockpos, blockstate.getValue(AurorianPortal.FACING).getAxis(), 21, Direction.Axis.Y, 21, (pos) -> this.level.getBlockState(pos) == blockstate);
+            BlockPos blockPos = poi.getPos();
+            this.level.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(blockPos), 3, blockPos);
+            BlockState blockState = this.level.getBlockState(blockPos);
+            return BlockUtil.getLargestRectangleAround(blockPos, blockState.getValue(AurorianPortal.FACING).getAxis(), 21, Direction.Axis.Y, 21, (pos) -> this.level.getBlockState(pos) == blockState);
         });
     }
 
@@ -94,27 +93,31 @@ public class AurorianPortalTeleporter implements ITeleporter {
         BlockPos blockpos = null;
         double d1 = -1.0D;
         BlockPos blockpos1 = null;
-        WorldBorder worldborder = this.level.getWorldBorder();
-        int i = Math.min(this.level.getMaxBuildHeight(), this.level.getMinBuildHeight() + this.level.getLogicalHeight()) - 1;
+        WorldBorder worldBorder = this.level.getWorldBorder();
+        int maxY = Math.min(this.level.getMaxBuildHeight(), this.level.getMinBuildHeight() + this.level.getLogicalHeight()) - 1;
         BlockPos.MutableBlockPos blockpos$mutableblockpos = pPos.mutable();
 
         for (BlockPos.MutableBlockPos mut : BlockPos.spiralAround(pPos, 48, Direction.EAST, Direction.SOUTH)) {
-            int height = Math.min(i, this.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, mut.getX(), mut.getZ()));
-            int k = 1;
-            if (worldborder.isWithinBounds(mut) && worldborder.isWithinBounds(mut.move(direction, 1)) && !this.level.structureManager().hasAnyStructureAt(mut)) {
+            int height = Math.min(maxY, this.level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, mut.getX(), mut.getZ()));
+            if (worldBorder.isWithinBounds(mut) && worldBorder.isWithinBounds(mut.move(direction, 1)) && !this.level.structureManager().hasAnyStructureAt(mut)) {
                 mut.move(direction.getOpposite(), 1);
-
-                for (int l = height; l >= this.level.getMinBuildHeight(); --l) {
-                    mut.setY(l);
+                // goes down from heightmap to bottom of world
+                for (int y = height; y >= this.level.getMinBuildHeight(); --y) {
+                    // move mut
+                    mut.setY(y);
+                    // when empty block
                     if (this.level.isEmptyBlock(mut)) {
-                        int i1;
-                        for (i1 = l; l > this.level.getMinBuildHeight() && this.level.isEmptyBlock(mut.move(Direction.DOWN)); --l) {
+                        int emptyY;
+                        // go from current y to bottom of world or until theres another empty block below
+                        emptyY = y;
+                        while (y > this.level.getMinBuildHeight() && this.level.isEmptyBlock(mut.move(Direction.DOWN))) {
+                            --y;
                         }
 
-                        if (l + 4 <= i) {
-                            int j1 = i1 - l;
+                        if (y + 4 <= maxY) {
+                            int j1 = emptyY - y;
                             if (j1 <= 0 || j1 >= 3) {
-                                mut.setY(l);
+                                mut.setY(y);
                                 if (this.validFrame(mut, blockpos$mutableblockpos, direction, 0)) {
                                     double d2 = pPos.distSqr(mut);
                                     if (this.validFrame(mut, blockpos$mutableblockpos, direction, -1) && this.validFrame(mut, blockpos$mutableblockpos, direction, 1) && (d0 == -1.0D || d0 > d2)) {
@@ -141,14 +144,14 @@ public class AurorianPortalTeleporter implements ITeleporter {
 
         if (d0 == -1.0D) {
             int k1 = Math.max(this.level.getMinBuildHeight() - -1, 70);
-            int i2 = i - 9;
+            int i2 = maxY - 9;
             if (i2 < k1) {
                 return Optional.empty();
             }
 
             blockpos = (new BlockPos(pPos.getX(), Mth.clamp(pPos.getY(), k1, i2), pPos.getZ())).immutable();
             Direction direction1 = direction.getClockWise();
-            if (!worldborder.isWithinBounds(blockpos)) {
+            if (!worldBorder.isWithinBounds(blockpos)) {
                 return Optional.empty();
             }
 

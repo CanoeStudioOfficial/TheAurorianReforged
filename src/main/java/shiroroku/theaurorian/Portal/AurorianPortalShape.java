@@ -58,7 +58,9 @@ public class AurorianPortalShape {
 
     @Nullable
     private BlockPos calculateBottomLeft(BlockPos pos) {
-        for (int i = Math.max(this.level.getMinBuildHeight(), pos.getY() - 21); pos.getY() > i && isEmpty(this.level.getBlockState(pos.below())); pos = pos.below()) {
+        int i = Math.max(this.level.getMinBuildHeight(), pos.getY() - 21);
+        while (pos.getY() > i && isEmpty(this.level.getBlockState(pos.below()))) {
+            pos = pos.below();
         }
 
         Direction direction = this.rightDir.getOpposite();
