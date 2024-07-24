@@ -146,7 +146,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> crystalline_sword = ITEMS.register("crystalline_sword", () -> new CrystallineSword(MaterialTiers.CRYSTALLINE, 3, -2.4F, defaultProp().rarity(Rarity.RARE)));
 
     // Trinkets
-    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", () -> new MirrorOGItem(defaultProp().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", () -> new MirrorOGItem(defaultProp().rarity(Rarity.EPIC).stacksTo(1)));
     public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADDITION, 1));
     public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.MULTIPLY_BASE, 0.1));
     public static final RegistryObject<Item> ruby_amulet = ITEMS_GEN.register("ruby_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MAX_HEALTH, AttributeModifier.Operation.ADDITION, 4));
