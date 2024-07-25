@@ -54,6 +54,8 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_portal_frame.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_stone.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.cerulean_ore.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.deepslate_cerulean_ore.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.deepslate_moonstone_ore.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.chimney.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.geode.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.moon_gem.get());

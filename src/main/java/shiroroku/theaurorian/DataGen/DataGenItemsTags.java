@@ -105,6 +105,7 @@ public class DataGenItemsTags extends TagsProvider<Item> {
         this.tag(Tags.Items.TOOLS_SWORDS).add(ItemRegistry.silentwood_sword.get());
         this.tag(Tags.Items.TOOLS_BOWS).add(ItemRegistry.silentwood_bow.get());
         this.tag(ItemTags.COALS).add(ItemRegistry.aurorian_coal.get());
+        this.tag(Tags.Items.GEMS).add(BlockRegistry.crystal.get().asItem());
         this.tag(CERULEAN_ORE).add(BlockRegistry.cerulean_ore.get().asItem());
         this.tag(CERULEAN_ORE).add(BlockRegistry.deepslate_cerulean_ore.get().asItem());
         this.tag(MOONSTONE_ORE).add(BlockRegistry.moonstone_ore.get().asItem());
