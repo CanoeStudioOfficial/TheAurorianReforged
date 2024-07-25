@@ -15,10 +15,10 @@ import shiroroku.theaurorian.TheAurorian;
 
 public class DataGenBlocksTags extends TagsProvider<Block> {
 
+    public static final TagKey<Block> CERULEAN_ORE = BlockTags.create(new ResourceLocation(TheAurorian.MODID, "cerulean_ore"));
     public static final TagKey<Block> DUNGEON_BRICKS = BlockTags.create(new ResourceLocation(TheAurorian.MODID, "dungeon_bricks"));
     public static final TagKey<Block> DUNGEON_GATES = BlockTags.create(new ResourceLocation(TheAurorian.MODID, "dungeon_gates"));
     public static final TagKey<Block> MOONSTONE_ORE = BlockTags.create(new ResourceLocation(TheAurorian.MODID, "moonstone_ore"));
-    public static final TagKey<Block> CERULEAN_ORE = BlockTags.create(new ResourceLocation(TheAurorian.MODID, "cerulean_ore"));
 
     @SuppressWarnings("deprecation")
     protected DataGenBlocksTags(DataGenerator pGenerator, @Nullable ExistingFileHelper existingFileHelper) {
@@ -54,9 +54,9 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_portal_frame.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.aurorian_stone.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.cerulean_ore.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.chimney.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.deepslate_cerulean_ore.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.deepslate_moonstone_ore.get());
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.chimney.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.geode.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.moon_gem.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockRegistry.moonlight_forge.get());
