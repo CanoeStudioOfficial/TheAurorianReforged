@@ -107,6 +107,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> moon_gem = regBlockItem(BLOCKS, "moon_gem", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
     public static void register(IEventBus bus) {
+        // The order of these matter because some blocks copy from previous register
         BLOCKS_GEN.register(bus);
         BLOCKS.register(bus);
         BLOCKS_GEN_NL.register(bus);

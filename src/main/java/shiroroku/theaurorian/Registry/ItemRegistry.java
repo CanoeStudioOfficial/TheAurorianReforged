@@ -146,16 +146,17 @@ public class ItemRegistry {
     public static final RegistryObject<Item> crystalline_sword = ITEMS.register("crystalline_sword", () -> new CrystallineSword(MaterialTiers.CRYSTALLINE, 3, -2.4F, defaultProp().rarity(Rarity.RARE)));
 
     // Trinkets
-    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", () -> new MirrorOGItem(defaultProp().rarity(Rarity.EPIC).stacksTo(1)));
-    public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADDITION, 1));
-    public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.MULTIPLY_BASE, 0.1));
-    public static final RegistryObject<Item> ruby_amulet = ITEMS_GEN.register("ruby_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MAX_HEALTH, AttributeModifier.Operation.ADDITION, 4));
-    public static final RegistryObject<Item> emerald_amulet = ITEMS_GEN.register("emerald_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADDITION, 0.2));
     public static final RegistryObject<Item> amulet_of_chroma = ITEMS_GEN.register("amulet_of_chroma", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Arrays.asList(
             new BaseAurorianCurio.SimpleAttibuteModifier(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADDITION, 2),
             new BaseAurorianCurio.SimpleAttibuteModifier(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.MULTIPLY_BASE, 0.05),
             new BaseAurorianCurio.SimpleAttibuteModifier(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADDITION, 0.1))
     ));
+    public static final RegistryObject<Item> emerald_amulet = ITEMS_GEN.register("emerald_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADDITION, 0.2));
+    public static final RegistryObject<Item> keepers_amulet = ITEMS_GEN.register("keepers_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADDITION, 1));
+    public static final RegistryObject<Item> mirror_of_guidance = ITEMS_GEN.register("mirror_of_guidance", () -> new MirrorOGItem(defaultProp().rarity(Rarity.EPIC).stacksTo(1)));
+    public static final RegistryObject<Item> ruby_amulet = ITEMS_GEN.register("ruby_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MAX_HEALTH, AttributeModifier.Operation.ADDITION, 4));
+    public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.MULTIPLY_BASE, 0.1));
+
 
     // Misc
     public static final RegistryObject<Item> spawn_egg_dungeon_keeper = ITEMS_SPAWN_EGGS.register("spawn_egg_dungeon_keeper", () -> new ForgeSpawnEggItem(EntityRegistry.dungeon_keeper, 8117755, 3363951, defaultProp()));

@@ -49,12 +49,12 @@ public class EventsClient {
             ItemProperties.register(ItemRegistry.silentwood_bow.get(), new ResourceLocation("pulling"), (stack, level, entity, i) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F);
 
             // MENU SCREENS
-            MenuScreens.register(MenuRegistry.scrapper.get(), ScrapperScreen::new);
             MenuScreens.register(MenuRegistry.moonlight_forge.get(), MoonlightForgeScreen::new);
+            MenuScreens.register(MenuRegistry.scrapper.get(), ScrapperScreen::new);
 
             // BLOCK ENTITY RENDERERS
-            BlockEntityRenderers.register(BlockEntityRegistry.crystal.get(), CrystalBlockRenderer::new);
             BlockEntityRenderers.register(BlockEntityRegistry.boss_spawner.get(), BossSpawnerBlockRenderer::new);
+            BlockEntityRenderers.register(BlockEntityRegistry.crystal.get(), CrystalBlockRenderer::new);
             BlockEntityRenderers.register(BlockEntityRegistry.moonlight_forge.get(), MoonlightForgeBlockRenderer::new);
             BlockEntityRenderers.register(BlockEntityRegistry.moonlight_forge.get(), MoonlightForgeBlockRenderer::new);
             BlockEntityRenderers.register(BlockEntityRegistry.silentwood_chest.get(), SilentwoodChestBlockRenderer::new);
@@ -76,6 +76,7 @@ public class EventsClient {
      */
     @SubscribeEvent
     public static void onItemColorHandler(RegisterColorHandlersEvent.Item event) {
+        // Crystalline sword glow when charged
         event.register((stack, tintIndex) -> {
             if (tintIndex == 0) {
                 float max = (Minecraft.getInstance().player.getUseItem() != stack ? 0.0F : (float) (stack.getUseDuration() - Minecraft.getInstance().player.getUseItemRemainingTicks()) / 20.0F);
@@ -88,12 +89,8 @@ public class EventsClient {
             }
             return 16777215;
         }, ItemRegistry.crystalline_sword.get());
-        event.register((stack, tintIndex) -> {
-            if (tintIndex == 1) {
-                return ((BaseAurorianTea) stack.getItem()).color;
-            }
-            return 16777215;
-        }, ItemRegistry.ITEMS_GEN_TEA.getEntries().stream().map(Supplier::get).toArray(ItemLike[]::new));
+        // Tea color modifier
+        event.register((stack, tintIndex) -> tintIndex == 1 ? ((BaseAurorianTea) stack.getItem()).color : 16777215, ItemRegistry.ITEMS_GEN_TEA.getEntries().stream().map(Supplier::get).toArray(ItemLike[]::new));
     }
 
     /**
@@ -124,9 +121,9 @@ public class EventsClient {
             return;
         }
         event.addSprite(MoonlightForgeBlockRenderer.RING_OVERLAY);
-        event.addSprite(SilentwoodChestBlockRenderer.NORMAL);
         event.addSprite(SilentwoodChestBlockRenderer.DOUBLE_LEFT);
         event.addSprite(SilentwoodChestBlockRenderer.DOUBLE_RIGHT);
+        event.addSprite(SilentwoodChestBlockRenderer.NORMAL);
     }
 
 }

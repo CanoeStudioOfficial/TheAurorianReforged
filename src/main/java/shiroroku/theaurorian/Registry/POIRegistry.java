@@ -12,4 +12,5 @@ public class POIRegistry {
     public static final DeferredRegister<PoiType> POIS = DeferredRegister.create(ForgeRegistries.POI_TYPES, TheAurorian.MODID);
 
     public static final RegistryObject<PoiType> aurorian_portal = POIS.register("aurorian_portal", () -> new PoiType(ImmutableSet.copyOf(BlockRegistry.aurorian_portal.get().getStateDefinition().getPossibleStates()), 0, 1));
+
 }

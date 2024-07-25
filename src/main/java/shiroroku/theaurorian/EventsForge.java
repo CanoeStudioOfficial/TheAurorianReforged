@@ -13,12 +13,12 @@ public class EventsForge {
 
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
-        Spectral.handleOnDamage(event);
         LightningEnchant.handleOnDamage(event);
+        Spectral.handleOnDamage(event);
     }
 
     @SubscribeEvent
-    public static void onAddReloadListenerEvent(AddReloadListenerEvent pEvent) {
-        pEvent.addListener(new MirrorDataLoader());
+    public static void onAddReloadListener(AddReloadListenerEvent event) {
+        event.addListener(new MirrorDataLoader());
     }
 }

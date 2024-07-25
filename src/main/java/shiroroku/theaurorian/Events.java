@@ -18,4 +18,5 @@ public class Events {
     public static void spawnPlacementRegister(SpawnPlacementRegisterEvent event) {
         EntityRegistry.registerSpawnPlacements(event);
     }
+
 }
