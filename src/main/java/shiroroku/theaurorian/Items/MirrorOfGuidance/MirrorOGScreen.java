@@ -11,9 +11,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
-import net.minecraft.world.phys.Vec2;
 import shiroroku.theaurorian.TheAurorian;
 import shiroroku.theaurorian.Util.ModUtil;
 import shiroroku.theaurorian.Util.RenderUtil;
@@ -78,8 +78,8 @@ public class MirrorOGScreen extends Screen {
 
         // There are two lerp timers because the content gradient uses one for fading in + out and other is for reset view button
         if (LerpTimer.isActive()) {
-            ViewX = Mth.lerp(LerpTimer.getPercentageProgress(), ViewXO, ViewLerpToX);
-            ViewY = Mth.lerp(LerpTimer.getPercentageProgress(), ViewYO, ViewLerpToY);
+            ViewX = Mth.lerp(Math.pow(LerpTimer.getPercentageProgress(), 1.5), ViewXO, ViewLerpToX);
+            ViewY = Mth.lerp(Math.pow(LerpTimer.getPercentageProgress(), 1.5), ViewYO, ViewLerpToY);
         }
         if (LerpPanTimer.isActive()) {
             ViewX = Mth.lerp(LerpPanTimer.getPercentageProgress(), ViewXO, ViewLerpToX);
@@ -190,22 +190,25 @@ public class MirrorOGScreen extends Screen {
             if (selectedNode == null) {
                 this.onClose();
             } else {
-                ViewXO = ViewX;
-                ViewYO = ViewY;
-                ViewLerpToX = -selectedNode.x;
-                ViewLerpToY = -selectedNode.y;
-                LerpTimer.start();
+                lerpTo(LerpTimer, -selectedNode.x, -selectedNode.y);
                 setSelectedNode(null);
-                return true;
+                playClickSound(1, SoundEvents.UI_TOAST_OUT);
             }
             return true;
         }
         return false;
     }
 
-    @Override
-    public boolean mouseClicked(double pMouseX, double pMouseY, int pButton) {
-        return super.mouseClicked(pMouseX, pMouseY, pButton);
+    private void lerpTo(SimpleTimer timer, double x, double y) {
+        ViewXO = ViewX;
+        ViewYO = ViewY;
+        ViewLerpToX = x;
+        ViewLerpToY = y;
+        timer.start();
+    }
+
+    private void playClickSound(float pitch, SoundEvent sound) {
+        Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(sound, (float) (pitch - Rand.nextDouble() * 0.01f), 0.8F));
     }
 
     @Override
@@ -217,36 +220,28 @@ public class MirrorOGScreen extends Screen {
 
         // Buttons
         if (selectedNode == null && RenderUtil.isMouseOver(x_gui_left + 4, y_gui_top + HEIGHT - 24, 16, 16, pMouseX, pMouseY)) { // reset view button
-            ViewXO = ViewX;
-            ViewYO = ViewY;
-            ViewLerpToX = 0;
-            ViewLerpToY = 0;
-            LerpPanTimer.start();
+            lerpTo(LerpPanTimer, 0, 0);
             setSelectedNode(null);
+            playClickSound(2f, SoundEvents.UI_TOAST_IN);
             return true;
         }
         if (selectedNode != null && RenderUtil.isMouseOver(x_gui_left + WIDTH - 28, y_gui_top + 8, 16, 16, pMouseX, pMouseY)) { // close button
-            ViewXO = ViewX;
-            ViewYO = ViewY;
-            ViewLerpToX = -selectedNode.x;
-            ViewLerpToY = -selectedNode.y;
-            LerpTimer.start();
+            lerpTo(LerpTimer, -selectedNode.x, -selectedNode.y);
             setSelectedNode(null);
+            playClickSound(1, SoundEvents.UI_TOAST_OUT);
             return true;
         }
 
         // Nodes
         if (selectedNode == null && RenderUtil.isMouseOver(x_gui_left, y_gui_top, WIDTH - 8, HEIGHT, pMouseX, pMouseY)) {
-            nodes.forEach((node) -> {
+            for (MirrorNode node : nodes) {
                 if (RenderUtil.isMouseOver((int) (ViewX + x_gui_center + node.x - 12), (int) (ViewY + y_gui_center + node.y - 12), 24, 24, pMouseX, pMouseY)) {
                     setSelectedNode(node);
-                    ViewXO = ViewX;
-                    ViewYO = ViewY;
-                    ViewLerpToX = -selectedNode.x - 108;
-                    ViewLerpToY = -selectedNode.y - 92;
-                    LerpTimer.start();
+                    lerpTo(LerpTimer, -selectedNode.x - 108, -selectedNode.y - 92);
+                    playClickSound(1.5f, SoundEvents.UI_TOAST_IN);
+                    break;
                 }
-            });
+            }
         }
 
         return super.mouseReleased(pMouseX, pMouseY, pButton);
@@ -262,7 +257,6 @@ public class MirrorOGScreen extends Screen {
         }
     }
 
-
     @Override
     public boolean mouseDragged(double pMouseX, double pMouseY, int pButton, double pDragX, double pDragY) {
         if (!LerpPanTimer.isActive() && selectedNode == null) {
@@ -271,9 +265,5 @@ public class MirrorOGScreen extends Screen {
             return true;
         }
         return false;
-    }
-
-    private void renderLine(PoseStack pose, Vec2 pStart, Vec2 pEnd) {
-
     }
 }

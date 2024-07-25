@@ -1,5 +1,7 @@
 package shiroroku.theaurorian.Util;
 
+import net.minecraft.util.Mth;
+
 public class SimpleTimer {
 
     private final float Duration;
@@ -40,12 +42,12 @@ public class SimpleTimer {
         Tick = Duration;
     }
 
-    public boolean isActive(){
+    public boolean isActive() {
         return IsActive;
     }
 
     public float getPercentageProgress() {
-        return 1.0f - Tick / Duration;
+        return Mth.clamp(1.0f - Tick / Duration, 0.0f, 1.0f);
     }
 
     public float getTicks() {
