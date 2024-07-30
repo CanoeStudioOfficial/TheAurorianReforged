@@ -40,8 +40,8 @@ public class DataGenItemsTags extends TagsProvider<Item> {
     @SuppressWarnings("unchecked")
     @Override
     protected void addTags() {
-        ItemRegistry.ITEMS_GEN_SHIELD.getEntries().stream().map(Supplier::get).forEach((shield) -> this.tag(Tags.Items.TOOLS_SHIELDS).add(shield));
-        ItemRegistry.ITEMS_GEN_KEY.getEntries().stream().map(Supplier::get).forEach((key) -> this.tag(KEYS).add(key));
+        ItemRegistry.ITEMS_GEN_SHIELD.getEntries().stream().map(Supplier::get).forEach(shield -> this.tag(Tags.Items.TOOLS_SHIELDS).add(shield));
+        ItemRegistry.ITEMS_GEN_KEY.getEntries().stream().map(Supplier::get).forEach(key -> this.tag(KEYS).add(key));
         this.tag(ABSORPTION_ORB_REPAIRABLE).addTags(Tags.Items.TOOLS, Tags.Items.ARMORS, Tags.Items.SHEARS);
         this.tag(AURORIAN_STONES).add(BlockRegistry.aurorian_cobblestone.get().asItem());
         this.tag(AURORIAN_STONES).add(BlockRegistry.aurorian_deepslate.get().asItem());

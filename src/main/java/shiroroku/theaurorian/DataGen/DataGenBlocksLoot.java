@@ -66,14 +66,14 @@ public class DataGenBlocksLoot extends LootTableProvider {
             BlockRegistry.BLOCKS_GEN.getEntries().stream().map(Supplier::get).forEach(this::dropSelf);
 
             // CUSTOM
-            this.add(BlockRegistry.aurorian_coal_ore.get(), (block) -> createOreDrop(block, ItemRegistry.aurorian_coal.get()));
+            this.add(BlockRegistry.aurorian_coal_ore.get(), block -> createOreDrop(block, ItemRegistry.aurorian_coal.get()));
             this.add(BlockRegistry.aurorian_cobblestone_slab.get(), BlockLoot::createSlabItemTable);
             this.add(BlockRegistry.aurorian_deepslate_slab.get(), BlockLoot::createSlabItemTable);
-            this.add(BlockRegistry.aurorian_grass.get(), (block) -> createSingleItemTableWithSilkTouch(block, BlockRegistry.aurorian_dirt.get()));
-            this.add(BlockRegistry.aurorian_stone.get(), (block) -> createSingleItemTableWithSilkTouch(block, BlockRegistry.aurorian_cobblestone.get()));
+            this.add(BlockRegistry.aurorian_grass.get(), block -> createSingleItemTableWithSilkTouch(block, BlockRegistry.aurorian_dirt.get()));
+            this.add(BlockRegistry.aurorian_stone.get(), block-> createSingleItemTableWithSilkTouch(block, BlockRegistry.aurorian_cobblestone.get()));
             this.add(BlockRegistry.aurorian_tallgrass.get(), dropWithSickleOrShears(ItemRegistry.plant_fiber.get()));
             this.add(BlockRegistry.bright_bulb.get(), dropWithSickleOrShears(BlockRegistry.bright_bulb.get()));
-            this.add(BlockRegistry.geode.get(), (block) -> createOreDrop(block, BlockRegistry.crystal.get().asItem()));
+            this.add(BlockRegistry.geode.get(), block -> createOreDrop(block, BlockRegistry.crystal.get().asItem()));
             this.add(BlockRegistry.lavender_block.get(), dropWithSickleOrShears(ItemRegistry.lavender.get()));
             this.add(BlockRegistry.petunia.get(), dropWithSickleOrShears(BlockRegistry.petunia.get()));
             this.add(BlockRegistry.silentwood_slab.get(), BlockLoot::createSlabItemTable);
@@ -92,7 +92,7 @@ public class DataGenBlocksLoot extends LootTableProvider {
             this.dropSelf(BlockRegistry.silentwood_chest.get());
             this.dropSelf(BlockRegistry.silentwood_crafting_table.get());
             this.dropSelf(BlockRegistry.silentwood_fence.get());
-            this.add(BlockRegistry.silentwood_leaves.get(), (block) -> createSelfDropDispatchTable(BlockRegistry.silentwood_leaves.get(), HAS_SHEARS_OR_SILK_TOUCH,
+            this.add(BlockRegistry.silentwood_leaves.get(), block -> createSelfDropDispatchTable(BlockRegistry.silentwood_leaves.get(), HAS_SHEARS_OR_SILK_TOUCH,
                     applyExplosionCondition(BlockRegistry.silentwood_leaves.get(), LootItem.lootTableItem(BlockRegistry.silentwood_sapling.get()))
                             .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.05F, 0.0625F, 0.083333336F, 0.1F)))
                     .withPool(LootPool.lootPool()
@@ -151,7 +151,7 @@ public class DataGenBlocksLoot extends LootTableProvider {
         }
 
         private Function<Block, LootTable.Builder> dropWithSickleOrShears(ItemLike drops) {
-            return (block) -> LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_SHEARS).add(LootItem.lootTableItem(drops)));
+            return block -> LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_SHEARS).add(LootItem.lootTableItem(drops)));
         }
     }
 }

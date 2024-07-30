@@ -13,6 +13,7 @@ public abstract class AbstractModContainerMenu extends AbstractContainerMenu {
 
     private final int inventorySize;
 
+    @SuppressWarnings("SameParameterValue")
     protected AbstractModContainerMenu(@Nullable MenuType<?> pMenuType, int pContainerId, int inventorySize) {
         super(pMenuType, pContainerId);
         this.inventorySize = inventorySize;

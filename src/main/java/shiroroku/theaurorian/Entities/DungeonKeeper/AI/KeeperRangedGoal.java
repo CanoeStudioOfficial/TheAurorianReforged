@@ -21,8 +21,4 @@ public class KeeperRangedGoal<T extends DungeonKeeperEntity> extends RangedBowAt
         keeper.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(ItemRegistry.silentwood_bow.get()));
     }
 
-    @Override
-    public void tick() {
-        super.tick();
-    }
 }

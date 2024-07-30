@@ -1,7 +1,6 @@
 package shiroroku.theaurorian.Entities.DungeonSlime;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.Difficulty;
@@ -86,10 +85,5 @@ public class DungeonSlimeEntity extends Slime {
     @Override
     protected boolean spawnCustomParticles() {
         return true;
-    }
-
-    @Override
-    protected ParticleOptions getParticleType() {
-        return super.getParticleType(); //todo
     }
 }

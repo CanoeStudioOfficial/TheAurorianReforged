@@ -62,12 +62,12 @@ public class EventsClient {
     }
 
     @SubscribeEvent
-    public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
+    public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event) {
         EntityRegistry.registerRenderers(event);
     }
 
     @SubscribeEvent
-    public static void registerRenderer(EntityRenderersEvent.RegisterLayerDefinitions event) {
+    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         EntityRegistry.registerLayerDefinitions(event);
     }
 
@@ -97,7 +97,7 @@ public class EventsClient {
      * Adds block icon to the umbra pickaxe item
      */
     @SubscribeEvent
-    public static void registerItemDecorations(RegisterItemDecorationsEvent event) {
+    public static void onRegisterItemDecorations(RegisterItemDecorationsEvent event) {
         event.register(ItemRegistry.umbra_pickaxe.get(), (font, stack, xOffset, yOffset, blitOffset) -> {
             Block selectedBlock = UmbraPickaxe.getSelectedBlock(stack);
             if (selectedBlock == null) {

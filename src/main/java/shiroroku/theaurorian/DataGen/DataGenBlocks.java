@@ -28,11 +28,11 @@ public class DataGenBlocks extends BlockStateProvider {
         List<RegistryObject<Block>> BASIC = new ArrayList<>();
         BASIC.addAll(BlockRegistry.BLOCKS_GEN.getEntries());
         BASIC.addAll(BlockRegistry.BLOCKS_GEN_NL.getEntries());
-        BASIC.stream().map(Supplier::get).forEach((block) -> {
+        BASIC.stream().map(Supplier::get).forEach(block -> {
             simpleBlock(block);
             simpleBlockItem(block);
         });
-        BlockRegistry.BLOCKS_GEN_NL_PLANT.getEntries().stream().map(Supplier::get).forEach((block) -> {
+        BlockRegistry.BLOCKS_GEN_NL_PLANT.getEntries().stream().map(Supplier::get).forEach(block -> {
             getVariantBuilder(block).partialState().setModels(new ConfiguredModel(models().cross(blockTexture(block).getPath(), blockTexture(block)).renderType("cutout")));
             itemModels().getBuilder(ForgeRegistries.BLOCKS.getKey(block).getPath()).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", blockTexture(block));
         });

@@ -41,15 +41,15 @@ public class EventsForgeClient {
         VertexConsumer consumer = event.getMultiBufferSource().getBuffer(RenderType.lines());
         VoxelShape shape = Minecraft.getInstance().level.getBlockState(event.getTarget().getBlockPos()).getShape(Minecraft.getInstance().level, pPos, CollisionContext.of(event.getCamera().getEntity()));
         shape.forAllEdges((x, y, z, x1, y1, z1) -> {
-            float f = (float) (x1 - x);
-            float f1 = (float) (y1 - y);
-            float f2 = (float) (z1 - z);
-            float f3 = Mth.sqrt(f * f + f1 * f1 + f2 * f2);
-            f /= f3;
-            f1 /= f3;
-            f2 /= f3;
-            consumer.vertex(last.pose(), (float) (x + pX), (float) (y + pY), (float) (z + pZ)).color(colorWave, colorWave, colorWave, 0.5F).normal(last.normal(), f, f1, f2).endVertex();
-            consumer.vertex(last.pose(), (float) (x1 + pX), (float) (y1 + pY), (float) (z1 + pZ)).color(colorWave, colorWave, colorWave, 0.5F).normal(last.normal(), f, f1, f2).endVertex();
+            float dx = (float) (x1 - x);
+            float dy = (float) (y1 - y);
+            float dz = (float) (z1 - z);
+            float f3 = Mth.sqrt(dx * dx + dy * dy + dz * dz);
+            dx /= f3;
+            dy /= f3;
+            dz /= f3;
+            consumer.vertex(last.pose(), (float) (x + pX), (float) (y + pY), (float) (z + pZ)).color(colorWave, colorWave, colorWave, 0.5F).normal(last.normal(), dx, dy, dz).endVertex();
+            consumer.vertex(last.pose(), (float) (x1 + pX), (float) (y1 + pY), (float) (z1 + pZ)).color(colorWave, colorWave, colorWave, 0.5F).normal(last.normal(), dx, dy, dz).endVertex();
         });
         event.getPoseStack().popPose();
         event.setCanceled(true);

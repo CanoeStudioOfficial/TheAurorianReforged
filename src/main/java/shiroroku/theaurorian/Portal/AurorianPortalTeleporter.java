@@ -143,7 +143,7 @@ public class AurorianPortalTeleporter implements ITeleporter {
         }
 
         if (d0 == -1.0D) {
-            int k1 = Math.max(this.level.getMinBuildHeight() - -1, 70);
+            int k1 = Math.max(this.level.getMinBuildHeight() + 1, 70);
             int i2 = maxY - 9;
             if (i2 < k1) {
                 return Optional.empty();

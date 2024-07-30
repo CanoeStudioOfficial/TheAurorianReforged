@@ -24,6 +24,7 @@ public class CrystalBlockRenderer implements BlockEntityRenderer<CrystalBlockEnt
         blockRenderer = context.getBlockRenderDispatcher();
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void render(CrystalBlockEntity pBlockEntity, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight, int pPackedOverlay) {
         float time = Minecraft.getInstance().level.getGameTime() + pPartialTick;

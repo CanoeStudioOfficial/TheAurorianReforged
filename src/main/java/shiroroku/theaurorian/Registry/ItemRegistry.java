@@ -157,7 +157,6 @@ public class ItemRegistry {
     public static final RegistryObject<Item> ruby_amulet = ITEMS_GEN.register("ruby_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MAX_HEALTH, AttributeModifier.Operation.ADDITION, 4));
     public static final RegistryObject<Item> sapphire_amulet = ITEMS_GEN.register("sapphire_amulet", () -> new BaseAurorianCurio(defaultProp().rarity(Rarity.EPIC), Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.MULTIPLY_BASE, 0.1));
 
-
     // Misc
     public static final RegistryObject<Item> spawn_egg_dungeon_keeper = ITEMS_SPAWN_EGGS.register("spawn_egg_dungeon_keeper", () -> new ForgeSpawnEggItem(EntityRegistry.dungeon_keeper, 8117755, 3363951, defaultProp()));
     public static final RegistryObject<Item> spawn_egg_dungeon_slime = ITEMS_SPAWN_EGGS.register("spawn_egg_dungeon_slime", () -> new ForgeSpawnEggItem(EntityRegistry.dungeon_slime, 8117755, 3363951, defaultProp()));

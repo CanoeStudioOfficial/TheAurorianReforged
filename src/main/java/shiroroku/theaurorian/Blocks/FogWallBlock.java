@@ -20,6 +20,7 @@ import net.minecraft.world.phys.Vec3;
 public class FogWallBlock extends Block {
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    @SuppressWarnings("FieldCanBeLocal")
     private final double repellingForce = 0.20D;
 
     public FogWallBlock(Properties pProperties) {

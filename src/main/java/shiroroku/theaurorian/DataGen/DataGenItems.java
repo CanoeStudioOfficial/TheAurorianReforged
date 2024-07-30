@@ -27,7 +27,7 @@ public class DataGenItems extends ItemModelProvider {
         ItemRegistry.ITEMS_GEN_HANDHELD.getEntries().stream().map(Supplier::get).forEach(this::basicItemHandheld);
         ItemRegistry.ITEMS_GEN_SHIELD.getEntries().stream().map(Supplier::get).forEach(this::shieldItem);
         ItemRegistry.ITEMS_GEN_KEY.getEntries().stream().map(Supplier::get).forEach(this::keyItem);
-        ItemRegistry.ITEMS_SPAWN_EGGS.getEntries().stream().map(Supplier::get).forEach((e) -> getBuilder(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(e)).toString()).parent(new ModelFile.UncheckedModelFile("item/template_spawn_egg")));
+        ItemRegistry.ITEMS_SPAWN_EGGS.getEntries().stream().map(Supplier::get).forEach(e -> getBuilder(Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(e)).toString()).parent(new ModelFile.UncheckedModelFile("item/template_spawn_egg")));
     }
 
     public void teaItem(Item item) {

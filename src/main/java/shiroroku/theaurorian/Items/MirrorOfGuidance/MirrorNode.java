@@ -29,12 +29,12 @@ public class MirrorNode {
         }
     }
 
-    public Component name;
-    public Component description;
-    public NODE_BORDER border;
-    public Item icon;
-    public int x;
-    public int y;
+    public final Component name;
+    public final Component description;
+    public final NODE_BORDER border;
+    public final Item icon;
+    public final int x;
+    public final int y;
     private final List<ResourceLocation> children;
 
     private boolean selected = false;

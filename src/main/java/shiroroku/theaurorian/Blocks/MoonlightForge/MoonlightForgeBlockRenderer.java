@@ -83,6 +83,7 @@ public class MoonlightForgeBlockRenderer implements BlockEntityRenderer<Moonligh
         stack.popPose();
     }
 
+    @SuppressWarnings("resource")
     private static void renderRing(MultiBufferSource pBufferSource, PoseStack stack) {
         TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(TextureAtlas.LOCATION_BLOCKS).apply(RING_OVERLAY);
         VertexConsumer builder = pBufferSource.getBuffer(RenderType.cutout());
@@ -97,6 +98,7 @@ public class MoonlightForgeBlockRenderer implements BlockEntityRenderer<Moonligh
         stack.popPose();
     }
 
+    @SuppressWarnings("SameParameterValue")
     private static void vert(VertexConsumer vertexConsumer, Matrix4f matrix4f, Matrix3f matrix3f, float x, float y, float z, float u, float v) {
         vertexConsumer.vertex(matrix4f, x, y, z).color(255, 255, 255, 255).uv(u, v).overlayCoords(OverlayTexture.NO_OVERLAY).uv2(15728880).normal(matrix3f, 0.0F, 1.0F, 0.0F).endVertex();
     }

@@ -22,12 +22,6 @@ public abstract class AbstractInventoryBlockEntity extends BlockEntity {
         super(pType, pPos, pBlockState);
     }
 
-    @Override
-    public void setRemoved() {
-        super.setRemoved();
-        // todo
-    }
-
     protected abstract ItemStackHandler createItemHandler();
 
     public ItemStackHandler getItemHandler() {
