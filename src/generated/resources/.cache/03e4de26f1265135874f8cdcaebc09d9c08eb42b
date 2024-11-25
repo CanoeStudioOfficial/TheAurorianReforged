@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-25T13:42:06.631332679	Tags for minecraft:item
+// 1.19.2	2024-11-25T13:27:39.613896155	Tags for minecraft:item
 43e69fd2854424b3f652227b88a6e29f40cf59e3 data/forge/tags/items/armors/boots.json
 90a2ba48331af73e933481383f7eae9a4787de94 data/forge/tags/items/armors/chestplates.json
 84e3942f69f9c083562172fe3b20e7e9ae307151 data/forge/tags/items/armors/helmets.json
@@ -7,7 +7,7 @@ cf27326d1fdc68acf6b003bcc0998c6a84d9d589 data/forge/tags/items/armors/leggings.j
 4052cba1a2dd4624005126892af9d93ccbc0a53d data/forge/tags/items/chests/wooden.json
 f67ec947eb65b81673a3cbd620b0d5baac82b8a8 data/forge/tags/items/gems.json
 e8df99c609753393c136a4997eec07869451f9de data/forge/tags/items/ingots.json
-1df2de6ddf039e57477b0a9fd23b2c1c32df8765 data/forge/tags/items/nuggets.json
+1a12463eaa53c90c3cea33a4c8082a5e5aba4c3b data/forge/tags/items/nuggets.json
 f6e1a78b078631f32c5563e4fbaf4743292194a6 data/forge/tags/items/ores.json
 7d30cac774d61a4d85a3e6edaf2817b87432f42f data/forge/tags/items/rods/wooden.json
 615a2932e612d0b2bc027151d0dc21b7c05983d5 data/forge/tags/items/shears.json

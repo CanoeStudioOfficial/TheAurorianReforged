@@ -47,6 +47,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> aurorian_coal = ITEMS_GEN.register("aurorian_coal", basicItemWithBurntime(defaultProp(), 1600));
     public static final RegistryObject<Item> aurorian_coal_nugget = ITEMS_GEN.register("aurorian_coal_nugget", basicItemWithBurntime(defaultProp(), 200));
     public static final RegistryObject<Item> aurorian_steel_ingot = ITEMS_GEN.register("aurorian_steel_ingot", basicItem());
+    public static final RegistryObject<Item> aurorian_steel_nugget = ITEMS_GEN.register("aurorian_steel_nugget", basicItem());
     public static final RegistryObject<Item> aurorianite_ingot = ITEMS_GEN.register("aurorianite_ingot", basicItem());
     public static final RegistryObject<Item> aurorianite_scrap = ITEMS_GEN.register("aurorianite_scrap", basicItem());
     public static final RegistryObject<Item> cerulean_ingot = ITEMS_GEN.register("cerulean_ingot", basicItem());

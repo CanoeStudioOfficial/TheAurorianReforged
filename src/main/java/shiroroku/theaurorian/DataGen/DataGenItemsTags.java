@@ -82,6 +82,7 @@ public class DataGenItemsTags extends TagsProvider<Item> {
         this.tag(Tags.Items.NUGGETS).add(ItemRegistry.aurorian_coal_nugget.get());
         this.tag(Tags.Items.NUGGETS).add(ItemRegistry.cerulean_nugget.get());
         this.tag(Tags.Items.NUGGETS).add(ItemRegistry.moonstone_nugget.get());
+        this.tag(Tags.Items.NUGGETS).add(ItemRegistry.aurorian_steel_nugget.get());
         this.tag(Tags.Items.ORES).add(BlockRegistry.geode.get().asItem(), BlockRegistry.aurorian_coal_ore.get().asItem());
         this.tag(Tags.Items.ORES).addTags(CERULEAN_ORE, MOONSTONE_ORE);
         this.tag(Tags.Items.RODS_WOODEN).add(ItemRegistry.silentwood_stick.get());

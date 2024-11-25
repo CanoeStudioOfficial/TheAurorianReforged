@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-23T16:14:38.982539596	Item Models: theaurorian
+// 1.19.2	2024-11-25T13:27:39.615807658	Item Models: theaurorian
 a95bbdcaf10620b09f246c54e853176b212124ff assets/theaurorian/models/item/absorption_orb.json
 62c111d018dba8b55fb88600325394b94342d085 assets/theaurorian/models/item/amulet_of_chroma.json
 9a390d09acfa4a0621298f03a11e6a910b91f71f assets/theaurorian/models/item/aurorian_coal.json
@@ -10,6 +10,7 @@ dac80493c8465ff6e08b7e7708a76bf4eecaaecc assets/theaurorian/models/item/aurorian
 549633ac45bef2e21bf2641d01b298a939ffba36 assets/theaurorian/models/item/aurorian_steel_hoe.json
 f085bc0419b06652728704c4693cbd12a0721c7c assets/theaurorian/models/item/aurorian_steel_ingot.json
 d8281074e81dad9c68b63ae4ea156b5671d1b454 assets/theaurorian/models/item/aurorian_steel_leggings.json
+b86ec0252d549fc9bbdfd2a2cdf9f125860fd42b assets/theaurorian/models/item/aurorian_steel_nugget.json
 0c03ade9d7369c0bd68f08a9bc8c871c1244c757 assets/theaurorian/models/item/aurorian_steel_pickaxe.json
 3e6a500c0907c1e7ee4f0d8c165f044105d169ff assets/theaurorian/models/item/aurorian_steel_shovel.json
 acb40fa7090e6253579c3c4cb6081835b2890679 assets/theaurorian/models/item/aurorian_steel_sword.json
