@@ -2,6 +2,7 @@
     - loot tables use item shears instead of shears tag, meaning sickles wont work fully as shears anymore, though i fixed it for aurorian stuff (leaves, plants)
     - tool tier settings arent possible anymore, config registers after item registry
     - 1.19.3 added DatapackBuiltinEntriesProvider for worldgen, so for now its manual >.>
+    - why does my chest not show as a block in inventories ;-; (using a 2d sprite for now)
 
     to do:
     - silentwood abilities
