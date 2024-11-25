@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-21T15:01:35.326140428	LootTables
+// 1.19.2	2024-11-25T12:57:50.908772422	LootTables
 a51a687ced84a16c646af8c74ece31bba237c0c8 data/theaurorian/loot_tables/blocks/aurorian_coal_ore.json
 3454003c9e54aba310c93ea27e5ec39d993ff312 data/theaurorian/loot_tables/blocks/aurorian_cobblestone.json
 eaeb954fe7f2f6fcfe9e35e1f607afa0cec4f63e data/theaurorian/loot_tables/blocks/aurorian_cobblestone_slab.json
@@ -30,6 +30,13 @@ d8f92dc67233df39dd55ce4202a4f5d1ef0d13aa data/theaurorian/loot_tables/blocks/dee
 9d24f39570238316b01825cead2d0f538bbfde79 data/theaurorian/loot_tables/blocks/geode.json
 e7174dbfdd5e924738b4f43ecabfb9a063a024ee data/theaurorian/loot_tables/blocks/lavender_block.json
 b9010dc216a870a5dcc1d9a8d13d62ef9e074782 data/theaurorian/loot_tables/blocks/moon_gem.json
+b44a1a48d4f76c52a138cc6be702f824c8e89ff6 data/theaurorian/loot_tables/blocks/moon_temple_bricks.json
+a62702201e5e4288527b0c85ac65e01fae181481 data/theaurorian/loot_tables/blocks/moon_temple_bricks_smooth.json
+e6416348172f77525336b3fc816c8b80d041012d data/theaurorian/loot_tables/blocks/moon_temple_gate.json
+f04b6903545d6e82dd75de37d7ab8146d8322536 data/theaurorian/loot_tables/blocks/moon_temple_gate_keyhole.json
+ede7409ca4d470c0b81138083117f66f21921e4a data/theaurorian/loot_tables/blocks/moon_temple_interior_gate.json
+2721e1273de2378517124c233379f3144ca2bc56 data/theaurorian/loot_tables/blocks/moon_temple_interior_gate_keyhole.json
+0625847fa8af47876c3bd8cf2b3fb8d5bc33fb46 data/theaurorian/loot_tables/blocks/moon_temple_lamp.json
 23f6d4e375186cc4df88bed2010299fed43e311d data/theaurorian/loot_tables/blocks/moonlight_forge.json
 efb5fb282d359dcf547f0b781bd6e79ccf7ae90a data/theaurorian/loot_tables/blocks/moonstone_ore.json
 585020f261c45e6b603ecb67d0f038c6d9f3813d data/theaurorian/loot_tables/blocks/petunia.json

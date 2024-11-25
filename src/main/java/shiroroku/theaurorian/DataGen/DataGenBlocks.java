@@ -40,6 +40,7 @@ public class DataGenBlocks extends BlockStateProvider {
         // CUSTOM
         axisBlock((RotatedPillarBlock) BlockRegistry.silentwood_log.get());
         barsBlock(BlockRegistry.runestone_bars.get());
+        barsBlock(BlockRegistry.moon_temple_bars.get());
         fenceBlock(BlockRegistry.silentwood_fence.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
         simpleBlockItem(BlockRegistry.boss_spawner.get());
         simpleBlockItem(BlockRegistry.fog_wall.get());
@@ -52,6 +53,7 @@ public class DataGenBlocks extends BlockStateProvider {
         stairsBlock(BlockRegistry.aurorian_deepslate_stairs.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));
         stairsBlock(BlockRegistry.darkstone_stairs.get(), blockTexture(BlockRegistry.darkstone.get()));
         stairsBlock(BlockRegistry.runestone_stairs.get(), blockTexture(BlockRegistry.runestone.get()));
+        stairsBlock(BlockRegistry.moon_temple_stairs.get(), blockTexture(BlockRegistry.moon_temple_bricks.get()));
         stairsBlock(BlockRegistry.silentwood_stairs.get(), blockTexture(BlockRegistry.silentwood_planks.get()));
         wallBlock(BlockRegistry.aurorian_cobblestone_wall.get(), blockTexture(BlockRegistry.aurorian_cobblestone.get()));
         wallBlock(BlockRegistry.aurorian_deepslate_wall.get(), blockTexture(BlockRegistry.aurorian_deepslate.get()));

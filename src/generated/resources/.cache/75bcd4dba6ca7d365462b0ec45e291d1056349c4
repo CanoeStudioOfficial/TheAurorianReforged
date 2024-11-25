@@ -1,4 +1,4 @@
-// 1.19.2	2024-07-25T13:42:06.629492617	Tags for minecraft:block
+// 1.19.2	2024-11-25T12:57:50.909570779	Tags for minecraft:block
 4052cba1a2dd4624005126892af9d93ccbc0a53d data/forge/tags/blocks/chests.json
 4052cba1a2dd4624005126892af9d93ccbc0a53d data/forge/tags/blocks/chests/wooden.json
 52812fab3474d07f55d5ed5e0025c937791a2a04 data/forge/tags/blocks/fences/wooden.json
@@ -24,6 +24,6 @@ c63870251e0361bd20e0bc544d5d4c8ead22616e data/minecraft/tags/blocks/walls.json
 ce9aba30f358c2ea8922c4430663c42b6b8fb9aa data/minecraft/tags/blocks/wooden_slabs.json
 057a9a223d2d465ff8029acaa6d23333f3cc82d7 data/minecraft/tags/blocks/wooden_stairs.json
 aa10960d590cbb00738b837fc1795e3ba65b39e3 data/theaurorian/tags/blocks/cerulean_ore.json
-a9dfad70c4813e81d7222e10d51827712b48d1f5 data/theaurorian/tags/blocks/dungeon_bricks.json
-0758f247a21169c6b7c3bf03cb89c9c07c1a611b data/theaurorian/tags/blocks/dungeon_gates.json
+0c40fab963c99235bd6e4a3df9724b9ae4ff7164 data/theaurorian/tags/blocks/dungeon_bricks.json
+bcbee14318f947cfd2a96d0825e9f4450e11b579 data/theaurorian/tags/blocks/dungeon_gates.json
 78b36be4690e71b1073a4f225396c12d9c737c09 data/theaurorian/tags/blocks/moonstone_ore.json

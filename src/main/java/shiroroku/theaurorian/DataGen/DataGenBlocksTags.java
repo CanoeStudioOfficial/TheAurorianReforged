@@ -91,6 +91,14 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_lamp.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_pillar.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.darkstone_stairs.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_bars.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_bricks.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_bricks_smooth.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_gate.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_gate_keyhole.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_interior_gate.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_interior_gate_keyhole.get());
+        this.tag(DUNGEON_BRICKS).add(BlockRegistry.moon_temple_lamp.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_bars.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_gate.get());
@@ -100,6 +108,7 @@ public class DataGenBlocksTags extends TagsProvider<Block> {
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_smooth.get());
         this.tag(DUNGEON_BRICKS).add(BlockRegistry.runestone_stairs.get());
         this.tag(DUNGEON_GATES).add(BlockRegistry.darkstone_gate.get());
+        this.tag(DUNGEON_GATES).add(BlockRegistry.moon_temple_gate.get());
         this.tag(DUNGEON_GATES).add(BlockRegistry.runestone_gate.get());
         this.tag(MOONSTONE_ORE).add(BlockRegistry.deepslate_moonstone_ore.get());
         this.tag(MOONSTONE_ORE).add(BlockRegistry.moonstone_ore.get());

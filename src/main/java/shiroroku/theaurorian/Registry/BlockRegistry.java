@@ -55,6 +55,17 @@ public class BlockRegistry {
     public static final RegistryObject<Block> darkstone_pillar = regBlockItem(BLOCKS_GEN, "darkstone_pillar", () -> new Block(BlockBehaviour.Properties.copy(darkstone.get())));
     public static final RegistryObject<Block> darkstone_stairs = regBlockItem(BLOCKS, "darkstone_stairs", () -> new StairBlock(() -> darkstone.get().defaultBlockState(), BlockBehaviour.Properties.copy(darkstone.get())));
 
+    // Moon Temple
+    public static final RegistryObject<Block> moon_temple_bricks = regBlockItem(BLOCKS_GEN, "moon_temple_bricks", () -> new Block(BlockBehaviour.Properties.copy(runestone.get())));
+    public static final RegistryObject<Block> moon_temple_bars = regBlockItem(BLOCKS, "moon_temple_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+    public static final RegistryObject<Block> moon_temple_bricks_smooth = regBlockItem(BLOCKS_GEN, "moon_temple_bricks_smooth", () -> new Block(BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+    public static final RegistryObject<Block> moon_temple_gate = regBlockItem(BLOCKS_GEN, "moon_temple_gate", () -> new Block(BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+    public static final RegistryObject<Block> moon_temple_gate_keyhole = regBlockItem(BLOCKS_GEN, "moon_temple_gate_keyhole", () -> new DungeonGateKeyHole(ItemRegistry.moon_temple_key, BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+    public static final RegistryObject<Block> moon_temple_interior_gate = regBlockItem(BLOCKS_GEN, "moon_temple_interior_gate", () -> new Block(BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+    public static final RegistryObject<Block> moon_temple_interior_gate_keyhole = regBlockItem(BLOCKS_GEN, "moon_temple_interior_gate_keyhole", () -> new DungeonGateKeyHole(ItemRegistry.moon_temple_interior_key, BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+    public static final RegistryObject<Block> moon_temple_lamp = regBlockItem(BLOCKS_GEN, "moon_temple_lamp", () -> new Block(BlockBehaviour.Properties.copy(moon_temple_bricks.get()).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> moon_temple_stairs = regBlockItem(BLOCKS, "moon_temple_stairs", () -> new StairBlock(() -> moon_temple_bricks.get().defaultBlockState(), BlockBehaviour.Properties.copy(moon_temple_bricks.get())));
+
     // Natural
     public static final RegistryObject<Block> aurorian_cobblestone = regBlockItem(BLOCKS_GEN, "aurorian_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<Block> aurorian_cobblestone_slab = regBlockItem(BLOCKS, "aurorian_cobblestone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockRegistry.aurorian_cobblestone.get())));
