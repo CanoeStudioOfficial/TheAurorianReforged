@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Util.TooltipUtil;
 
 import java.util.List;
@@ -72,12 +72,12 @@ public class AurorianSteel {
      */
     private static void nextLevel(ItemStack aurorian_steel_item) {
         // level cost increases by 25% every time you enchant
-        setMultiplier(aurorian_steel_item, (float) (getMultiplier(aurorian_steel_item) * Configuration.aurorian_steel_level_multiplier.get()));
+        setMultiplier(aurorian_steel_item, (float) (getMultiplier(aurorian_steel_item) * CommonConfig.aurorian_steel_level_multiplier.get()));
         setXP(aurorian_steel_item, 0);
     }
 
     private static boolean isMaxXP(ItemStack aurorian_steel_item) {
-        return getXP(aurorian_steel_item) >= Configuration.aurorian_steel_base_level.get() * getMultiplier(aurorian_steel_item);
+        return getXP(aurorian_steel_item) >= CommonConfig.aurorian_steel_base_level.get() * getMultiplier(aurorian_steel_item);
     }
 
     private static void setMultiplier(ItemStack aurorian_steel_item, float amt) {

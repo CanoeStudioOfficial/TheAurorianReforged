@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.registries.ForgeRegistries;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Items.BaseAurorianPickaxe;
 
 import javax.annotation.Nullable;
@@ -50,7 +50,7 @@ public class UmbraPickaxe extends BaseAurorianPickaxe {
 
     @Override
     public float getDestroySpeed(ItemStack pStack, BlockState pState) {
-        return pState.is(getSelectedBlock(pStack)) ? (float) (this.speed * Configuration.umbra_pickaxe_speed_multiplier.get()) : super.getDestroySpeed(pStack, pState);
+        return pState.is(getSelectedBlock(pStack)) ? (float) (this.speed * CommonConfig.umbra_pickaxe_speed_multiplier.get()) : super.getDestroySpeed(pStack, pState);
     }
 
     @Nullable
@@ -65,7 +65,7 @@ public class UmbraPickaxe extends BaseAurorianPickaxe {
     private static void setSelectedBlock(ItemStack stack, Block block, Player player, InteractionHand hand) {
         if (getSelectedBlock(stack) != block) {
             stack.getOrCreateTag().putString("selected_block", ForgeRegistries.BLOCKS.getKey(block).toString());
-            stack.hurtAndBreak(Configuration.umbra_pickaxe_selection_cost.get(), player, (p) -> p.broadcastBreakEvent(hand));
+            stack.hurtAndBreak(CommonConfig.umbra_pickaxe_selection_cost.get(), player, (p) -> p.broadcastBreakEvent(hand));
             player.level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1F, 2F);
         }
     }

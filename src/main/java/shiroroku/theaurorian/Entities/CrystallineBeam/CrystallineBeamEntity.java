@@ -15,7 +15,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Registry.EntityRegistry;
 
 public class CrystallineBeamEntity extends Projectile {
@@ -90,7 +90,7 @@ public class CrystallineBeamEntity extends Projectile {
     protected void onHitEntity(EntityHitResult pResult) {
         if (this.getOwner() instanceof LivingEntity livingEntity) {
             this.level.broadcastEntityEvent(this, (byte) 0);
-            pResult.getEntity().hurt(DamageSource.indirectMobAttack(this, livingEntity).setProjectile(), Configuration.cystalline_sword_beam_damage.get().floatValue());
+            pResult.getEntity().hurt(DamageSource.indirectMobAttack(this, livingEntity).setProjectile(), CommonConfig.cystalline_sword_beam_damage.get().floatValue());
             this.discard();
         }
     }

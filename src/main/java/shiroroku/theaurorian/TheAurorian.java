@@ -13,6 +13,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import shiroroku.theaurorian.Config.ClientConfig;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Registry.*;
 
 @Mod(TheAurorian.MODID)
@@ -30,7 +32,8 @@ public class TheAurorian {
 
     public TheAurorian() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.config);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.config);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ClientConfig.config);
         BlockRegistry.register(bus);
         ItemRegistry.register(bus);
         BlockEntityRegistry.BLOCK_ENTITIES.register(bus);

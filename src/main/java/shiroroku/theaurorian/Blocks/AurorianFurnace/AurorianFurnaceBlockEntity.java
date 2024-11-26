@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Registry.BlockEntityRegistry;
 import shiroroku.theaurorian.Registry.BlockRegistry;
 
@@ -28,7 +28,7 @@ public class AurorianFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
             return super.getBurnDuration(pFuel);
         }
 
-        int maxChimneys = Configuration.chimney_max.get();
+        int maxChimneys = CommonConfig.chimney_max.get();
         int chimneyCount = 0;
         BlockPos mutPos = this.getBlockPos().above();
         while (level.getBlockState(mutPos).is(BlockRegistry.chimney.get())) {
@@ -36,7 +36,7 @@ public class AurorianFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
             mutPos = mutPos.above();
         }
         chimneyCount = Math.min(maxChimneys, chimneyCount);
-        float multi = (float) Math.max(1, ((float) chimneyCount / maxChimneys) * Configuration.chimney_multiplier.get());
+        float multi = (float) Math.max(1, ((float) chimneyCount / maxChimneys) * CommonConfig.chimney_multiplier.get());
         return (int) (super.getBurnDuration(pFuel) * multi);
     }
 

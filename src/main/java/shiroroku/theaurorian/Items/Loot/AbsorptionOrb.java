@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.DataGen.DataGenItemsTags;
 import shiroroku.theaurorian.Items.BaseAurorianItem;
 import shiroroku.theaurorian.Registry.ItemRegistry;
@@ -34,7 +34,7 @@ public class AbsorptionOrb extends BaseAurorianItem {
         }
 
         // check if its repairable, then repair
-        if (Configuration.absorption_orb_repairs_all.get() || player.getMainHandItem().is(DataGenItemsTags.ABSORPTION_ORB_REPAIRABLE)) {
+        if (CommonConfig.absorption_orb_repairs_all.get() || player.getMainHandItem().is(DataGenItemsTags.ABSORPTION_ORB_REPAIRABLE)) {
             orbItem.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(InteractionHand.OFF_HAND));
             mainhandItem.setDamageValue(mainhandItem.getDamageValue() - 1);
         }

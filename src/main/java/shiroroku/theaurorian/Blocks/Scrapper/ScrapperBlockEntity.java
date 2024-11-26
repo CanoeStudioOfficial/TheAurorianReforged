@@ -7,7 +7,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.items.ItemStackHandler;
 import shiroroku.theaurorian.Blocks.AbstractCrafterBlockEntity;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Registry.BlockEntityRegistry;
 import shiroroku.theaurorian.Registry.BlockRegistry;
 import shiroroku.theaurorian.Registry.RecipeRegistry;
@@ -42,7 +42,7 @@ public class ScrapperBlockEntity extends AbstractCrafterBlockEntity {
 
     @Override
     public int getCraftingTime(Recipe<Container> cachedRecipe) {
-        return (int) (Configuration.scrapper_base_craft_duration.get() * (level.getBlockState(getBlockPos().above()).is(BlockRegistry.crystal.get()) ? Configuration.scrapper_crystal_speed_discount.get() : 1));
+        return (int) (CommonConfig.scrapper_base_craft_duration.get() * (level.getBlockState(getBlockPos().above()).is(BlockRegistry.crystal.get()) ? CommonConfig.scrapper_crystal_speed_discount.get() : 1));
     }
 
     @Override
@@ -86,7 +86,7 @@ public class ScrapperBlockEntity extends AbstractCrafterBlockEntity {
             ModUtil.setAndMergeStack(getItemHandler(), 2, cachedRecipe.getResultItem());
         }
 
-        if(level.getBlockState(getBlockPos().above()).is(BlockRegistry.crystal.get()) && ModUtil.randomChanceOf(this.level.getRandom(), Configuration.scrapper_crystal_break_chance.get())){
+        if(level.getBlockState(getBlockPos().above()).is(BlockRegistry.crystal.get()) && ModUtil.randomChanceOf(this.level.getRandom(), CommonConfig.scrapper_crystal_break_chance.get())){
             level.destroyBlock(getBlockPos().above(), false);
         }
     }

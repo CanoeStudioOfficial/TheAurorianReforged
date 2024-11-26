@@ -4,7 +4,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.DataGen.DataGenItemsTags;
 import shiroroku.theaurorian.Items.BaseAurorianShield;
 import shiroroku.theaurorian.Registry.ItemRegistry;
@@ -34,7 +34,7 @@ public class CrystallineShield extends BaseAurorianShield {
         }
 
         // check if its repairable, then repair
-        if (Configuration.crystalline_shield_repairs_all.get() || player.getMainHandItem().is(DataGenItemsTags.CRYSTALLINE_SHIELD_REPAIRABLE)) {
+        if (CommonConfig.crystalline_shield_repairs_all.get() || player.getMainHandItem().is(DataGenItemsTags.CRYSTALLINE_SHIELD_REPAIRABLE)) {
             amount++;
             mainhandItem.setDamageValue(mainhandItem.getDamageValue() - 1);
         }

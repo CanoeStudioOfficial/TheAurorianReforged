@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.DataGen.DataGenItemsTags;
 import shiroroku.theaurorian.Items.BaseAurorianPickaxe;
 import shiroroku.theaurorian.Util.ModUtil;
@@ -30,7 +30,7 @@ public class CrystallinePickaxe extends BaseAurorianPickaxe {
 
         // choose random item from tag, and % chance to drop it
         ForgeRegistries.ITEMS.tags().getTag(DataGenItemsTags.CRYSTALLINE_PICKAXE_TREASURE).getRandomElement(pLevel.getRandom()).ifPresent((i) -> {
-            if (ModUtil.randomChanceOf(pLevel.getRandom(), Configuration.crystalline_pickaxe_treasure_chance.get())) {
+            if (ModUtil.randomChanceOf(pLevel.getRandom(), CommonConfig.crystalline_pickaxe_treasure_chance.get())) {
                 pStack.hurtAndBreak(1, pEntityLiving, (p) -> p.broadcastBreakEvent(InteractionHand.OFF_HAND));
                 pLevel.addFreshEntity(new ItemEntity(pLevel, pPos.getX(), pPos.getY(), pPos.getZ(), new ItemStack(i)));
             }

@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.registries.ForgeRegistries;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Registry.BlockEntityRegistry;
 import shiroroku.theaurorian.TheAurorian;
 import shiroroku.theaurorian.Util.ModUtil;
@@ -60,9 +60,9 @@ public class BossSpawnerBlockEntity extends BlockEntity {
         TheAurorian.LOGGER.debug(nearbyPlayers);
         LivingEntity boss = (LivingEntity) bossEntity.spawn((ServerLevel) this.level, null, null, null, worldPosition.above(), MobSpawnType.STRUCTURE, false, false);
         if (nearbyPlayers > 1) {
-            boss.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(boss.getAttribute(Attributes.MOVEMENT_SPEED).getValue() * ((nearbyPlayers * Configuration.boss_speed_per_player.get()) + 1));
-            boss.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(boss.getAttribute(Attributes.ATTACK_DAMAGE).getValue() * ((nearbyPlayers * Configuration.boss_damage_per_player.get()) + 1));
-            boss.getAttribute(Attributes.MAX_HEALTH).setBaseValue(boss.getAttribute(Attributes.MAX_HEALTH).getValue() * ((nearbyPlayers * Configuration.boss_health_per_player.get()) + 1));
+            boss.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(boss.getAttribute(Attributes.MOVEMENT_SPEED).getValue() * ((nearbyPlayers * CommonConfig.boss_speed_per_player.get()) + 1));
+            boss.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(boss.getAttribute(Attributes.ATTACK_DAMAGE).getValue() * ((nearbyPlayers * CommonConfig.boss_damage_per_player.get()) + 1));
+            boss.getAttribute(Attributes.MAX_HEALTH).setBaseValue(boss.getAttribute(Attributes.MAX_HEALTH).getValue() * ((nearbyPlayers * CommonConfig.boss_health_per_player.get()) + 1));
         }
         this.level.destroyBlock(this.worldPosition, false);
     }

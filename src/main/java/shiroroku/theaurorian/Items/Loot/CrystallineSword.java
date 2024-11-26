@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
-import shiroroku.theaurorian.Configuration;
+import shiroroku.theaurorian.Config.CommonConfig;
 import shiroroku.theaurorian.Entities.CrystallineBeam.CrystallineBeamEntity;
 import shiroroku.theaurorian.Items.BaseAurorianSword;
 
@@ -28,7 +28,7 @@ public class CrystallineSword extends BaseAurorianSword {
             return;
         }
         CrystallineBeamEntity beam = new CrystallineBeamEntity(pLevel, pLivingEntity);
-        beam.shootFromRotation(pLivingEntity, pLivingEntity.getXRot(), pLivingEntity.getYRot(), 0.0f, Configuration.cystalline_sword_beam_velocity.get().floatValue(), 0f);
+        beam.shootFromRotation(pLivingEntity, pLivingEntity.getXRot(), pLivingEntity.getYRot(), 0.0f, CommonConfig.cystalline_sword_beam_velocity.get().floatValue(), 0f);
         pLevel.addFreshEntity(beam);
         pLevel.playSound(null, pLivingEntity.getX(), pLivingEntity.getY(), pLivingEntity.getZ(), SoundEvents.GRINDSTONE_USE, SoundSource.PLAYERS, 1F, 2.5F);
         pLevel.playSound(null, pLivingEntity.getX(), pLivingEntity.getY(), pLivingEntity.getZ(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1F, 5F);

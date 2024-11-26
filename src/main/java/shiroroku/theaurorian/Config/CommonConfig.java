@@ -1,8 +1,8 @@
-package shiroroku.theaurorian;
+package shiroroku.theaurorian.Config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
-public class Configuration {
+public class CommonConfig {
 
     public static final ForgeConfigSpec config;
 
