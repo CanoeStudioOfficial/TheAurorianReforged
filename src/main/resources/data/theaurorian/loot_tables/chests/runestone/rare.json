@@ -145,6 +145,11 @@
         {
           "type": "minecraft:item",
           "weight": 1,
+          "name": "theaurorian:aurorianite_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
           "name": "theaurorian:aurorianite_pickaxe"
         },
         {

@@ -1,4 +1,4 @@
-// 1.19.2	2024-11-25T13:27:39.615807658	Item Models: theaurorian
+// 1.19.2	2024-11-26T15:08:52.967027796	Item Models: theaurorian
 a95bbdcaf10620b09f246c54e853176b212124ff assets/theaurorian/models/item/absorption_orb.json
 62c111d018dba8b55fb88600325394b94342d085 assets/theaurorian/models/item/amulet_of_chroma.json
 9a390d09acfa4a0621298f03a11e6a910b91f71f assets/theaurorian/models/item/aurorian_coal.json
@@ -24,6 +24,7 @@ abbc91372c1fe9fa5af13268c9f879b9aa3fa5f4 assets/theaurorian/models/item/aurorian
 9e5db382793755407b439c13e7bd8fef7d835540 assets/theaurorian/models/item/aurorianite_ingot.json
 bf906b2a7a5d568968fc2db72a49a5a83856e2c4 assets/theaurorian/models/item/aurorianite_pickaxe.json
 32f626c03e5279cf732d5aabc0a70072a2cf596d assets/theaurorian/models/item/aurorianite_scrap.json
+7bd3cfb7632e9d6ee1cb400f129011be96f2dfa5 assets/theaurorian/models/item/aurorianite_shovel.json
 a6fc57818de230bf8eb0e4fb699540517ad7a945 assets/theaurorian/models/item/aurorianite_sword.json
 7e09bf354060aeaa4f14aa8908e4ba0dc336874b assets/theaurorian/models/item/bright_bulb_tea.json
 d6014291a6206f8d566f9b9327e6257a15d95684 assets/theaurorian/models/item/cerulean_arrow.json

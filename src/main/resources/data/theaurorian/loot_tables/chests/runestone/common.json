@@ -178,6 +178,11 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 1,
+          "name": "theaurorian:aurorianite_shovel"
+        },
+        {
+          "type": "minecraft:item",
           "weight": 2,
           "name": "theaurorian:cerulean_shield",
           "functions": [

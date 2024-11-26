@@ -132,6 +132,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> aurorianite_axe = ITEMS_GEN_HANDHELD.register("aurorianite_axe", () -> new AurorianiteAxe(MaterialTiers.AURORIANITE, 5.0F, -3.0F, defaultProp().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> aurorianite_pickaxe = ITEMS_GEN_HANDHELD.register("aurorianite_pickaxe", () -> new AurorianitePickaxe(MaterialTiers.AURORIANITE, 1, -2.8F, defaultProp().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> aurorianite_sword = ITEMS_GEN_HANDHELD.register("aurorianite_sword", () -> new AurorianiteSword(MaterialTiers.AURORIANITE, 3, -2.4F, defaultProp().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> aurorianite_shovel = ITEMS_GEN_HANDHELD.register("aurorianite_shovel", () -> new AurorianiteShovel(MaterialTiers.AURORIANITE, 1.5F, -3.0F, defaultProp().rarity(Rarity.RARE)));
     public static final RegistryObject<Item> living_divining_rod = ITEMS_GEN_HANDHELD.register("living_divining_rod", () -> new LivingDiviningRod(defaultProp().durability(100).rarity(Rarity.RARE)));
 
     // Umbra

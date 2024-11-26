@@ -111,6 +111,7 @@ public class DataGenItemsTags extends TagsProvider<Item> {
         this.tag(Tags.Items.TOOLS_SHOVELS).add(ItemRegistry.aurorian_stone_shovel.get());
         this.tag(Tags.Items.TOOLS_SHOVELS).add(ItemRegistry.moonstone_shovel.get());
         this.tag(Tags.Items.TOOLS_SHOVELS).add(ItemRegistry.silentwood_shovel.get());
+        this.tag(Tags.Items.TOOLS_SHOVELS).add(ItemRegistry.aurorianite_shovel.get());
         this.tag(Tags.Items.TOOLS_SWORDS).add(ItemRegistry.aurorian_steel_sword.get());
         this.tag(Tags.Items.TOOLS_SWORDS).add(ItemRegistry.aurorian_stone_sword.get());
         this.tag(Tags.Items.TOOLS_SWORDS).add(ItemRegistry.aurorianite_sword.get());
