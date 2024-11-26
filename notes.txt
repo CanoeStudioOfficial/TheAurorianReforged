@@ -6,7 +6,6 @@
 
     to do:
     - silentwood abilities
-    - aurorian moon rotation
     - spectral armor transparency
     - dark stone dungeon and mobs
     - moon temple dungeon and mobs

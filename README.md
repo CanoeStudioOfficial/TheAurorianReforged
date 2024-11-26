@@ -20,3 +20,4 @@ A Minecraft mod for that adds a new dimension with new bosses, tools, and other 
 - Aurorian Steel has a new recipe.
 - Weeping willow biome is removed for now
 - Dungeons stick to their loot type. (Runestone: Aurorianite, Darkstone: Umbra, Moon Temple: Crystalline)
+- New rendering effects, like auroras and moon movement
