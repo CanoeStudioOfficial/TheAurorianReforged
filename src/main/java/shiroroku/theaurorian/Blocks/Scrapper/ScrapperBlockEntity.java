@@ -72,7 +72,7 @@ public class ScrapperBlockEntity extends AbstractCrafterBlockEntity {
 
     @Override
     public void finishCraft(Recipe<Container> recipe) {
-        // change to not output a result depending on damage
+        // chance to not output a result depending on damage
         // if item is more than 25% damaged, then that percent of the time itll output nothing
         // ex: 80% damaged = 80% that there will be no output, 15% damaged = 100% will output
         ItemStack inputStack = getItemHandler().getStackInSlot(1);
