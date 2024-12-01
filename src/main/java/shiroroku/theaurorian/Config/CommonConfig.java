@@ -8,6 +8,8 @@ public class CommonConfig {
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> absorption_orb_repairs_all;
     public static final ForgeConfigSpec.ConfigValue<Boolean> crystalline_shield_repairs_all;
+    public static final ForgeConfigSpec.ConfigValue<Double> aurorianite_shovel_resistance_difference;
+    public static final ForgeConfigSpec.ConfigValue<Integer> aurorianite_shovel_dig_radius;
     public static final ForgeConfigSpec.ConfigValue<Double> aurorian_steel_level_multiplier;
     public static final ForgeConfigSpec.ConfigValue<Double> boss_damage_per_player;
     public static final ForgeConfigSpec.ConfigValue<Double> boss_health_per_player;
@@ -41,6 +43,8 @@ public class CommonConfig {
         spectral_armor_cleanse_chance = builder.comment("+% per armor piece to cleanse negative effects when attacking").defineInRange("spectral_armor_cleanse_chance", 0.06, 0, 0.25);
         umbra_pickaxe_selection_cost = builder.defineInRange("umbra_pickaxe_selection_cost", 15, 0, Integer.MAX_VALUE);
         umbra_pickaxe_speed_multiplier = builder.defineInRange("umbra_pickaxe_selection_speed_multiplier", 1.5f, 1, Integer.MAX_VALUE);
+        aurorianite_shovel_resistance_difference = builder.comment("How different the speed of diggable blocks can be for them to also be mined. 0 = only blocks of the same resistance can be mined together, 0.15 allows for sand/gravel/clay/dirt to all be mined together").defineInRange("aurorianite_shovel_resistance_difference", 0.15, 0, Integer.MAX_VALUE);
+        aurorianite_shovel_dig_radius = builder.defineInRange("aurorianite_shovel_dig_radius", 1, 0, Integer.MAX_VALUE);
         builder.pop();
         builder.push("Blocks");
         chimney_max = builder.comment("Max chimneys you can stack on the aurorian furnace").defineInRange("chimney_max", 10, 0, Integer.MAX_VALUE);
