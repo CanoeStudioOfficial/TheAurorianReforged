@@ -60,7 +60,7 @@ public class AbsorptionOrbItem extends Item {
 									return;
 								}
 							} else if (!i.contains(":")) {
-								if (i.equals(mainhand.getItem().getRegistryName().getResourceDomain())) {
+								if (i.equals(mainhand.getItem().getRegistryName().getNamespace())) {
 									if (mainhand.isItemStackDamageable() && mainhand.isItemDamaged()) {
 										if (!p.isCreative()) {
 											offhand.damageItem(1, p);
@@ -77,7 +77,7 @@ public class AbsorptionOrbItem extends Item {
 							if (Item.getByNameOrId(i) == mainhand.getItem()) {
 								return;
 							} else if (!i.contains(":")) {
-								if (i.equals(mainhand.getItem().getRegistryName().getResourceDomain())) {
+								if (i.equals(mainhand.getItem().getRegistryName().getNamespace())) {
 									return;
 								}
 							}

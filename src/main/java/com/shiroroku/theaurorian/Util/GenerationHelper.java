@@ -42,8 +42,8 @@ public class GenerationHelper {
 	 * @param searchdistance Search distance in chunks.
 	 */
 	public static boolean isNearStructure(IChunkSpecific structure, World worldIn, BlockPos pos, int range, int searchdistance) {
-		int chunkX = worldIn.getChunkFromBlockCoords(pos).x;
-		int chunkZ = worldIn.getChunkFromBlockCoords(pos).z;
+		int chunkX = worldIn.getChunk(pos).x;
+		int chunkZ = worldIn.getChunk(pos).z;
 		if (worldIn.provider.getDimension() == AurorianConfig.Config_AurorianDimID) {
 			for (int x = -(searchdistance / 2); x < (searchdistance / 2); x++) {
 				for (int z = -(searchdistance / 2); z < (searchdistance / 2); z++) {

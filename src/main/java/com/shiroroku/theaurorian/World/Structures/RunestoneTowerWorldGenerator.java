@@ -66,7 +66,7 @@ public class RunestoneTowerWorldGenerator extends WorldGenerator implements Gene
 
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
-		this.generateTower(worldIn, worldIn.getChunkFromBlockCoords(position), rand);
+		this.generateTower(worldIn, worldIn.getChunk(position), rand);
 		return true;
 	}
 

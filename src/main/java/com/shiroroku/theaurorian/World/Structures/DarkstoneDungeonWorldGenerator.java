@@ -44,7 +44,7 @@ public class DarkstoneDungeonWorldGenerator extends WorldGenerator implements Ge
 
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
-		this.generateDungeon(worldIn, worldIn.getChunkFromBlockCoords(position));
+		this.generateDungeon(worldIn, worldIn.getChunk(position));
 		return true;
 	}
 

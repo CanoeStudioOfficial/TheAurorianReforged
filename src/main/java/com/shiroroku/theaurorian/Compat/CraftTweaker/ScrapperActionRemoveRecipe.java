@@ -19,7 +19,7 @@ public class ScrapperActionRemoveRecipe implements IAction {
 
 	@Override
 	public String describe() {
-		return "Removing Scrapper recipe for: [" + RECIPE.getOutput().getUnlocalizedName() + "]";
+		return "Removing Scrapper recipe for: [" + RECIPE.getOutput().getTranslationKey() + "]";
 	}
 
 }

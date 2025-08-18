@@ -66,14 +66,14 @@ public class AurorianSteelHelper {
 							return e.getKey().getTranslatedName(e.getValue() + 1);
 						case 1:
 							for (String enchreg : AurorianConfig.Config_AurorianSteel_Enchants) {
-								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getResourceDomain().equals(enchreg)) {
+								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getNamespace().equals(enchreg)) {
 									return e.getKey().getTranslatedName(e.getValue() + 1);
 								}
 							}
 							break;
 						case 2:
 							for (String enchreg : AurorianConfig.Config_AurorianSteel_Enchants) {
-								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getResourceDomain().equals(enchreg)) {
+								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getNamespace().equals(enchreg)) {
 									return null;
 								}
 							}
@@ -100,14 +100,14 @@ public class AurorianSteelHelper {
 							return true;
 						case 1:
 							for (String enchreg : AurorianConfig.Config_AurorianSteel_Enchants) {
-								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getResourceDomain().equals(enchreg)) {
+								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getNamespace().equals(enchreg)) {
 									return true;
 								}
 							}
 							break;
 						case 2:
 							for (String enchreg : AurorianConfig.Config_AurorianSteel_Enchants) {
-								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getResourceDomain().equals(enchreg)) {
+								if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getNamespace().equals(enchreg)) {
 									return false;
 								}
 							}
@@ -141,7 +141,7 @@ public class AurorianSteelHelper {
 								return;
 							case 1:
 								for (String enchreg : AurorianConfig.Config_AurorianSteel_Enchants) {
-									if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getResourceDomain().equals(enchreg)) {
+									if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getNamespace().equals(enchreg)) {
 										enchs.put(e.getKey(), e.getValue() + 1);
 										EnchantmentHelper.setEnchantments(enchs, stack);
 										setMultiplier(stack, levelmultiplier * maxlevelmultiplier);
@@ -152,7 +152,7 @@ public class AurorianSteelHelper {
 								break;
 							case 2:
 								for (String enchreg : AurorianConfig.Config_AurorianSteel_Enchants) {
-									if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getResourceDomain().equals(enchreg)) {
+									if (enchreg.equals(e.getKey().getRegistryName().toString()) || e.getKey().getRegistryName().getNamespace().equals(enchreg)) {
 										return;
 									}
 								}

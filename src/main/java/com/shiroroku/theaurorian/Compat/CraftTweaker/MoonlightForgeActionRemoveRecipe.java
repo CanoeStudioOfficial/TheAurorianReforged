@@ -19,7 +19,7 @@ public class MoonlightForgeActionRemoveRecipe implements IAction {
 
 	@Override
 	public String describe() {
-		return "Removing Moonlight Forge recipe for: [" + RECIPE.getOutput().getUnlocalizedName() + "]";
+		return "Removing Moonlight Forge recipe for: [" + RECIPE.getOutput().getTranslationKey() + "]";
 	}
 
 }

@@ -19,6 +19,6 @@ public class MoonlightForgeActionAddRecipe implements IAction {
 
 	@Override
 	public String describe() {
-		return "Adding Moonlight Forge recipe for: [" + RECIPE.getOutput().getUnlocalizedName() + "]";
+		return "Adding Moonlight Forge recipe for: [" + RECIPE.getOutput().getTranslationKey() + "]";
 	}
 }

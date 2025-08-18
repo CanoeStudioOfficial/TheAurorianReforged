@@ -19,6 +19,6 @@ public class ScrapperActionAddRecipe implements IAction {
 
 	@Override
 	public String describe() {
-		return "Adding Scrapper recipe for: [" + RECIPE.getOutput().getUnlocalizedName() + "]";
+		return "Adding Scrapper recipe for: [" + RECIPE.getOutput().getTranslationKey() + "]";
 	}
 }

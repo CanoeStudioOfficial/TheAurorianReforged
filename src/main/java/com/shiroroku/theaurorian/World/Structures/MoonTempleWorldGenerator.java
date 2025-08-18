@@ -52,7 +52,7 @@ public class MoonTempleWorldGenerator extends WorldGenerator implements Generati
 
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
-		this.generateTemple(worldIn, worldIn.getChunkFromBlockCoords(position), 200);
+		this.generateTemple(worldIn, worldIn.getChunk(position), 200);
 		return true;
 	}
 

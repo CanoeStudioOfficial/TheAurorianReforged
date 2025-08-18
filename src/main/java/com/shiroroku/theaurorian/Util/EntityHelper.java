@@ -18,7 +18,7 @@ public class EntityHelper {
 	public static boolean isLookingAt(EntityLivingBase looker, EntityLivingBase target, double accuracy) {
 		Vec3d lookvec = target.getLook(1.0F).normalize();
 		Vec3d vec = new Vec3d(looker.posX - target.posX, looker.getEntityBoundingBox().minY + looker.getEyeHeight() - (target.posY + target.getEyeHeight()), looker.posZ - target.posZ);
-		double leng = vec.lengthVector();
+		double leng = vec.length();
 		vec = vec.normalize();
 		double mult = lookvec.dotProduct(vec);
 		return mult > 1.0D - accuracy / leng && target.canEntityBeSeen(looker);

@@ -49,8 +49,8 @@ public class MoonTorch extends BlockTorch {
 
 		if (enumfacing.getAxis().isHorizontal()) {
 			EnumFacing enumfacing1 = enumfacing.getOpposite();
-			worldIn.spawnParticle(EnumParticleTypes.CLOUD, d0 + 0.27D * enumfacing1.getFrontOffsetX(), d1 + 0.22D, d2 + 0.27D * enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D);
-			worldIn.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, d0 + 0.27D * enumfacing1.getFrontOffsetX(), d1 + 0.22D, d2 + 0.27D * enumfacing1.getFrontOffsetZ(), 0.0D, 0.0D, 0.0D);
+			worldIn.spawnParticle(EnumParticleTypes.CLOUD, d0 + 0.27D * enumfacing1.getXOffset(), d1 + 0.22D, d2 + 0.27D * enumfacing1.getXOffset(), 0.0D, 0.0D, 0.0D);
+			worldIn.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, d0 + 0.27D * enumfacing1.getXOffset(), d1 + 0.22D, d2 + 0.27D * enumfacing1.getXOffset(), 0.0D, 0.0D, 0.0D);
 		} else {
 			worldIn.spawnParticle(EnumParticleTypes.CLOUD, d0, d1, d2, 0.0D, 0.0D, 0.0D);
 			worldIn.spawnParticle(EnumParticleTypes.FIREWORKS_SPARK, d0, d1, d2, 0.0D, 0.0D, 0.0D);
