@@ -46,7 +46,7 @@ public class AurorianPortal extends BlockBreakable {
 		super(Material.PORTAL, false);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.GLASS);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setLightLevel(1F);
 		this.setBlockUnbreakable();
 	}
@@ -179,7 +179,7 @@ public class AurorianPortal extends BlockBreakable {
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		if (!entityIn.isRiding() && !entityIn.isBeingRidden() && entityIn.isNonBoss() && !worldIn.isRemote) {
 			if (entityIn instanceof EntityPlayer) {
 				if (entityIn.timeUntilPortal > 0) {
@@ -204,7 +204,7 @@ public class AurorianPortal extends BlockBreakable {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.TRANSLUCENT;
 	}
 

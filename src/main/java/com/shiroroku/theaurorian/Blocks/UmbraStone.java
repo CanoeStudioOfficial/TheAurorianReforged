@@ -16,6 +16,6 @@ public class UmbraStone extends Block {
 		this.setHardness(5.0F);
 		this.setRegistryName(name);
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 	}
 }

@@ -22,7 +22,7 @@ public class LockpicksItem extends Item {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 		this.setMaxDamage(10);
 	}
 

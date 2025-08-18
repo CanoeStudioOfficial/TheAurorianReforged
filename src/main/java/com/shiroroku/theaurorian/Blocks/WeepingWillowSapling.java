@@ -30,7 +30,7 @@ public class WeepingWillowSapling extends BlockBush implements IGrowable {
 		this.setHardness(0.0F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.PLANT);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

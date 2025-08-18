@@ -16,7 +16,7 @@ public class MoltenCeruleanFluidBlock extends BlockFluidClassic implements ItemR
 	public MoltenCeruleanFluidBlock() {
 		super(BlockRegistry.Fluids.MOLTENCERULEAN, Material.LAVA);
 		this.setRegistryName(MoltenCeruleanFluid.FLUIDNAME);
-		this.setUnlocalizedName(MoltenCeruleanFluid.FLUIDNAME);
+		this.setTranslationKey(MoltenCeruleanFluid.FLUIDNAME);
 	}
 
 	@SideOnly(Side.CLIENT)

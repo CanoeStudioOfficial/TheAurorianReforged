@@ -29,7 +29,7 @@ public class AurorianiteAxe extends ItemAxe {
 		super(ItemRegistry.Materials.AURORIANITE, 12.0F, -3.5F);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

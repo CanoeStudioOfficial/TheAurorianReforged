@@ -26,7 +26,7 @@ public class AbsorptionOrbItem extends Item {
 		super();
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 		this.setMaxDamage(AurorianConfig.Config_OrbOfAbsorptionDurability);
 		this.setMaxStackSize(1);
 	}

@@ -20,7 +20,7 @@ public class StairsBlock extends BlockStairs {
 		super(blockbase.getDefaultState());
 		this.setLightOpacity(0);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 		this.setRegistryName(name);
 		this.setHarvestLevel(blockbase.getHarvestTool(blockbase.getDefaultState()), blockbase.getHarvestLevel(blockbase.getDefaultState()));
 	}

@@ -22,7 +22,7 @@ public class AurorianSteelItemArmor extends ItemArmor {
 	public AurorianSteelItemArmor(EntityEquipmentSlot equipmentSlotIn, String name) {
 		super(ItemRegistry.Materials.AURORIANSTEEL_ARMOR, 0, equipmentSlotIn);
 		this.setRegistryName(name);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setMaxStackSize(1);
 	}

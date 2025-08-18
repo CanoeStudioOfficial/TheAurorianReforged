@@ -133,7 +133,7 @@ public class BasicItem extends Item {
 	public BasicItem(BasicItem.Items itemtype) {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(itemtype.getName());
-		this.setUnlocalizedName(AurorianMod.MODID + "." + itemtype.getName());
+		this.setTranslationKey(AurorianMod.MODID + "." + itemtype.getName());
 		this.itemType = itemtype;
 		if (itemtype.getStacksize() != 64) {
 			this.setMaxStackSize(itemtype.getStacksize());

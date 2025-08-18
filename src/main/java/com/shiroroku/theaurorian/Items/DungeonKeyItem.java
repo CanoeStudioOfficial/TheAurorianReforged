@@ -53,7 +53,7 @@ public class DungeonKeyItem extends Item {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(key.getName());
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + key.getName());
+		this.setTranslationKey(AurorianMod.MODID + "." + key.getName());
 		this.setMaxDamage(3);
 		this.itemKey = key;
 	}

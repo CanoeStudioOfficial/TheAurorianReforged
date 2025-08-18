@@ -16,7 +16,7 @@ public class MoltenMoonstoneFluidBlock extends BlockFluidClassic implements Item
 	public MoltenMoonstoneFluidBlock() {
 		super(BlockRegistry.Fluids.MOLTENMOONSTONE, Material.LAVA);
 		this.setRegistryName(MoltenMoonstoneFluid.FLUIDNAME);
-		this.setUnlocalizedName(MoltenMoonstoneFluid.FLUIDNAME);
+		this.setTranslationKey(MoltenMoonstoneFluid.FLUIDNAME);
 	}
 
 	@SideOnly(Side.CLIENT)

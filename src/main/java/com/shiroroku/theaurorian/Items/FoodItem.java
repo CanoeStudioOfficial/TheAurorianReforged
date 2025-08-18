@@ -87,7 +87,7 @@ public class FoodItem extends ItemFood {
 		super(foodtype.getFeedAmount(), foodtype.getSaturation(), false);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(foodtype.getName());
-		this.setUnlocalizedName(AurorianMod.MODID + "." + foodtype.getName());
+		this.setTranslationKey(AurorianMod.MODID + "." + foodtype.getName());
 		this.itemFood = foodtype;
 	}
 

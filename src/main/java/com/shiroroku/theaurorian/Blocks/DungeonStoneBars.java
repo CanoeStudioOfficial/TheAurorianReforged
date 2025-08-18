@@ -15,6 +15,6 @@ public class DungeonStoneBars extends BlockPane {
 		this.setResistance(6000000.0F);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(blockname);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + blockname);
+		this.setTranslationKey(AurorianMod.MODID + "." + blockname);
 	}
 }

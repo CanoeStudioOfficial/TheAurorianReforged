@@ -34,7 +34,7 @@ public class WeepingWillowLeaves extends BlockLeaves {
 	public WeepingWillowLeaves() {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(BLOCKNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setHardness(0.2F);
 		this.setSoundType(SoundType.PLANT);
 		this.setLightOpacity(1);

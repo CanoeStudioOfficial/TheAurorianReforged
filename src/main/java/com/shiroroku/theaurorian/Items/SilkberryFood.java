@@ -22,7 +22,7 @@ public class SilkberryFood extends ItemSeedFood {
 		super(2, 0.1F, BlockRegistry.Registry.PLANTSILKBERRYCROP.getBlock(), BlockRegistry.Registry.AURORIANFARMTILE.getBlock());
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 		this.setPotionEffect(new PotionEffect(MobEffects.REGENERATION, 20), 0.5F);
 	}
 

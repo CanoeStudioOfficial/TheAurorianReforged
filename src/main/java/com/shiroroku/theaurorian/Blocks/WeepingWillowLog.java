@@ -17,7 +17,7 @@ public class WeepingWillowLog extends BlockLog {
 	public WeepingWillowLog() {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(BLOCKNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 
 		this.setDefaultState(blockState.getBaseState().withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
 	}

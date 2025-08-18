@@ -29,7 +29,7 @@ public class AurorianitePickaxe extends ItemPickaxe {
 		super(ItemRegistry.Materials.AURORIANITE);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

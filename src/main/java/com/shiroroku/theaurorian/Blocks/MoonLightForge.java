@@ -43,7 +43,7 @@ public class MoonLightForge extends BlockContainer implements ItemRegistry.IUniq
 		this.setHarvestLevel("pickaxe", 2);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.METAL);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

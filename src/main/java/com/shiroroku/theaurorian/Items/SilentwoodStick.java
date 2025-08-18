@@ -33,7 +33,7 @@ public class SilentwoodStick extends Item {
 	public SilentwoodStick() {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

@@ -31,7 +31,7 @@ public class SeedsItem extends Item implements net.minecraftforge.common.IPlanta
 	public SeedsItem(String namein) {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(namein);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + namein);
+		this.setTranslationKey(AurorianMod.MODID + "." + namein);
 	}
 
 	@Override

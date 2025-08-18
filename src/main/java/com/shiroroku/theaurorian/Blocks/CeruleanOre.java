@@ -16,6 +16,6 @@ public class CeruleanOre extends Block {
 		this.setHarvestLevel("pickaxe", 1);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 }

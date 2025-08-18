@@ -12,7 +12,7 @@ public class SilentwoodShovel extends ItemSpade {
 		super(ItemRegistry.Materials.SILENTWOOD);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 }

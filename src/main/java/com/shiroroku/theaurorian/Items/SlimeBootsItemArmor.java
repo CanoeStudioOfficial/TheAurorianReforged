@@ -28,7 +28,7 @@ public class SlimeBootsItemArmor extends ItemArmor {
 	public SlimeBootsItemArmor(EntityEquipmentSlot equipmentSlotIn, String name) {
 		super(ItemRegistry.Materials.AURORIAN_SLIME, 0, equipmentSlotIn);
 		this.setRegistryName(name);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setMaxStackSize(1);
 	}

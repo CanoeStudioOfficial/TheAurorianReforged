@@ -32,7 +32,7 @@ public class WeepingWillowSap extends Item {
 	public WeepingWillowSap() {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {

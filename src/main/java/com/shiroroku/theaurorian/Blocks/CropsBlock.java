@@ -33,7 +33,7 @@ public class CropsBlock extends BlockCrops {
 
 	public CropsBlock(String blockname) {
 		super();
-		this.setUnlocalizedName(AurorianMod.MODID + "." + blockname);
+		this.setTranslationKey(AurorianMod.MODID + "." + blockname);
 		this.setRegistryName(blockname);
 	}
 

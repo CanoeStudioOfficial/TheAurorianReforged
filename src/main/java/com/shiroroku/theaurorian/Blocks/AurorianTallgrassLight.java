@@ -31,7 +31,7 @@ public class AurorianTallgrassLight extends BlockBush implements IShearable {
 		this.setHardness(0.0F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.PLANT);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

@@ -12,7 +12,7 @@ public class KnightItemArmor extends ItemArmor {
 	public KnightItemArmor(EntityEquipmentSlot equipmentSlotIn, String name) {
 		super(ItemRegistry.Materials.KNIGHT_ARMOR, 0, equipmentSlotIn);
 		this.setRegistryName(name);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setMaxStackSize(1);
 	}

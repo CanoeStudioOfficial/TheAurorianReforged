@@ -16,7 +16,7 @@ public class MoltenAurorianSteelFluidBlock extends BlockFluidClassic implements 
 	public MoltenAurorianSteelFluidBlock() {
 		super(BlockRegistry.Fluids.MOLTENAURORIANSTEEL, Material.LAVA);
 		this.setRegistryName(MoltenAurorianSteelFluid.FLUIDNAME);
-		this.setUnlocalizedName(MoltenAurorianSteelFluid.FLUIDNAME);
+		this.setTranslationKey(MoltenAurorianSteelFluid.FLUIDNAME);
 	}
 
 	@SideOnly(Side.CLIENT)

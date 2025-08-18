@@ -31,7 +31,7 @@ public class KeepersBow extends ItemBow {
 	public KeepersBow() {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 		this.setMaxDamage(512);
 		this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter() {
 			@Override

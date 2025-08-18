@@ -33,7 +33,7 @@ public class StrangeMeatFood extends ItemFood {
 		super(8, 0.9F, true);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 		this.setMaxDamage(AurorianConfig.Config_StrangeMeatUses);
 		this.setMaxStackSize(1);
 	}

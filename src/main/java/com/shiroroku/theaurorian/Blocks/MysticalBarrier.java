@@ -40,13 +40,13 @@ public class MysticalBarrier extends BlockBreakable {
 		this.setResistance(6000000.0F);
 		this.setSoundType(SoundType.METAL);
 		this.setRegistryName(BLOCKNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setLightLevel(1F);
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+	public void	onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		if (!entityIn.isRiding() && !entityIn.isBeingRidden()) {
 			switch (state.getValue(FACING)) {
 				default:

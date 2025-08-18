@@ -14,7 +14,7 @@ public class SilentwoodLadder extends BlockLadder {
 		this.setHardness(2.0F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.WOOD);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
 

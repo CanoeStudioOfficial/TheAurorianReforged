@@ -22,7 +22,7 @@ public class SilentwoodWorkbench extends Block {
 		this.setHardness(2.5F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.WOOD);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

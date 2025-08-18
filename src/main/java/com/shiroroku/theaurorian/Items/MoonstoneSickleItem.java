@@ -25,7 +25,7 @@ public class MoonstoneSickleItem extends SickleItem {
 		super();
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 		this.setMaxDamage(250);
 	}
 

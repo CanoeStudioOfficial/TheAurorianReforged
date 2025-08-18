@@ -47,11 +47,11 @@ public class AurorianFurnace extends BlockContainer {
 		this.setSoundType(SoundType.STONE);
 		if (isBurning) {
 			this.setRegistryName(BLOCKNAME_LIT);
-			this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME_LIT);
+			this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME_LIT);
 			this.setLightLevel(0.875F);
 		} else {
 			this.setRegistryName(BLOCKNAME);
-			this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+			this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 			this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		}
 	}
@@ -228,7 +228,7 @@ public class AurorianFurnace extends BlockContainer {
 
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		EnumFacing enumfacing = EnumFacing.getFront(meta);
+		EnumFacing enumfacing = EnumFacing.byIndex(meta);
 
 		if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
 			enumfacing = EnumFacing.NORTH;

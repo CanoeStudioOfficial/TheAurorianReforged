@@ -68,7 +68,7 @@ public class TeaFood extends Item implements ItemRegistry.IUniqueModel {
 	public TeaFood(Teas tea) {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(tea.getName());
-		this.setUnlocalizedName(AurorianMod.MODID + "." + tea.getName());
+		this.setTranslationKey(AurorianMod.MODID + "." + tea.getName());
 		this.setMaxStackSize(8);
 		this.itemTea = tea;
 	}

@@ -18,7 +18,7 @@ public class AurorianCreativeTab extends CreativeTabs {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public ItemStack getTabIconItem() {
+	public ItemStack createIcon() {
 		return new ItemStack(Item.getItemFromBlock(BlockRegistry.Registry.PLANTSILENTWOODSAPLING.getBlock()));
 	}
 
@@ -29,7 +29,7 @@ public class AurorianCreativeTab extends CreativeTabs {
 		items.sort(new Comparator<ItemStack>() {
 			@Override
 			public int compare(ItemStack i1, ItemStack i2) {
-				return i1.getUnlocalizedName().compareTo(i2.getUnlocalizedName());
+				return i1.getTranslationKey().compareTo(i2.getTranslationKey());
 			}
 		});
 	}

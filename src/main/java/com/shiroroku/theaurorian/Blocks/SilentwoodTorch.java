@@ -15,7 +15,7 @@ public class SilentwoodTorch extends BlockTorch {
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.WOOD);
 		this.setLightLevel(0.9375F);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 }

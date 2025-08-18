@@ -27,7 +27,7 @@ public class MoonstoneAxe extends ItemAxe {
 		super(ItemRegistry.Materials.MOONSTONE, 8.0F, -3.2F);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

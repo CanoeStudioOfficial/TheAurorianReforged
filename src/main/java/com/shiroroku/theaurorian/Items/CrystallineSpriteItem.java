@@ -9,7 +9,7 @@ public class CrystallineSpriteItem extends Item {
 
 	public CrystallineSpriteItem() {
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 }

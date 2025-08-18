@@ -27,7 +27,7 @@ public class MoonstonePickaxe extends ItemPickaxe {
 		super(ItemRegistry.Materials.MOONSTONE);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

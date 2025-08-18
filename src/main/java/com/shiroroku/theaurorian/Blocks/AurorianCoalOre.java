@@ -25,7 +25,7 @@ public class AurorianCoalOre extends Block {
 		this.setHarvestLevel("pickaxe", 0);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

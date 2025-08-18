@@ -12,7 +12,7 @@ public class CeruleanItemArmor extends ItemArmor {
 	public CeruleanItemArmor(EntityEquipmentSlot equipmentSlotIn, String name) {
 		super(ItemRegistry.Materials.CERULEAN_ARMOR, 0, equipmentSlotIn);
 		this.setRegistryName(name);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setMaxStackSize(1);
 	}

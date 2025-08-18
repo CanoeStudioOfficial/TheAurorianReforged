@@ -35,7 +35,7 @@ public class UrnBlock extends Block {
 		this.setHardness(0.5F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(new SoundType(1.0F, 0.5F, SoundEvents.BLOCK_GLASS_BREAK, SoundEvents.BLOCK_GLASS_STEP, SoundEvents.BLOCK_GLASS_PLACE, SoundEvents.BLOCK_GLASS_HIT, SoundEvents.BLOCK_GLASS_FALL));
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

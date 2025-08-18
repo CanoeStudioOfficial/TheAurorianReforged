@@ -33,7 +33,7 @@ public class AurorianGrass extends Block {
 		this.setRegistryName(name);
 		this.setSoundType(SoundType.PLANT);
 		this.setTickRandomly(true);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 	}
 
 	@Override

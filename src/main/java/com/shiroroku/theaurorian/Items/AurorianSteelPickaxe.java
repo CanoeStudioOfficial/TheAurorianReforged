@@ -24,7 +24,7 @@ public class AurorianSteelPickaxe extends ItemPickaxe {
 		super(ItemRegistry.Materials.AURORIANSTEEL);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

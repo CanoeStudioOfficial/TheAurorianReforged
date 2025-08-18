@@ -24,7 +24,7 @@ public class AurorianSteelAxe extends ItemAxe {
 		super(ItemRegistry.Materials.AURORIANSTEEL, 10.0F, -3.2F);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 
 	}
 

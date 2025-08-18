@@ -23,7 +23,7 @@ public class IndigoMushroomStem extends BlockLog {
 		this.setHardness(1.0F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.SLIME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
 	}
 

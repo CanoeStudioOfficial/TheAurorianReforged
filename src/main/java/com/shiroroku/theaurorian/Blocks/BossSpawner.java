@@ -56,14 +56,14 @@ public class BossSpawner extends Block implements ITileEntityProvider {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setBlockUnbreakable();
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + boss.getName());
+		this.setTranslationKey(AurorianMod.MODID + "." + boss.getName());
 		this.setRegistryName(boss.getName());
 		this.blockBoss = boss;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.CUTOUT;
 	}
 

@@ -37,7 +37,7 @@ public class DungeonLocatorItem extends Item {
 		this.setRegistryName(ITEMNAME);
 		this.setMaxStackSize(1);
 		this.setMaxDamage(30);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

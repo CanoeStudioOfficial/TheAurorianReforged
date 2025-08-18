@@ -12,7 +12,7 @@ public class SilentwoodSword extends ItemSword {
 		super(ItemRegistry.Materials.SILENTWOOD);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 }

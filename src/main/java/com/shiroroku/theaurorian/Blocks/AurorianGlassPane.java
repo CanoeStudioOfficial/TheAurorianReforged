@@ -22,7 +22,7 @@ public class AurorianGlassPane extends BlockPane {
 		this.setHardness(0.3F);
 		this.setSoundType(SoundType.GLASS);
 		this.setRegistryName(name);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 
 	}
 
@@ -33,7 +33,7 @@ public class AurorianGlassPane extends BlockPane {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
+	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.TRANSLUCENT;
 	}
 

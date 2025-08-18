@@ -31,7 +31,7 @@ public class CrystallinePickaxe extends ItemPickaxe {
 		super(ItemRegistry.Materials.CRYSTALLINE);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(ITEMNAME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + ITEMNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + ITEMNAME);
 	}
 
 	@Override

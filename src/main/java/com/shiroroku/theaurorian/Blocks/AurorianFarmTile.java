@@ -39,7 +39,7 @@ public class AurorianFarmTile extends Block {
 		this.setHardness(0.5F);
 		this.setHarvestLevel("shovel", 0);
 		this.setSoundType(SoundType.GROUND);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setRegistryName(BLOCKNAME);
 	}
 

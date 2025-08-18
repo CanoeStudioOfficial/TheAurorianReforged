@@ -30,7 +30,7 @@ public class SpikedItemArmor extends ItemArmor {
 	public SpikedItemArmor(EntityEquipmentSlot equipmentSlotIn, String name) {
 		super(ItemRegistry.Materials.SPIKED_ARMOR, 0, equipmentSlotIn);
 		this.setRegistryName(name);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setMaxStackSize(1);
 	}

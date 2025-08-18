@@ -13,7 +13,7 @@ public class IndigoMushroomCrystal extends Block {
 		super(Material.GLASS);
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 		this.setRegistryName(BLOCKNAME);
 		this.setLightLevel(1F);
 	}

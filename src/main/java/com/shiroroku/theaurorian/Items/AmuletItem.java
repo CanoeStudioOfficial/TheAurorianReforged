@@ -46,7 +46,7 @@ public class AmuletItem extends Item {
 	public AmuletItem(Amulets amulet) {
 		this.setCreativeTab(AurorianMod.CREATIVE_TAB);
 		this.setRegistryName(amulet.getName());
-		this.setUnlocalizedName(AurorianMod.MODID + "." + amulet.getName());
+		this.setTranslationKey(AurorianMod.MODID + "." + amulet.getName());
 		this.setMaxStackSize(1);
 		this.itemAmulet = amulet;
 	}

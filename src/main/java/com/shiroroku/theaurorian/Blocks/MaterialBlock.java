@@ -17,7 +17,7 @@ public class MaterialBlock extends Block {
 		this.setHardness(5.0F);
 		this.setRegistryName(name);
 		this.setSoundType(SoundType.METAL);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + name);
+		this.setTranslationKey(AurorianMod.MODID + "." + name);
 	}
 
 }

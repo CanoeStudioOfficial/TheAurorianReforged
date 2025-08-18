@@ -17,7 +17,7 @@ public class MoonwaterFluidBlock extends BlockFluidClassic implements ItemRegist
 		super(BlockRegistry.Fluids.MOONWATER, Material.WATER);
 		this.canCreateSources = true;
 		this.setRegistryName(MoonwaterFluid.FLUIDNAME);
-		this.setUnlocalizedName(MoonwaterFluid.FLUIDNAME);
+		this.setTranslationKey(MoonwaterFluid.FLUIDNAME);
 	}
 
 	@SideOnly(Side.CLIENT)

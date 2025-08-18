@@ -32,7 +32,7 @@ public class IndigoMushroom extends Block {
 		this.setHardness(1.0F);
 		this.setRegistryName(BLOCKNAME);
 		this.setSoundType(SoundType.SLIME);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + BLOCKNAME);
+		this.setTranslationKey(AurorianMod.MODID + "." + BLOCKNAME);
 	}
 
 	@Override

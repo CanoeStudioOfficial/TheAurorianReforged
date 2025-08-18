@@ -18,6 +18,6 @@ public class Peridotite extends Block implements AurorianBiomeDecorator.Aurorian
 		this.setHarvestLevel("pickaxe", 0);
 		this.setRegistryName(blockname);
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + blockname);
+		this.setTranslationKey(AurorianMod.MODID + "." + blockname);
 	}
 }

@@ -37,7 +37,7 @@ public class DungeonStoneGateKeyhole extends Block {
 		this.setBlockUnbreakable();
 		this.setResistance(6000000.0F);
 		this.setSoundType(SoundType.STONE);
-		this.setUnlocalizedName(AurorianMod.MODID + "." + blockname);
+		this.setTranslationKey(AurorianMod.MODID + "." + blockname);
 		this.setRegistryName(blockname);
 	}
 
