@@ -3,6 +3,7 @@ package com.shiroroku.theaurorian;
 import com.shiroroku.theaurorian.Misc.AurorianCreativeTab;
 import com.shiroroku.theaurorian.Misc.TPTACommand;
 import com.shiroroku.theaurorian.Network.CommonProxy;
+import com.shiroroku.theaurorian.theaurorian.Tags;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -14,12 +15,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = AurorianMod.MODID, name = AurorianMod.NAME, version = AurorianMod.VERSION, dependencies = AurorianMod.VERSION_FORGE, acceptedMinecraftVersions = AurorianMod.VERSION_MINECRAFT)
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION, dependencies = AurorianMod.VERSION_FORGE)
 public class AurorianMod {
-    public static final String MODID = "theaurorian";
-    public static final String NAME = "The Aurorian";
-    public static final String VERSION = "1.12.2-Release";
-    public static final String VERSION_MINECRAFT = "[1.12.2]";
+    public static final String MODID = Tags.MOD_ID;
     public static final String VERSION_FORGE = "after:tconstruct;after:conarm;required-after:forge@[14.23.5.2859,)";
 
     @Instance
