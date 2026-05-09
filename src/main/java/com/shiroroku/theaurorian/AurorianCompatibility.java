@@ -1,8 +1,10 @@
 package com.shiroroku.theaurorian;
 
 import com.shiroroku.theaurorian.Compat.Conarm.ConstructsArmoryCompat;
+import com.shiroroku.theaurorian.Compat.DynamicTrees.DynamicTreesCompat;
 import com.shiroroku.theaurorian.Compat.TinkersConstruct.TinkersConstructCompat;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -37,4 +39,27 @@ public class AurorianCompatibility {
 
 	public static void postInit(FMLPostInitializationEvent event) {
 	}
+
+	@Optional.Method(modid = "dynamictrees")
+	public static void preInitDynamicTreesCompat() {
+		DynamicTreesCompat.preInit();
+	}
+
+	@Optional.Method(modid = "dynamictrees")
+	public static void initDynamicTreesCompat() {
+		DynamicTreesCompat.init();
+	}
+
+	@Optional.Method(modid = "dynamictrees")
+	@SideOnly(Side.CLIENT)
+	public static void preInitDynamicTreesClientCompat() {
+		DynamicTreesCompat.clientPreInit();
+	}
+
+	@Optional.Method(modid = "dynamictrees")
+	@SideOnly(Side.CLIENT)
+	public static void initDynamicTreesClientCompat() {
+		DynamicTreesCompat.clientInit();
+	}
+
 }
