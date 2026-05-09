@@ -6,6 +6,7 @@ import com.shiroroku.theaurorian.Registry.EntityRegistry;
 import com.shiroroku.theaurorian.Registry.ItemRegistry;
 import com.shiroroku.theaurorian.Registry.SoundRegistry;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -21,12 +22,20 @@ public class ClientProxy extends CommonProxy {
 		super.preInit(e);
 		EntityRegistry.initModels();
 		AurorianCompatibility.clientPreInit(e);
+
+		if (Loader.isModLoaded("dynamictrees")) {
+			AurorianCompatibility.preInitDynamicTreesCompat();
+		}
 	}
 
 	@Override
 	public void init(FMLInitializationEvent e) {
 		super.init(e);
 		SoundRegistry.addMusicTypes();
+
+		if (Loader.isModLoaded("dynamictrees")) {
+			AurorianCompatibility.initDynamicTreesCompat();
+		}
 	}
 
 	@Override
