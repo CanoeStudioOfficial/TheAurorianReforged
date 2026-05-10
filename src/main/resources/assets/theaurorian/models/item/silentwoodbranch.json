@@ -1,7 +1,7 @@
 {
-	"parent": "dynamictrees:block/smartmodel/branch",
-	"textures": {
-		"bark": "theaurorian:blocks/silentwoodlogside",
-		"rings": "theaurorian:blocks/silentwoodlogtop"
-	}
+    "parent": "dynamictrees:item/branch",
+    "textures": {
+        "bark": "theaurorian:blocks/silentwoodlogside",
+        "rings": "theaurorian:blocks/silentwoodlogtop"
+    }
 }
