@@ -1,6 +1,7 @@
 package com.shiroroku.theaurorian.Compat.DynamicTrees;
 
 import com.ferreusveritas.dynamictrees.api.TreeRegistry;
+import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors.EnumChance;
 import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors.RandomSpeciesSelector;
 import com.ferreusveritas.dynamictrees.api.worldgen.IBiomeDataBasePopulator;
 import com.ferreusveritas.dynamictrees.trees.Species;
@@ -27,12 +28,9 @@ public class BiomeDataBasePopulator implements IBiomeDataBasePopulator {
 			createStaticAliases();
 		}
 
-		int silentwoodWeight = 200;
-		int weepingwillowWeight = 200;
-
-		RandomSpeciesSelector silentwoodSelector = new RandomSpeciesSelector().add(1000 - silentwoodWeight).add(silentwood, silentwoodWeight);
-		RandomSpeciesSelector weepingwillowSelector = new RandomSpeciesSelector().add(1000 - weepingwillowWeight).add(weepingwillow, weepingwillowWeight);
-		RandomSpeciesSelector bothSelector = new RandomSpeciesSelector().add(1000 - (silentwoodWeight + weepingwillowWeight)).add(silentwood, silentwoodWeight).add(weepingwillow, weepingwillowWeight);
+		RandomSpeciesSelector silentwoodSelector = new RandomSpeciesSelector().add(silentwood, 1);
+		RandomSpeciesSelector weepingwillowSelector = new RandomSpeciesSelector().add(weepingwillow, 1);
+		RandomSpeciesSelector bothSelector = new RandomSpeciesSelector().add(silentwood, 1).add(weepingwillow, 1);
 
 		Biome.REGISTRY.forEach(biome -> {
 			boolean hasMagical = BiomeDictionary.hasType(biome, Type.MAGICAL);
@@ -45,7 +43,12 @@ public class BiomeDataBasePopulator implements IBiomeDataBasePopulator {
 			boolean weepingwillowSplice = hasMagical && (hasForest || hasWater);
 
 			if (silentwoodSplice || weepingwillowSplice) {
-				dbase.setSpeciesSelector(biome, (silentwoodSplice && weepingwillowSplice) ? bothSelector : (weepingwillowSplice ? weepingwillowSelector : silentwoodSelector), Operation.SPLICE_BEFORE);
+				RandomSpeciesSelector selector = (silentwoodSplice && weepingwillowSplice) ? bothSelector : (weepingwillowSplice ? weepingwillowSelector : silentwoodSelector);
+				dbase.setSpeciesSelector(biome, selector, Operation.REPLACE);
+				dbase.setCancelVanillaTreeGen(biome, true);
+				dbase.setDensitySelector(biome, (rnd, nd) -> nd * 0.5, Operation.REPLACE);
+				dbase.setChanceSelector(biome, (rnd, spc, rad) -> EnumChance.OK, Operation.REPLACE);
+				dbase.setForestness(biome, 0.5f);
 			}
 		});
 	}
