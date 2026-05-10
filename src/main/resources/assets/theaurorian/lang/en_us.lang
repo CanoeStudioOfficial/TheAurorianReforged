@@ -139,6 +139,7 @@ item.theaurorian.scrapaurorianite.name=Aurorianite Scrap
 item.theaurorian.scrapcrystalline.name=Crystalline Scrap
 item.theaurorian.scrapumbra.name=Umbra Scrap
 item.theaurorian.silentwoodaxe.name=Silentwood Axe
+item.theaurorian.silentwoodseed.name=Silentwood Seed
 item.theaurorian.silentwoodbow.name=Silentwood Bow
 item.theaurorian.silentwoodhoe.name=Silentwood Hoe
 item.theaurorian.silentwoodpickaxe.name=Silentwood Pickaxe
@@ -171,6 +172,7 @@ item.theaurorian.umbrapickaxe.name=Umbra Pickaxe
 item.theaurorian.umbrashield.name=Umbra Shield
 item.theaurorian.umbrasword.name=Umbra Sword
 item.theaurorian.weepingwillowsap.name=Weeping Willow Sap
+item.theaurorian.weepingwillowseed.name=Weeping Willow Seed
 
 itemGroup.theaurorian=The Aurorian
 

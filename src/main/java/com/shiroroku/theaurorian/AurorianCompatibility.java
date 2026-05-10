@@ -17,6 +17,9 @@ public class AurorianCompatibility {
 		if (Loader.isModLoaded("tconstruct") && AurorianConfig.Config_EnableTinkersConstructCompatibility) {
 			TinkersConstructCompat.preInitSetMaterialRender();
 		}
+		if (Loader.isModLoaded("dynamictrees") && AurorianConfig.Config_EnableDynamicTreesCompatibility) {
+			preInitDynamicTreesClientCompat();
+		}
 	}
 
 	public static void preInit(FMLPreInitializationEvent event) {
@@ -26,6 +29,9 @@ public class AurorianCompatibility {
 				ConstructsArmoryCompat.preinitArmorTraits();
 			}
 		}
+		if (Loader.isModLoaded("dynamictrees") && AurorianConfig.Config_EnableDynamicTreesCompatibility) {
+			preInitDynamicTreesCompat();
+		}
 	}
 
 	public static void init() {
@@ -34,6 +40,9 @@ public class AurorianCompatibility {
 			if (Loader.isModLoaded("conarm") && AurorianConfig.Config_EnableConstructsArmoryCompatibility) {
 				ConstructsArmoryCompat.initArmorMaterials();
 			}
+		}
+		if (Loader.isModLoaded("dynamictrees") && AurorianConfig.Config_EnableDynamicTreesCompatibility) {
+			initDynamicTreesCompat();
 		}
 	}
 

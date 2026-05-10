@@ -9,6 +9,7 @@ public class AurorianConfig {
 	//Compat
 	public static boolean Config_EnableTinkersConstructCompatibility = true;
 	public static boolean Config_EnableConstructsArmoryCompatibility = true;
+	public static boolean Config_EnableDynamicTreesCompatibility = true;
 
 	//Blocks
 	public static int Config_MaximumChimneys = 10;
@@ -210,6 +211,7 @@ public class AurorianConfig {
 
 		Config_EnableTinkersConstructCompatibility = cfg.getBoolean("EnableTinkersConstructCompatibility", name, Config_EnableTinkersConstructCompatibility, "Set to false to disable Tinkers Construct integration");
 		Config_EnableConstructsArmoryCompatibility = cfg.getBoolean("EnableConstructsArmoryCompatibility", name, Config_EnableConstructsArmoryCompatibility, "Set to false to disable Constructs Armory integration");
+		Config_EnableDynamicTreesCompatibility = cfg.getBoolean("EnableDynamicTreesCompatibility", name, Config_EnableDynamicTreesCompatibility, "Set to false to disable Dynamic Trees integration");
 	}
 
 	private static void initBlocksConfig(Configuration cfg) {

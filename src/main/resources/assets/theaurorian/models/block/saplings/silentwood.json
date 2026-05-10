@@ -1,0 +1,7 @@
+{   "parent": "dynamictrees:block/sapling",
+  "textures": {
+    "particle": "theaurorian:blocks/silentwoodleaves",
+    "log": "theaurorian:blocks/silentwoodlogside",
+    "leaves": "theaurorian:blocks/silentwoodleaves"
+  }
+}

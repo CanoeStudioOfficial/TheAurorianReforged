@@ -107,6 +107,7 @@ item.theaurorian.scrapaurorianite.name=极光碎片
 item.theaurorian.scrapcrystalline.name=月凝晶碎片
 item.theaurorian.scrapumbra.name=本影碎片
 item.theaurorian.silentwoodaxe.name=谧木斧
+item.theaurorian.silentwoodseed.name=谧树种子
 item.theaurorian.silentwoodbow.name=谧木弓
 item.theaurorian.silentwoodhoe.name=谧木锄
 item.theaurorian.silentwoodpickaxe.name=谧木镐
@@ -139,6 +140,7 @@ item.theaurorian.umbrapickaxe.name=本影镐
 item.theaurorian.umbrashield.name=本影盾牌
 item.theaurorian.umbrasword.name=本影剑
 item.theaurorian.weepingwillowsap.name=垂柳木树液
+item.theaurorian.weepingwillowseed.name=垂柳种子
 
 itemGroup.theaurorian=极光幽境
 

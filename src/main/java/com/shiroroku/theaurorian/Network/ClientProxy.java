@@ -1,6 +1,7 @@
 package com.shiroroku.theaurorian.Network;
 
 import com.shiroroku.theaurorian.AurorianCompatibility;
+import com.shiroroku.theaurorian.AurorianConfig;
 import com.shiroroku.theaurorian.Registry.BlockRegistry;
 import com.shiroroku.theaurorian.Registry.EntityRegistry;
 import com.shiroroku.theaurorian.Registry.ItemRegistry;
@@ -22,10 +23,6 @@ public class ClientProxy extends CommonProxy {
 		super.preInit(e);
 		EntityRegistry.initModels();
 		AurorianCompatibility.clientPreInit(e);
-
-		if (Loader.isModLoaded("dynamictrees")) {
-			AurorianCompatibility.preInitDynamicTreesCompat();
-		}
 	}
 
 	@Override
@@ -33,8 +30,8 @@ public class ClientProxy extends CommonProxy {
 		super.init(e);
 		SoundRegistry.addMusicTypes();
 
-		if (Loader.isModLoaded("dynamictrees")) {
-			AurorianCompatibility.initDynamicTreesCompat();
+		if (Loader.isModLoaded("dynamictrees") && AurorianConfig.Config_EnableDynamicTreesCompatibility) {
+			AurorianCompatibility.initDynamicTreesClientCompat();
 		}
 	}
 

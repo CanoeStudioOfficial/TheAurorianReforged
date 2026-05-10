@@ -1,0 +1,16 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "dynamictrees:leaves"
+	},
+	"variants": {
+		"hydro=0": [{ "model": "dynamictrees:leaves" }],
+		"hydro=1": [{ "model": "dynamictrees:leaves" }],
+		"hydro=2": [{ "model": "dynamictrees:leaves" }],
+		"hydro=3": [{ "model": "dynamictrees:leaves" }],
+		"hydro=4": [{ "model": "dynamictrees:leaves" }],
+		"hydro=5": [{ "model": "dynamictrees:leaves" }],
+		"hydro=6": [{ "model": "dynamictrees:leaves" }],
+		"hydro=7": [{ "model": "dynamictrees:leaves" }]
+	}
+}

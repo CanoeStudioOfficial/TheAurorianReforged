@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "variant=silentwood":	{ "model": "rustic:sapling_silentwood" },
+    "variant=weepingwillow":	{ "model": "rustic:sapling_weepingwillow" }
+  }
+}
