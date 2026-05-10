@@ -3,6 +3,7 @@ package com.shiroroku.theaurorian;
 import com.shiroroku.theaurorian.Compat.Conarm.ConstructsArmoryCompat;
 import com.shiroroku.theaurorian.Compat.DynamicTrees.DynamicTreesCompat;
 import com.shiroroku.theaurorian.Compat.TinkersConstruct.TinkersConstructCompat;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -30,6 +31,7 @@ public class AurorianCompatibility {
 			}
 		}
 		if (Loader.isModLoaded("dynamictrees") && AurorianConfig.Config_EnableDynamicTreesCompatibility) {
+			MinecraftForge.EVENT_BUS.register(DynamicTreesCompat.class);
 			preInitDynamicTreesCompat();
 		}
 	}

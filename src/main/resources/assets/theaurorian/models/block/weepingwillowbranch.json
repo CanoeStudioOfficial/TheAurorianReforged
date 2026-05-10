@@ -1,0 +1,7 @@
+{
+    "parent": "dynamictrees:block/smartmodel/branch",
+    "textures": {
+        "bark": "theaurorian:blocks/weepingwillowlogside",
+        "rings": "theaurorian:blocks/weepingwillowlogtop"
+    }
+}

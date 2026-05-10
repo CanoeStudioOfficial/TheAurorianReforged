@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "theaurorian:silentwood#dynamictree" }
-	}
+    "variants": {
+        "normal": { "model": "theaurorian:silentwoodbranch#dynamictree" }
+    }
 }

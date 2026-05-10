@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "theaurorian:items/weepingwillowseed"
-	}
+    "parent": "dynamictrees:item/standardseed",
+    "textures": {
+        "layer0": "theaurorian:items/weepingwillowseed"
+    }
 }
