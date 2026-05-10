@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 @Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION, dependencies = AurorianMod.VERSION_FORGE)
 public class AurorianMod {
     public static final String MODID = Tags.MOD_ID;
-    public static final String VERSION_FORGE = "after:tconstruct;after:conarm;required-after:forge@[14.23.5.2859,)";
+    public static final String VERSION_FORGE = "after:tconstruct;after:conarm;after:dynamictrees;required-after:forge@[14.23.5.2859,)";
 
     @Instance
     public static AurorianMod INSTANCE;
